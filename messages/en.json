@@ -1,0 +1,189 @@
+{
+  "navbar": {
+    "aboutUsLabel": "About",
+    "educationalSystemLabel": "Educational System",
+    "admissionAndRegistrationLabel": "Registration",
+    "mediaCenterLabel": "Media Center",
+    "partnershipsLabel": "Partners",
+    "contactUsLabel": "Contact",
+    "virtualTour": "Virtual Tour",
+    "achievements": "Achievements",
+    "strategicAreas": "Strategic Areas",
+    "jobApplications": "Job Applications",
+    "contactUs": "Contact Us",
+    "right" : "All rights reserved",
+  "importantLinks" : "Important links",
+    "subscribeTitle": "Subscribe to the Newsletter",
+    "subscribeSubTitle": "Subscribe to the newsletter to receive the latest updates",
+    "subscribe": "Subscribe",
+  "enterEmail" : "Enter Your Email",
+    "reqinvalid_email" :"Invalid email format",
+  "reqemail" : "Email is required"
+  },
+  "error": {
+    "pageNotFound": "Page Not Found",
+    "pageNotFoundDesc": "Sorry, the page you are looking for does not exist or has been moved.",
+      "backHome" : "Go To Home"
+
+
+  },
+  "about" : {
+    "knowMoreSchool" : "Know more about the school"
+  },"educationSystem" : {
+    "educationSystemBtn" : "View details of the education system"
+  },  "partners" : {
+    "partnersTitle" : "Partners",
+    "partnersSubtitle" : "Meet our proud success partners"
+  },
+  "env" : {
+    "envTitle" : "Learning Environment"
+  },
+  "eductionSystem" : {
+    "eductionSystemVideo" : "Videos",
+     "educationalPathsways" : "Educational Pathways",
+     "educationalSystemm" : "Educational System"
+  },
+  "questions" : {
+    "submitButton" : "Send data for registration",
+    "questionsTitle" : "Inquiries and questions",
+    "questionsFormTitle": "Inquiries for New Student Registration for the New Academic Year",
+     "questionsFormDesc": "Fill in the student’s information to register",
+     "male": "Male",
+     "female": "Female",
+     "single": "Single",
+     "married": "Married",
+     "muslim": "Muslim",
+     "christian": "Christian",
+     "name": "Student Name",
+     "selectGender": "Select gender",
+     "nationalId": "National ID",
+     "birthDate": "Birth date",
+     "selectMaritalStatus": "Select marital status",
+     "selectReligion": "Select religion",
+     "Guardians_phone": "Guardian's Phone",
+     "another_phone": "Another Phone",
+     "how_do_know_us" : "How did you Know our school?",
+     "add_other_questions" : "Add other questions or comments" , 
+     "email": "Email",
+     "selectAcadimicStage" : "Select Academic Stage ",
+     "selectCity" : "Select City",
+      "studyBath" : "His advanced study path",
+      "reqgender": "Gender is required",
+      "reqcity": "City is required",
+      "reqeducation_stage": "Education stage is required",
+      "reqeducational_path": "Educational path is required",
+      "reqstudent_name": "Student name is required",
+      "reqguardian_mobile": "Guardian mobile is required",
+      "reqalternate_mobile": "Alternate mobile is required",
+      "reqinvalid_email": "Invalid email format",
+      "reqemail": "Email is required",
+      "reqhow_did_you_hear": "This field is required",
+      "reqnote": "Note is required"
+
+  },
+ "mediaCenter": {
+  "mediaCenterTitle": "Media Center",
+  "mediaCenterNews": "News",
+  "mediaCenterGellary": "Photo Gallery",
+  "mediaCenterVideos": "Video Gallery",
+  "mediaCenterBtn": "View News Details"
+},
+"contactUs" : {
+  "contactTitle": "Contact Us",
+  "contactSubtitle": "Send us your suggestions or inquiries anytime",
+  "name": "Name",
+  "email": "Email",
+  "phone": "Phone Number",
+  "subject": "Subject",
+  "message": "Message",
+  "submit": "Send Message",
+  "nameRequired": "Name is required",
+  "emailRequired": "Email is required",
+  "invalidEmail": "Invalid email address",
+  "phoneRequired": "Phone number is required",
+  "subjectRequired": "Subject is required",
+  "messageRequired": "Message content is required",
+  "success": "Message sent successfully",
+  "error": "Something went wrong"
+},
+"info" : {
+  "contactUs": "Contact Us",
+  "contactNumbers": "Through contact numbers",
+  "emailUs": "Email Us",
+  "email": "Through email",
+  "workHours": "Working Hours",
+  "workDays": "From Saturday to Thursday",
+  "workingHours": "From 8 AM to 5 PM"
+},
+"latestNews" : {
+    "latestNews": "Latest News",
+    "browseLatestNews": "Browse the latest news from the media center",
+    "viewAllNews": "View All News"
+  },
+  "strategicAreas" : {
+    "strategicAreasTitle" : "Strategic areas",
+    "strategicAreasBtn" : "Show field details"
+  },
+  "virtualTour" : {
+    "virtualTourTitle" : "Virtual Tour",
+    "virtualTourBtn" : "Show field details"
+  },
+  "jobApplications" : {
+    "jobApplicationsTitle" : "Job applications",
+    "jobApplicationsBtn" : "Apply for the job",
+    "jobTitle": "Apply for the Job",
+    "jobDescription": "If the job suits you, fill in your details and apply now",
+  "personalInfo": "First: Personal Information",
+  "contactInfo": "Second: Contact Information",
+  "cvAndSalary": "Third: CV and Expected Salary",
+  "coverLetter": "Fourth: Cover Letter",
+  "male": "Male",
+  "female": "Female",
+  "single": "Single",
+  "married": "Married",
+  "muslim": "Muslim",
+  "christian": "Christian",
+  "fullName": "Full name",
+  "selectGender": "Select gender",
+  "nationalId": "National ID",
+  "birthDate": "Birth date",
+  "selectMaritalStatus": "Select marital status",
+  "selectReligion": "Select religion",
+  "phone": "Phone number",
+  "email": "Email",
+  "linkedin": "Linkedin link",
+  "cvUploadTitle": "Attach your CV",
+  "cvUploadFormat": "PDF format",
+  "expectedSalaryLabel": "Write your expected salary for this position",
+  "expectedSalaryPlaceholder": "Expected salary",
+  "coverLetterPlaceholder": "Write a detailed summary about yourself",
+  "submitButton": "Submit job application",
+  "fullNameRequired": "Full name is required",
+    "genderRequired": "Gender is required",
+    "nationalIdRequired": "National ID is required",
+    "birthDateRequired": "Birth date is required",
+    "maritalStatusRequired": "Marital status is required",
+    "religionRequired": "Religion is required",
+    "phoneRequired": "Phone number is required",
+    "emailRequired": "Email is required",
+    "linkedinRequired": "LinkedIn profile is required",
+    "expectedSalaryRequired": "Expected salary is required",
+    "invalidEmail": "Invalid email address"
+  },
+  "admissionAndRegistration" : {
+    "admissionAndRegistrationTitle" : "Admission and Registration",
+    "admissionAndRegistrationBtn" : "Register with us now"
+  },
+  "headerCard" : {
+    "virtualTour": "Virtual Tour",
+    "achievements": "Achievements",
+    "achievementsSubtitle": "Discover our achievements",
+    "strategicAreas": "Strategic Areas",
+    "strategicAreasSubtitle": "A variety of strategic areas",
+    "jobApplications": "Job Applications",
+    "jobApplicationsSubtitle": "Join our respectful work family",
+    "virtualTourSubtitle" : "Learn about our tours"
+
+  }
+
+}

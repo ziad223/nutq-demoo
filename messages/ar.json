@@ -1,0 +1,191 @@
+{
+ "navbar": {
+  "aboutUsLabel": "نبذة عن المدرسة",
+  "educationalSystemLabel": "النظام التعليمي",
+  "admissionAndRegistrationLabel": "القبول والتسجيل",
+  "mediaCenterLabel": "المركز الإعلامي",
+  "partnershipsLabel": "الشراكات",
+  "contactUsLabel": "تواصل معنا",
+  "virtualTour": "جولة افتراضية",
+  "achievements": "إنجازات",
+  "strategicAreas": "المجالات الاستراتيجية",
+  "jobApplications": "طلبات التوظيف",
+  "contactUs": "تواصل معنا",
+  "right" : "جميع الحقوق محفوظة",
+  "importantLinks" : "روابط هامة",
+  "subscribeTitle" : "الاشتراك بالنشرة البريدية",
+  "subscribeSubTitle" : "قم بالاشتراك بالنشرة البريدية ليصلك كل جديد",
+  "subscribe" : " الاشتراك",
+  "enterEmail" : "أدخل بريدك الإلكتروني",
+  "reqinvalid_email" : "صيغة البريد الإلكتروني غير صحيحة",
+  "reqemail" : "البريد الإلكتروني مطلوب"
+},
+"error": {
+  "pageNotFound": "الصفحة غير موجودة",
+  "pageNotFoundDesc": "عذرًا، الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+  "backHome" : "الذهاب الي الصفحة الرئيسية"
+
+
+},
+  "about" : {
+    "knowMoreSchool" : "  تعرف أكثر على المدرسة"
+  }, "educationSystem" : {
+    "educationSystemBtn" : " عرض تفاصيل النظام التعليمي"
+  },
+  "partners" : {
+    "partnersTitle" : "الشراكات",
+    "partnersSubtitle" : "تعرف على شركاء نجاحنا الذين نفتخر بهم"
+  },
+  "env" : {
+    "envTitle" : "البيئة التعليمية"
+  },
+  "eductionSystem" : {
+    "eductionSystemVideo" : "مقاطع الفيديو",
+     "educationalPathsways" : "المسارات التعليمية",
+     "educationalSystemm" : "المنظومة التعليمية"
+  },
+  "questions" : {
+    "submitButton" : "إرسال البيانات للتسجيل",
+    "questionsTitle" : "الاستفسارات والأسئلة",
+    "questionsFormTitle" : "استفسارات تسجيل الطلاب والطالبات الجدد للعام الدراسي الجديد",
+    "questionsFormDesc" : "قم بملأ بيانات الطالب أو الطالبة للتسجيل",
+    "male": "ذكر",
+  "female": "أنثى",
+  "single": "أعزب",
+  "married": "متزوج",
+  "muslim": "مسلم",
+  "christian": "مسيحي",
+  "name": "أسم الطالب",
+  "selectGender": "اختار الجنس",
+  "nationalId": "رقم الهوية",
+  "birthDate": "تاريخ الميلاد",
+  "selectMaritalStatus": "اختار الحالة الإجتماعية",
+  "selectReligion": "اختار الديانة",
+      "Guardians_phone": "رقم جوال ولي الأمر",
+     "another_phone": "رقم جوال آخر",
+     "how_do_know_us" : "كيف تعرفت على مدرستنا ؟",
+     "add_other_questions" : "إضافة استفسارات أو ملاحظات أخرى" , 
+  "email": "البريد الإلكتروني",
+  "selectAcadimicStage" : "اختر المرحلة الدراسية ",
+  "selectCity" : " اختر المدينة",
+  "studyBath" : "المسار الدراسي المتقدم له",
+  "reqgender": "تحديد الجنس مطلوب",
+  "reqcity": "تحديد المدينة مطلوب",
+  "reqeducation_stage": "تحديد المرحلة التعليمية مطلوب",
+  "reqeducational_path": "تحديد المسار التعليمي مطلوب",
+  "reqstudent_name": "اسم الطالب مطلوب",
+  "reqguardian_mobile": "رقم ولي الأمر مطلوب",
+  "reqalternate_mobile": "الرقم البديل مطلوب",
+  "reqinvalid_email": "صيغة البريد الإلكتروني غير صحيحة",
+  "reqemail": "البريد الإلكتروني مطلوب",
+  "reqhow_did_you_hear": "يرجى تحديد كيف سمعت عنا",
+  "reqnote": "الملاحظات مطلوبة"
+
+    
+  },
+  "mediaCenter" : {
+    "mediaCenterTitle" : "المركز الإعلامي",
+    "mediaCenterNews" : "الأخبار",
+    "mediaCenterGellary" : "معرض الصور",
+    "mediaCenterVideos" : "معرض الفيديو",
+    "mediaCenterBtn" : "عرض تفاصيل الخبر"
+
+  },
+  "contactUs" : {
+    "contactTitle": "تواصل معنا",
+    "contactSubtitle": "أرسل إلينا مقترحاتك أو استفساراتك بأي وقت",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الجوال",
+    "subject": "موضوع الرسالة",
+    "message": "نص الرسالة",
+    "submit": "إرسال الرسالة",
+    "nameRequired": "الاسم مطلوب",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "invalidEmail": "بريد إلكتروني غير صالح",
+    "phoneRequired": "رقم الجوال مطلوب",
+    "subjectRequired": "عنوان الرسالة مطلوب",
+    "messageRequired": "محتوى الرسالة مطلوب",
+    "success": "تم الإرسال بنجاح",
+    "error": "حدث خطأ ما"
+  },
+  "info" : {
+    "contactUs": "اتصل بنا",
+    "contactNumbers": "عبر أرقام التواصل",
+    "emailUs": "راسلنا",
+    "email": "عبر البريد الإلكتروني",
+    "workHours": "مواعيد العمل",
+    "workDays": "من السبت إلى الخميس",
+    "workingHours": "من الثامنة صباحا حتى الخامسة مساء"
+  },
+  "latestNews" : {
+    "latestNews": "آخر الأخبار",
+    "browseLatestNews": "تصفح آخر أخبار المركز الإعلامي",
+    "viewAllNews": "عرض جميع الأخبار"
+  },
+  "strategicAreas" : {
+    "strategicAreasTitle" : "المجالات الاستراتيجية",
+    "strategicAreasBtn" : "عرض تفاصيل المجال"
+  },
+  "virtualTour" : {
+    "virtualTourTitle" : "جولة افتراضية",
+    "virtualTourBtn" : "عرض تفاصيل المجال"
+  },
+  "jobApplications" : {
+    "jobApplicationsTitle" : "طلبات التوظيف",
+    "jobApplicationsBtn" : "التقدم على الوظيفة",
+    "jobTitle": "التقدم على الوظيفة",
+    "jobDescription": "إذا كانت الوظيفة تناسبك قم بملأ بياناتك والتقدم الآن",
+    "personalInfo": "أولا : البيانات الشخصية",
+  "contactInfo": "ثانيا : بيانات التواصل",
+  "cvAndSalary": "ثالثا : السيرة الذاتية والراتب المتوقع",
+  "coverLetter": "رابعا : خطاب العمل",
+  "male": "ذكر",
+  "female": "أنثى",
+  "single": "أعزب",
+  "married": "متزوج",
+  "muslim": "مسلم",
+  "christian": "مسيحي",
+  "fullName": "الاسم كاملا",
+  "selectGender": "اختار الجنس",
+  "nationalId": "رقم الهوية",
+  "birthDate": "تاريخ الميلاد",
+  "selectMaritalStatus": "اختار الحالة الإجتماعية",
+  "selectReligion": "اختار الديانة",
+  "phone": "رقم الجوال",
+  "email": "البريد الإلكتروني",
+  "linkedin": "رابط Linkedin",
+  "cvUploadTitle": "قم بإرفاق سيرتك الذاتية",
+  "cvUploadFormat": "بصيغة PDF",
+  "expectedSalaryLabel": "قم بكتابة الراتب المتوقع لديك في هذه الوظيفة",
+  "expectedSalaryPlaceholder": "الراتب المتوقع",
+  "coverLetterPlaceholder": "قم بكتابة نبذة تفصيلية عنك",
+  "submitButton": "إرسال طلب التقدم على الوظيفة",
+  "fullNameRequired": "الاسم مطلوب",
+  "genderRequired": "النوع مطلوب",
+  "nationalIdRequired": "الرقم القومي مطلوب",
+  "birthDateRequired": "تاريخ الميلاد مطلوب",
+  "maritalStatusRequired": "الحالة الاجتماعية مطلوبة",
+  "religionRequired": "الديانة مطلوبة",
+  "phoneRequired": "رقم الهاتف مطلوب",
+  "emailRequired": "البريد الإلكتروني مطلوب",
+  "linkedinRequired": "رابط لينكد إن مطلوب",
+  "expectedSalaryRequired": "الراتب المتوقع مطلوب",
+  "invalidEmail": "بريد غير صالح"
+  },
+  "admissionAndRegistration" : {
+    "admissionAndRegistrationTitle" : "القبول والتسجيل",
+    "admissionAndRegistrationBtn" : "سجل معنا الآن"
+  },
+  "headerCard" : {
+    "virtualTour": "جولة افتراضية",
+    "achievements": "إنجازات",
+    "achievementsSubtitle": "تعرف على إنجازاتنا",
+    "strategicAreas": "المجالات الاستراتيجية",
+    "strategicAreasSubtitle": "العديد من المجالات الاستراتيجية",
+    "jobApplications": "طلبات التوظيف",
+    "jobApplicationsSubtitle": "إنضم إلى أسرة عملنا الموقرة",
+    "virtualTourSubtitle" : "تعرف علي جولاتنا"
+  }
+  
+}
