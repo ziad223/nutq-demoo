@@ -4,6 +4,12 @@ import { useRouter } from 'next/navigation';
 import Table, { Column } from '@/components/shared/reusableComponents/Table';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
+import {  FaFileInvoiceDollar, FaWhatsapp } from 'react-icons/fa';
+import { FaClipboardUser, FaMessage } from 'react-icons/fa6';
+import { IoEye } from 'react-icons/io5';
+import { GoClockFill } from "react-icons/go";
+import { BiTransfer } from "react-icons/bi";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 const columns: Column[] = [
     { label: 'Number', key: 'number' },
@@ -45,7 +51,38 @@ const sampleData: PatientData[] = [
         paidBills: '500 EGP',
         unpaidBills: '100 EGP',
         lastVisit: '2025-06-01',
-        actions: <button className="text-blue-500 underline">View</button>,
+        actions: (
+            <div className="flex gap-2 items-center">
+                <button className="bg-blue-500 text-white p-2 rounded-lg">Patient <span className = 'lg:block'>Report</span></button>
+                <button className="bg-green-500 hover:bg-green-600 w-9 h-9 flex items-center justify-center text-white p-2 rounded-full shadow-md">
+                    <FaWhatsapp size={20} />
+                </button>
+                <button className="bg-[#222] hover:bg-green-bg-[#000] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                <FaClipboardUser size={16} />
+                </button>
+                <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaMessage size={16} /> 
+                </button>
+                <button className="bg-[#555] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaFileInvoiceDollar size={16} />
+                </button>
+                <button className="bg-[#8e44ad]  w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <IoEye size={20} />
+                </button>
+                <button className="bg-[#333] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <GoClockFill size={20} />
+                </button>
+                <button className="bg-[#ffc107]  w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <GoClockFill size={20} />
+                </button>
+                <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <BiTransfer size={20} />
+                </button>
+                <button className="bg-transparent border border-gray-700  hover:bg-gray-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px]">
+                    <BsThreeDotsVertical size={20} className='text-black hover:text-white' />
+                </button>
+            </div>
+          ),
     },
     {
         number: 2,
@@ -58,7 +95,38 @@ const sampleData: PatientData[] = [
         paidBills: '500 EGP',
         unpaidBills: '100 EGP',
         lastVisit: '2025-06-01',
-        actions: <button className="text-blue-500 underline">View</button>,
+        actions: (
+            <div className="flex gap-2 items-center">
+                <button className="bg-blue-500 text-white p-2 rounded-lg">Patient <span className='lg:block'>Report</span></button>
+                <button className="bg-green-500 hover:bg-green-600 w-9 h-9 flex items-center justify-center text-white p-2 rounded-full shadow-md">
+                    <FaWhatsapp size={20} />
+                </button>
+                <button className="bg-[#222] hover:bg-green-bg-[#000] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaClipboardUser size={16} />
+                </button>
+                <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaMessage size={16} />
+                </button>
+                <button className="bg-[#555] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaFileInvoiceDollar size={16} />
+                </button>
+                <button className="bg-[#8e44ad]  w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <IoEye size={20} />
+                </button>
+                <button className="bg-[#333] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <GoClockFill size={20} />
+                </button>
+                <button className="bg-[#ffc107]  w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <GoClockFill size={20} />
+                </button>
+                <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <BiTransfer size={20} />
+                </button>
+                <button className="bg-transparent border border-gray-700  hover:bg-gray-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px]">
+                    <BsThreeDotsVertical size={20} className='text-black hover:text-white' />
+                </button>
+            </div>
+        ),
     },
     {
         number: 3,
@@ -71,8 +139,38 @@ const sampleData: PatientData[] = [
         paidBills: '500 EGP',
         unpaidBills: '100 EGP',
         lastVisit: '2025-06-01',
-        actions: <button className="text-blue-500 underline">View</button>,
-    },
+        actions: (
+            <div className="flex gap-2 items-center">
+                <button className="bg-blue-500 text-white p-2 rounded-lg">Patient <span className='lg:block'>Report</span></button>
+                <button className="bg-green-500 hover:bg-green-600 w-9 h-9 flex items-center justify-center text-white p-2 rounded-full shadow-md">
+                    <FaWhatsapp size={20} />
+                </button>
+                <button className="bg-[#222] hover:bg-green-bg-[#000] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaClipboardUser size={16} />
+                </button>
+                <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaMessage size={16} />
+                </button>
+                <button className="bg-[#555] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaFileInvoiceDollar size={16} />
+                </button>
+                <button className="bg-[#8e44ad]  w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <IoEye size={20} />
+                </button>
+                <button className="bg-[#333] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <GoClockFill size={20} />
+                </button>
+                <button className="bg-[#ffc107]  w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <GoClockFill size={20} />
+                </button>
+                <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <BiTransfer size={20} />
+                </button>
+                <button className="bg-transparent border border-gray-700  hover:bg-gray-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px]">
+                    <BsThreeDotsVertical size={20} className='text-black hover:text-white' />
+                </button>
+            </div>
+        ),    },
     {
         number: 4,
         name: 'Karma Saad',
@@ -84,8 +182,38 @@ const sampleData: PatientData[] = [
         paidBills: '500 EGP',
         unpaidBills: '100 EGP',
         lastVisit: '2025-06-01',
-        actions: <button className="text-blue-500 underline">View</button>,
-    },
+        actions: (
+            <div className="flex gap-2 items-center">
+                <button className="bg-blue-500 text-white p-2 rounded-lg">Patient <span className = 'lg:block'>Report</span></button>
+                <button className="bg-green-500 hover:bg-green-600 w-9 h-9 flex items-center justify-center text-white p-2 rounded-full shadow-md">
+                    <FaWhatsapp size={20} />
+                </button>
+                <button className="bg-[#222] hover:bg-green-bg-[#000] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                <FaClipboardUser size={16} />
+                </button>
+                <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaMessage size={16} /> 
+                </button>
+                <button className="bg-[#555] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaFileInvoiceDollar size={16} />
+                </button>
+                <button className="bg-[#8e44ad]  w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <IoEye size={20} />
+                </button>
+                <button className="bg-[#333] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <GoClockFill size={20} />
+                </button>
+                <button className="bg-[#ffc107]  w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <GoClockFill size={20} />
+                </button>
+                <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <BiTransfer size={20} />
+                </button>
+                <button className="bg-transparent border border-gray-700  hover:bg-gray-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px]">
+                    <BsThreeDotsVertical size={20} className='text-black hover:text-white' />
+                </button>
+            </div>
+          ),    },
     {
         number: 5,
         name: 'Ziad Abdalla',
@@ -97,7 +225,39 @@ const sampleData: PatientData[] = [
         paidBills: '500 EGP',
         unpaidBills: '100 EGP',
         lastVisit: '2025-06-01',
-        actions: <button className="text-blue-500 underline">View</button>,
+        actions: (
+            <div className="flex gap-2 items-center">
+                <button className="bg-blue-500 text-white p-2 rounded-lg">Patient <span className='lg:block'>Report</span></button>
+                <button className="bg-green-500 hover:bg-green-600 w-9 h-9 flex items-center justify-center text-white p-2 rounded-full shadow-md">
+                    <FaWhatsapp size={20} />
+                </button>
+                <button className="bg-[#222] hover:bg-green-bg-[#000] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaClipboardUser size={16} />
+                </button>
+                <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaMessage size={16} />
+                </button>
+                <button className="bg-[#555] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <FaFileInvoiceDollar size={16} />
+                </button>
+                <button className="bg-[#8e44ad]  w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <IoEye size={20} />
+                </button>
+                <button className="bg-[#333] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <GoClockFill size={20} />
+                </button>
+                <button className="bg-[#ffc107]  w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <GoClockFill size={20} />
+                </button>
+                <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+                    <BiTransfer size={20} />
+                </button>
+                <button className="bg-transparent border border-gray-700  hover:bg-gray-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px]">
+                    <BsThreeDotsVertical size={20} className='text-black hover:text-white' />
+                </button>
+            </div>
+        ),
+    
     }
 ];
 

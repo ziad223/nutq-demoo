@@ -15,6 +15,7 @@ import Navbar from "@/components/navbar";
 export const metadata: Metadata = {
   title: "nutq-demo",
   description: "Your premier destination for real estate",
+  
 };
 
 export default async function RootLayout({
