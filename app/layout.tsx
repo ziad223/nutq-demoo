@@ -7,7 +7,6 @@ import myCustomFont from "@/public/fonts/customFont";
 
 const inter = Inter({ subsets: ["latin"] });
 
-
 export const metadata: Metadata = {
   title: "nutq-demo",
   description: "Your premier destination for real estate",

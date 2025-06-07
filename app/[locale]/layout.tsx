@@ -66,3 +66,47 @@ export default async function RootLayout({
     </NextIntlClientProvider>
   );
 }
+
+// actions: (
+//   <div className="flex gap-2 items-center">
+//     <Link href='/patient-report' className="bg-blue-500 text-white p-2 rounded-lg">
+//       Patient <span className='lg:block'>Report</span>
+//     </Link>
+//     <a
+//       href="https://wa.me/96612312220239"
+//       target="_blank"
+//       rel="noopener noreferrer"
+//       title="send family login information"
+//     >
+//       <button
+//         className="bg-green-500 hover:bg-green-600 w-9 h-9 flex items-center justify-center text-white p-2 rounded-full shadow-md"
+//       >
+//         <FaWhatsapp size={20} />
+//       </button>
+//     </a>
+//     <button className="bg-[#222] hover:bg-green-bg-[#000] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+//       <FaClipboardUser size={16} />
+//     </button>
+//     <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+//       <FaMessage size={16} />
+//     </button>
+//     <button className="bg-[#555] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+//       <FaFileInvoiceDollar size={16} />
+//     </button>
+//     <button className="bg-[#8e44ad]  w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+//       <IoEye size={20} />
+//     </button>
+//     <button className="bg-[#333] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+//       <GoClockFill size={20} />
+//     </button>
+//     <button className="bg-[#ffc107]  w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+//       <GoClockFill size={20} />
+//     </button>
+//     <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+//       <BiTransfer size={20} />
+//     </button>
+//     <button className="bg-transparent border border-gray-700  hover:bg-gray-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px]">
+//       <BsThreeDotsVertical size={20} className='text-black hover:text-white' />
+//     </button>
+//   </div>
+// ),
