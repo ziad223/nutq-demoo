@@ -1,3 +1,4 @@
+'use client'
 import DateInput from '@/components/shared/reusableComponents/DateInput';
 import FormSection from '@/components/shared/reusableComponents/FormSection';
 import RadioGroup from '@/components/shared/reusableComponents/GenderRadio';
