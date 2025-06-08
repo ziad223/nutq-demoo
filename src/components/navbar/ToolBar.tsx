@@ -19,23 +19,23 @@ const ToolBar = () => {
                 </button>
 
                 <ul className={`hidden lg:flex flex-wrap items-center gap-3`}>
-                    <li><a href="#" className='text-sm whitespace-nowrap'>Administration</a></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap'>Accounting & Reporting</a></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap'>Transferred Patients</a></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap'>Diagnoses</a></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap'>User manual</a></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap'>Program additions</a></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap'>Our services</a></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap mr-5'>Consultations</a></li>
+                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>Administration</a></li>
+                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>Accounting & Reporting</a></li>
+                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>Transferred Patients</a></li>
+                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>Diagnoses</a></li>
+                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>User manual</a></li>
+                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>Program additions</a></li>
+                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>Our services</a></li>
+                    <li><a href="#" className='text-sm whitespace-nowrap text-white mr-5'>Consultations</a></li>
                 </ul>
 
                 <ul className="flex items-center gap-3">
-                    <li><a href="#" className='text-sm whitespace-nowrap'>Control panel</a></li>
-                    <li><a href="#" className='text-sm'><IoNotifications className='text-xl' /></a></li>
+                    <li><a href="#" className='text-sm whitespace-nowrap text-white '>Control panel</a></li>
+                    <li><a href="#" className='text-sm text-white '><IoNotifications className='text-xl' /></a></li>
                     <li className='flex items-center gap-2 text-sm whitespace-nowrap'>
-                        <FaCircleUser className='w-7 h-7' />
-                        <span>admin</span>
-                        <FaChevronDown />
+                        <FaCircleUser className='w-7 h-7 text-white ' />
+                        <span className = 'text-white'>admin</span>
+                        <FaChevronDown className = 'text-white' />
                     </li>
                 </ul>
             </div>

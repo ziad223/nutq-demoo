@@ -2,9 +2,14 @@
 import { FaFileInvoiceDollar, FaTrash, FaExclamationTriangle, FaInfoCircle } from 'react-icons/fa';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
+import { useState } from 'react';
 
 export default function CreateInvoice() {
     const locale = useLocale();
+    const [installments, setInstallments] = useState(3);
+    const [cashPayment, setCashPayment] = useState(100);
+    const [medicalExamPrice, setMedicalExamPrice] = useState(100);
+    const [xrayPrice, setXrayPrice] = useState(200);
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -13,7 +18,6 @@ export default function CreateInvoice() {
                     {locale === 'ar' ? 'إضافة فاتورة' : 'Add Invoice'}
                 </h4>
 
-                {/* Case study alert */}
                 <div className="alert bg-blue-50 p-4 rounded-lg mb-6 flex items-start">
                     <FaInfoCircle className="text-blue-500 mt-1 mr-2 flex-shrink-0" />
                     <div>
@@ -24,7 +28,6 @@ export default function CreateInvoice() {
                 </div>
 
                 <div className="flex flex-col lg:flex-row gap-6">
-                    {/* Main form section */}
                     <div className="lg:w-3/4">
                         {/* Patient information */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
@@ -250,7 +253,8 @@ export default function CreateInvoice() {
                                 <input
                                     type="number"
                                     min="1"
-                                    value="3"
+                                    value={installments}
+                                    onChange={(e) => setInstallments(Number(e.target.value))}
                                     className="w-16 p-1 border rounded text-center"
                                 />
                             </div>
@@ -283,7 +287,8 @@ export default function CreateInvoice() {
                                         <td className="py-3 px-4 border">
                                             <input
                                                 type="number"
-                                                value="100"
+                                                value={medicalExamPrice}
+                                                onChange={(e) => setMedicalExamPrice(Number(e.target.value))}
                                                 className="w-full p-1 border rounded text-right"
                                             />
                                         </td>
@@ -300,7 +305,8 @@ export default function CreateInvoice() {
                                         <td className="py-3 px-4 border">
                                             <input
                                                 type="number"
-                                                value="200"
+                                                value={xrayPrice}
+                                                onChange={(e) => setXrayPrice(Number(e.target.value))}
                                                 className="w-full p-1 border rounded text-right"
                                             />
                                         </td>
@@ -370,7 +376,8 @@ export default function CreateInvoice() {
                                     <span>{locale === 'ar' ? 'نقدي:' : 'Cash:'}</span>
                                     <input
                                         type="number"
-                                        value="100"
+                                        value={cashPayment}
+                                        onChange={(e) => setCashPayment(Number(e.target.value))}
                                         className="w-24 p-1 border rounded text-right"
                                     />
                                 </div>
@@ -379,7 +386,7 @@ export default function CreateInvoice() {
                                     <span>{locale === 'ar' ? 'بطاقة:' : 'Card:'}</span>
                                     <input
                                         type="number"
-                                        value="0"
+                                        defaultValue="0"
                                         className="w-24 p-1 border rounded text-right bg-gray-100"
                                         disabled
                                     />
@@ -389,7 +396,7 @@ export default function CreateInvoice() {
                                     <span>{locale === 'ar' ? 'تحويل بنكي:' : 'Bank Transfer:'}</span>
                                     <input
                                         type="number"
-                                        value="0"
+                                        defaultValue="0"
                                         className="w-24 p-1 border rounded text-right bg-gray-100"
                                         disabled
                                     />

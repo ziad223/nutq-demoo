@@ -2,7 +2,6 @@
 import DateInput from '@/components/shared/reusableComponents/DateInput';
 import FormSection from '@/components/shared/reusableComponents/FormSection';
 import RadioGroup from '@/components/shared/reusableComponents/GenderRadio';
-import TextArea from '@/components/shared/reusableComponents/TextArea';
 import TextInput from '@/components/shared/reusableComponents/TextInput';
 import React from 'react';
 

@@ -57,7 +57,7 @@ const Page = async ({ params, searchParams }: {
   const { locale } = params;
 
   const generateActions = (patientId: number) => (
-    <div className="flex gap-2 items-center">
+    <div className="flex gap-1 items-center">
       <Link href={`/${locale}/patient-report`} className="bg-blue-500 text-white p-2 rounded-lg">
         Patient <span className='lg:block'>Report</span>
       </Link>
@@ -67,41 +67,52 @@ const Page = async ({ params, searchParams }: {
         rel="noopener noreferrer"
         title="send family login information"
       >
-        <button className="bg-green-500 hover:bg-green-600 w-9 h-9 flex items-center justify-center text-white p-2 rounded-full shadow-md">
+        <button className="bg-green-500 hover:bg-green-600 w-7 h-7 flex items-center justify-center text-white p-2 rounded-full shadow-md">
           <FaWhatsapp size={20} />
         </button>
       </a>
       <Link
         href={`/${locale}/attendance-report?patient_id=${patientId}`}
         title="Attendance and absence record" 
-        className="bg-[#222] hover:bg-[#000] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md"
+        className="bg-[#222] hover:bg-[#000] w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
       >
         <FaClipboardUser size={16} />
       </Link>
       <Link
         href={`/${locale}/chat/$4?patientName=${encodeURIComponent('ziad')}`}
-        className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md"
+        className="bg-[#0d6efd] hover:bg-blue-700 w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
         title={`Chat with the patient`}
       >
         <FaMessage size={16} />
       </Link>
-      <Link href={`/${locale}/invoices/create?patient_id=6`} className="bg-[#555] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
+      <Link
+       href={`/${locale}/invoices/create?patient_id=6`}
+       className="bg-green-400 hover:bg-green-600 w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
+        title='Add Invoice'
+
+       >
         <FaFileInvoiceDollar size={16} />
+        
       </Link>
-      <button className="bg-[#8e44ad] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
-        <IoEye size={20} />
+      <button className="bg-[#8e44ad] w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md">
+        <IoEye size={20} className='text-xl' />
       </button>
-      <button className="bg-[#333] hover:bg-[#444] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
-        <GoClockFill size={20} />
+      <Link
+        href={`/${locale}/session-appointments?case_study_package_id=4`}
+        className="bg-[#333] hover:bg-[#444] w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
+      >
+        <GoClockFill size={16} />
+      </Link>
+      <Link
+        href={`/${locale}/appointments/create`}
+       className="bg-[#ffc107] w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md">
+        <GoClockFill size={16} />
+      </Link>
+      <button className="bg-[#0d6efd] hover:bg-blue-700 w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md">
+        <BiTransfer size={16} />
       </button>
-      <button className="bg-[#ffc107] w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
-        <GoClockFill size={20} />
-      </button>
-      <button className="bg-[#0d6efd] hover:bg-blue-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px] shadow-md">
-        <BiTransfer size={20} />
-      </button>
-      <button className="bg-transparent border border-gray-700 hover:bg-gray-700 w-9 h-9 flex items-center justify-center text-white p-2 rounded-[10px]">
-        <BsThreeDotsVertical size={20} className='text-black hover:text-white' />
+      <button className="bg-transparent border border-gray-700 hover:bg-gray-700 w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px]">
+        <BsThreeDotsVertical size={16} className='text-black hover:text-white' />
       </button>
     </div>
   );
