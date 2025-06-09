@@ -2,17 +2,19 @@
 import React from 'react';
 
 interface TextInputProps {
-    label: string;
+    label?: string;
     name: string;
     defaultValue?: string;
     disabled?: boolean;
+    placeholder?: string; // ← أضف هذا السطر
 }
 
 const TextInput: React.FC<TextInputProps> = ({
     label,
     name,
     defaultValue = '',
-    disabled = false
+    disabled = false,
+    placeholder = '' 
 }) => {
     return (
         <div className="col-span-1">
@@ -22,6 +24,7 @@ const TextInput: React.FC<TextInputProps> = ({
                 name={name}
                 defaultValue={defaultValue}
                 disabled={disabled}
+                placeholder={placeholder} // ← أضف هذا السطر
                 className="w-full p-2 border rounded text-black outline-none text-sm"
             />
         </div>

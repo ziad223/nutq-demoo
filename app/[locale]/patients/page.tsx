@@ -5,10 +5,10 @@ import { FaFileInvoiceDollar, FaWhatsapp } from 'react-icons/fa';
 import { FaClipboardUser, FaMessage } from 'react-icons/fa6';
 import { IoEye } from 'react-icons/io5';
 import { GoClockFill } from "react-icons/go";
-import { BiTransfer } from "react-icons/bi";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import SearchPatients from './SearchPatients';
-
+import TransferBtn from './TransferBtn';
+import OptionsMenu from './OptionsMenu';
 interface LayoutProps {
     params: { locale: string };
 }
@@ -56,6 +56,7 @@ const Page = async ({ params, searchParams }: {
 }) => {
   const { locale } = params;
 
+
   const generateActions = (patientId: number) => (
     <div className="flex gap-1 items-center">
       <Link href={`/${locale}/patient-report`} className="bg-blue-500 text-white p-2 rounded-lg">
@@ -67,53 +68,51 @@ const Page = async ({ params, searchParams }: {
         rel="noopener noreferrer"
         title="send family login information"
       >
-        <button className="bg-green-500 hover:bg-green-600 w-7 h-7 flex items-center justify-center text-white p-2 rounded-full shadow-md">
-          <FaWhatsapp size={20} />
+        <button className="bg-green-500 hover:bg-green-600 w-8 h-8 flex items-center justify-center text-white p-2 rounded-full shadow-md">
+          <FaWhatsapp className = 'text-xl' />
         </button>
+        
       </a>
       <Link
         href={`/${locale}/attendance-report?patient_id=${patientId}`}
         title="Attendance and absence record" 
-        className="bg-[#222] hover:bg-[#000] w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
+        className="bg-[#222] hover:bg-[#000] w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
       >
         <FaClipboardUser size={16} />
       </Link>
       <Link
         href={`/${locale}/chat/$4?patientName=${encodeURIComponent('ziad')}`}
-        className="bg-[#0d6efd] hover:bg-blue-700 w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
+        className="bg-[#0d6efd] hover:bg-blue-700 w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
         title={`Chat with the patient`}
       >
         <FaMessage size={16} />
       </Link>
       <Link
        href={`/${locale}/invoices/create?patient_id=6`}
-       className="bg-green-400 hover:bg-green-600 w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
+       className="bg-green-400 hover:bg-green-600 w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
         title='Add Invoice'
 
        >
         <FaFileInvoiceDollar size={16} />
         
       </Link>
-      <button className="bg-[#8e44ad] w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md">
+      <button className="bg-[#8e44ad] w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md">
         <IoEye size={20} className='text-xl' />
       </button>
       <Link
         href={`/${locale}/session-appointments?case_study_package_id=4`}
-        className="bg-[#333] hover:bg-[#444] w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
+        className="bg-[#333] hover:bg-[#444] w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
       >
         <GoClockFill size={16} />
       </Link>
       <Link
         href={`/${locale}/appointments/create`}
-       className="bg-[#ffc107] w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md">
+       className="bg-[#ffc107] w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md">
         <GoClockFill size={16} />
       </Link>
-      <button className="bg-[#0d6efd] hover:bg-blue-700 w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md">
-        <BiTransfer size={16} />
-      </button>
-      <button className="bg-transparent border border-gray-700 hover:bg-gray-700 w-7 h-7 flex items-center justify-center text-white p-2 rounded-[5px]">
-        <BsThreeDotsVertical size={16} className='text-black hover:text-white' />
-      </button>
+      <TransferBtn/>
+      <OptionsMenu />
+
     </div>
   );
 
