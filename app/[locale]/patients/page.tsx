@@ -96,9 +96,12 @@ const Page = async ({ params, searchParams }: {
         <FaFileInvoiceDollar size={16} />
         
       </Link>
-      <button className="bg-[#8e44ad] w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md">
+      <Link
+       href={`/${locale}/patients/6`}
+       title='patient file'
+        className="bg-[#8e44ad] w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md">
         <IoEye size={20} className='text-xl' />
-      </button>
+      </Link>
       <Link
         href={`/${locale}/session-appointments?case_study_package_id=4`}
         className="bg-[#333] hover:bg-[#444] w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"

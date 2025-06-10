@@ -3,7 +3,7 @@ import React from 'react';
 
 interface TextAreaProps {
   label: string;
-  name: string;
+  name?: string;
   rows?: number;
   defaultValue?: string;
 }
@@ -21,7 +21,7 @@ const TextArea: React.FC<TextAreaProps> = ({
         name={name}
         rows={rows}
         defaultValue={defaultValue}
-        className="w-full p-2 border rounded"
+        className="w-full p-2 border rounded outline-none"
       />
     </div>
   );
