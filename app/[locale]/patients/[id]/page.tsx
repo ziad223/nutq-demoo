@@ -1,4 +1,5 @@
 
+import { getTranslations } from "next-intl/server";
 import PatientView from "./PatientView";
 
 const staticPatient = {
@@ -17,12 +18,13 @@ const staticPatient = {
     ticketsCount: 1,
 };
 
-export default function Page() {
+export default async function Page() {
+    const t = await getTranslations('patients')
     return (
         <section className="py-5">
             <div className="container mx-auto px-4">
                 <h4 className="text-2xl font-semibold mb-4">
-                    View patient {staticPatient.name}
+                    {t('viewPatient')} {staticPatient.name}
                 </h4>
                 <div className="bg-white rounded-lg shadow p-6">
                     <PatientView patient={staticPatient} />

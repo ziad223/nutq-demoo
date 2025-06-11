@@ -3,6 +3,7 @@
 import { useParams, useSearchParams, useRouter } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import { FaPaperPlane, FaArrowLeft } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
 
 export default function ChatPage() {
     const params = useParams();
@@ -15,16 +16,17 @@ export default function ChatPage() {
     const patientId = params.id as string;
     const patientName = searchParams.get('patientName') || 'Patient';
     const locale = params.locale as string;
+    const t = useTranslations('chat');
 
     useEffect(() => {
         setMessages([
             {
-                text: `مرحباً، أنا ${patientName}. كيف يمكنني مساعدتك اليوم؟`,
+                text: `${t('greeting')}, أنا ${patientName}. ${t('help')}`,
                 sender: 'patient',
                 time: new Date().toLocaleTimeString()
             }
         ]);
-    }, [patientName]);
+    }, [patientName, t]);
 
     const handleSendMessage = () => {
         if (newMessage.trim() === '') return;
@@ -39,7 +41,7 @@ export default function ChatPage() {
 
         setTimeout(() => {
             setMessages(prev => [...prev, {
-                text: `شكراً على رسالتك دكتور. ${newMessage.includes('؟') ? 'سأجيب قريباً' : 'تم استلام رسالتك'}`,
+                text: `${t('thankYou')} ${newMessage.includes('؟') ? t('replySoon') : t('received')}`,
                 sender: 'patient',
                 time: new Date().toLocaleTimeString()
             }]);
@@ -59,10 +61,12 @@ export default function ChatPage() {
                 >
                     <FaArrowLeft size={18} />
                 </button>
-                <h1 className="text-xl font-semibold">محادثة مع {patientName}</h1>
+                <h1 className="text-xl font-semibold">
+                    {t('chatWith')} {patientName}
+                </h1>
             </div>
 
-                <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">
                 {messages.map((message, index) => (
                     <div
                         key={index}
@@ -90,7 +94,7 @@ export default function ChatPage() {
                         value={newMessage}
                         onChange={(e) => setNewMessage(e.target.value)}
                         onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                        placeholder="اكتب رسالتك هنا..."
+                        placeholder={t('inputPlaceholder')}
                         className="flex-1 text-end border text-black border-gray-300 rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     <button

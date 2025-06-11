@@ -1,7 +1,7 @@
 'use client'
 import { FaFileInvoiceDollar, FaTrash, FaExclamationTriangle, FaInfoCircle } from 'react-icons/fa';
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 export default function CreateInvoice() {

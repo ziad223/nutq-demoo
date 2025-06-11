@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { Patient } from "./PatientView";
 import Table, { Column } from "@/components/shared/reusableComponents/Table";
+import { useTranslations } from "next-intl";
 
 interface Props {
   screen: string;
@@ -8,73 +11,83 @@ interface Props {
 }
 
 export default function ScreenContent({ screen, patient }: Props) {
-    const basicInfoColumns: Column[] = [
-        { label: "Medical Number", key: "id" },
-        { label: "Name", key: "name" },
-        { label: "Civil number", key: "Civil number" },
-        { label: "Nationality", key: "Nationality" },
-        { label: "group", key: "group" },
-        { label: "Gender", key: "Gender" },
-        { label: "Date of birth AD", key: "Date of birth AD" },
-        { label: "Date of birth Hijr", key: "Date of birth Hijr" },
-        { label: "Age", key: "Age" },
-    ];
+  const t = useTranslations("patients");
 
-    const basicInfoData = [
-        {
-            id: patient.id,
-            name: patient.name,
-            civil_number: '1237074100',
-            Nationality: 'سعودي',
-            group: 'yes',
-            Gender: 'male',
-            Date_of_birth_AD: '05-2-2025',
-            Date_of_birth_Hijri: '05-10-2025',
-            Age: '26'
-        },
-    ];
+  const basicInfoColumns: Column[] = [
+    { label: t("medicalNumber"), key: "id" },
+    { label: t("name"), key: "name" },
+    { label: t("civilNumber"), key: "civil_number" },
+    { label: t("nationality"), key: "Nationality" },
+    { label: t("group"), key: "group" },
+    { label: t("gender"), key: "Gender" },
+    { label: t("dobAD"), key: "Date_of_birth_AD" },
+    { label: t("dobHijri"), key: "Date_of_birth_Hijri" },
+    { label: t("age"), key: "Age" },
+  ];
 
-    
+  const basicInfoData = [
+    {
+      id: patient.id,
+      name: patient.name,
+      civil_number: "1237074100",
+      Nationality: "سعودي",
+      group: "yes",
+      Gender: "ذكر",
+      Date_of_birth_AD: "05-2-2025",
+      Date_of_birth_Hijri: "05-10-2025",
+      Age: "26",
+    },
+  ];
+
   switch (screen) {
     case "data":
       return (
-          <div>
-              <h3 className="font-semibold mb-2 text-lg">Basic Info</h3>
-              <Table columns={basicInfoColumns} data={basicInfoData} />
-          </div>
+        <div>
+          <h3 className="font-semibold mb-2 text-lg">{t("basicInfo")}</h3>
+          <Table columns={basicInfoColumns} data={basicInfoData} />
+        </div>
       );
     case "caseStudy":
-      return <div className="flex justify-between w-full">📊 Case studies: {patient.caseStudiesCount} item{patient.caseStudiesCount !== 1 && "s"}</div>;
+      return (
+        <div className="flex justify-between w-full">
+          📊 {t("caseStudy")}: {patient.caseStudiesCount}{" "}
+          {t("items", { count: patient.caseStudiesCount })}
+        </div>
+      );
     case "subscriptions":
-      return <div className="flex items-center justify-between w-full">🩺 Medical subscriptions: {patient.caseStudiesCount}</div>;
+      return (
+        <div className="flex items-center justify-between w-full">
+          🩺 {t("subscriptions")}: {patient.caseStudiesCount}
+        </div>
+      );
     case "invoices":
-      return <div>📃 Invoices: {patient.invoicesCount}</div>;
+      return <div>📃 {t("invoices")}: {patient.invoicesCount}</div>;
     case "rate":
-      return <div>⭐ Reviews: {patient.ratesCount}</div>;
+      return <div>⭐ {t("rate")}: {patient.ratesCount}</div>;
     case "appointments":
-      return <div>📅 Appointments: {patient.appointmentsCount}</div>;
+      return <div>📅 {t("appointments")}: {patient.appointmentsCount}</div>;
     case "reports":
-      return <div>📝 Medical reports: {patient.reportsCount}</div>;
+      return <div>📝 {t("reports")}: {patient.reportsCount}</div>;
     case "medical_reports":
-      return <div>📅 Monthly reports: {patient.medicalReportsCount}</div>;
+      return <div>📅 {t("medical_reports")}: {patient.medicalReportsCount}</div>;
     case "scans":
-      return <div>🚑 Radiology: {patient.scanRequestsCount}</div>;
+      return <div>🚑 {t("scans")}: {patient.scanRequestsCount}</div>;
     case "labs":
-      return <div>🧪 Lab requests: {patient.labRequestsCount}</div>;
+      return <div>🧪 {t("labs")}: {patient.labRequestsCount}</div>;
     case "follow":
-      return <div>🔄 Follow-ups: {patient.followsCount}</div>;
+      return <div>🔄 {t("follow")}: {patient.followsCount}</div>;
     case "tickets":
-      return <div>✉️ Tickets: {patient.ticketsCount}</div>;
+      return <div>✉️ {t("tickets")}: {patient.ticketsCount}</div>;
     case "home-treatment":
-      return <div>🏠 Home treatment info ...</div>;
+      return <div>🏠 {t("homeTreatmentDetails")}</div>;
     case "contact":
       return (
         <div>
-          <p>📞 Phone: +123456789</p>
-          <p>📧 Email: example@example.com</p>
+          <p>📞 {t("phone")}: +123456789</p>
+          <p>📧 {t("email")}: example@example.com</p>
         </div>
       );
     default:
-      return <div>Unknown tab...</div>;
+      return <div>{t("unknownTab")}</div>;
   }
 }

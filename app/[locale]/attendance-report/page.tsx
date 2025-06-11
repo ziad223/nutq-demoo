@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl'; 
 import Table, { Column } from '@/components/shared/reusableComponents/Table';
 
 interface Patient {
@@ -15,6 +15,7 @@ const AttendanceReportPage = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
     const patientIdFromUrl = searchParams.get('patient_id') || '';
+    const t = useTranslations('patients');
 
     const [patients, setPatients] = useState<Patient[]>([]);
     const [selectedPatient, setSelectedPatient] = useState(patientIdFromUrl);
@@ -44,14 +45,13 @@ const AttendanceReportPage = () => {
 
     const currentPatient = patients.find((p) => p.id.toString() === selectedPatient);
 
-    // 👇 الأعمدة المطلوبة للجدول
     const columns: Column[] = [
-        { label: 'Package', key: 'package' },
-        { label: 'Day', key: 'day' },
-        { label: 'Appointment Date', key: 'appointmentDate' },
-        { label: 'Cost', key: 'cost' },
-        { label: 'Type of Sessions', key: 'type' },
-        { label: 'Audience', key: 'audience' },
+        { label: t('package'), key: 'package' },
+        { label: t('day'), key: 'day' },
+        { label: t('appointmentDate'), key: 'appointmentDate' },
+        { label: t('cost'), key: 'cost' },
+        { label: t('type'), key: 'type' },
+        { label: t('audience'), key: 'audience' },
     ];
 
     const data = [
@@ -77,7 +77,7 @@ const AttendanceReportPage = () => {
         <div className="p-6 lg:w-[85%] mx-auto">
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-2xl font-bold text-black">
-                    Presence and absence
+                    {t('presenceAndAbsence')}
                 </h1>
             </div>
 
@@ -85,7 +85,7 @@ const AttendanceReportPage = () => {
                 <div className="bg-white p-4 rounded-lg shadow">
                     <div className="mb-6">
                         <label htmlFor="patient-select" className="block mb-2 font-medium text-black">
-                            Select Patient:
+                            {t('selectPatient')}:
                         </label>
                         <select
                             id="patient-select"
@@ -93,7 +93,7 @@ const AttendanceReportPage = () => {
                             onChange={(e) => setSelectedPatient(e.target.value)}
                             className="border border-gray-300 rounded-md px-4 py-2 outline-none w-full text-black"
                         >
-                            <option value="" hidden>Select the patient</option>
+                            <option value="" hidden>{t('selectPatientPlaceholder')}</option>
                             {patients.map((patient) => (
                                 <option key={patient.id} value={patient.id}>
                                     {patient.name}
@@ -102,9 +102,11 @@ const AttendanceReportPage = () => {
                         </select>
                     </div>
                     <h2 className='text-black text-center'>
-                        (تحليل سلوك تطبيقي) ( Total sessions 24 )
-                         <span className='text-red-600 block lg:inline-block'>Total 2300 SAR</span>
-                   </h2>
+                        {t('sessionAnalysis')} ( {t('totalSessions', { count: 24 })} )
+                        <span className='text-red-600 block lg:inline-block'>
+                            {t('totalAmount', { amount: 2300 })}
+                        </span>
+                    </h2>
                     <Table columns={columns} data={data} />
                 </div>
             )}

@@ -1,488 +1,485 @@
-'use client'
 import DateInput from '@/components/shared/reusableComponents/DateInput';
 import FormSection from '@/components/shared/reusableComponents/FormSection';
 import RadioGroup from '@/components/shared/reusableComponents/GenderRadio';
 import TextInput from '@/components/shared/reusableComponents/TextInput';
+import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
-
-const StudyCaseForm = () => {
+const StudyCaseForm = async () => {
+    const t = await getTranslations('patients.studyCaseForm');
     return (
-        <div dir="rtl" className="max-w-6xl mx-auto p-4">
-            <h1 className="text-2xl font-bold text-center mb-6 text-black">أستمارة دراسية الحالة</h1>
-
+        <div  className="max-w-6xl mx-auto p-4">
+            <h1 className="text-2xl font-bold text-center mb-6 text-black">{t('title')}</h1>
             <div className="bg-white p-6 rounded-lg shadow-md">
-                <FormSection title="البيانات الأولية">
+                <FormSection title={t('sections.basicInfo')}>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
-                        <TextInput label="أسم الطفل" name="childName" defaultValue="محمد لاشين" disabled />
-                        <DateInput label="تاريخ الميلاد" name="birthDate" />
-                        <TextInput label="العمر الزمني" name="age" />
+                        <TextInput label={t('fields.childName')} name="childName" defaultValue="محمد لاشين" disabled />
+                        <DateInput label={t('fields.birthDate')} name="birthDate" />
+                        <TextInput label={t('fields.age')} name="age" />
                         <RadioGroup
-                            label="مدى تقبل الأسرة للاضطراب واستعدادها للمشاركة في التأهيل"
+                            label={t('fields.gender')}
                             name="gendar"
                             options={[
-                                { label: "ذكر", value: "male" },
-                                { label: "أنثي", value: "female" }
+                                { label: t('options.male'), value: "male" },
+                                { label: t('options.female'), value: "female" }
                             ]}
                         />
 
-                        <TextInput label="الجنسية" name="nationality" />
-                        <TextInput label="المدينة" name="city" />
-                        <TextInput label="الحي" name="district" />
-                        <TextInput label="الشارع" name="street" />
+                        <TextInput label={t('fields.nationality')} name="nationality" />
+                        <TextInput label={t('fields.city')} name="city" />
+                        <TextInput label={t('fields.district')} name="district" />
+                        <TextInput label={t('fields.street')} name="street" />
 
-                        <TextInput label="اسم ولي الأمر" name="guardianName" />
-                        <TextInput label="صلته بالطفل" name="guardianRelation" />
-                        <TextInput label="رقم الموبايل" name="mobile" />
-                        <TextInput label="رقم المنزل" name="phone" />
+                        <TextInput label={t('fields.guardianName')} name="guardianName" />
+                        <TextInput label={t('fields.guardianRelation')} name="guardianRelation" />
+                        <TextInput label={t('fields.mobile')} name="mobile" />
+                        <TextInput label={t('fields.phone')} name="phone" />
 
-                        <TextInput label="مستوى تعليم الأب" name="fatherEducation" />
-                        <TextInput label="عمل الأب" name="fatherJob" />
-                        <TextInput label="مكان العمل" name="fatherWorkplace" />
+                        <TextInput label={t('fields.fatherEducation')} name="fatherEducation" />
+                        <TextInput label={t('fields.fatherJob')} name="fatherJob" />
+                        <TextInput label={t('fields.fatherWorkplace')} name="fatherWorkplace" />
 
-                        <TextInput label="مستوى تعليم الأم" name="motherEducation" />
-                        <TextInput label="عمل الأم" name="motherJob" />
-                        <TextInput label="مكان العمل" name="motherWorkplace" />
+                        <TextInput label={t('fields.motherEducation')} name="motherEducation" />
+                        <TextInput label={t('fields.motherJob')} name="motherJob" />
+                        <TextInput label={t('fields.motherWorkplace')} name="motherWorkplace" />
 
-                        <TextInput label="عدد افراد الأسرة" name="familyMembers" />
-                        <TextInput label="ترتيب الطفل بين أخوانه" name="childOrder" />
+                        <TextInput label={t('fields.familyMembers')} name="familyMembers" />
+                        <TextInput label={t('fields.childOrder')} name="childOrder" />
 
                         <RadioGroup
-                            label="درجة القرابة بين الوالدين"
+                            label={t('fields.parentsRelation')}
                             name="parentsRelation"
                             options={[
-                                { label: "درجة اولى", value: "first" },
-                                { label: "درجة ثانية", value: "second" }
+                                { label: t('options.firstDegree'), value: "first" },
+                                { label: t('options.secondDegree'), value: "second" }
                             ]}
                         />
 
                         <RadioGroup
-                            label="مع من يقيم الطفل"
+                            label={t('fields.residence')}
                             name="residence"
                             options={[
-                                { label: "الوالدين", value: "parents" },
-                                { label: "الأب", value: "father" },
-                                { label: "شخص اخر", value: "other" }
+                                { label: t('options.parents'), value: "parents" },
+                                { label: t('options.father'), value: "father" },
+                                { label: t('options.other'), value: "other" }
                             ]}
                         />
 
-                        <TextInput label="المسؤول عن رعاية الطفل في المنزل" name="caretaker" />
+                        <TextInput label={t('fields.caretaker')} name="caretaker" />
 
                         <div className="md:col-span-2">
                             <RadioGroup
-                                label="مدى التكيف الإجتماعي للطفل في الأسرة"
+                                label={t('fields.socialAdaptation')}
                                 name="socialAdaptation"
                                 options={[
-                                    { label: "متكيف", value: "adapted" },
-                                    { label: "غير متكيف", value: "notAdapted" }
+                                    { label: t('options.adapted'), value: "adapted" },
+                                    { label: t('options.notAdapted'), value: "notAdapted" }
                                 ]}
                             />
                         </div>
 
                         <div className="md:col-span-2">
                             <RadioGroup
-                                label="مدى تقبل الأسرة للاضطراب واستعدادها للمشاركة في التأهيل"
+                                label={t('fields.familyReadiness')}
                                 name="familyReadiness"
                                 options={[
-                                    { label: "مستعد", value: "ready" },
-                                    { label: "غير مستعد", value: "notReady" }
+                                    { label: t('options.ready'), value: "ready" },
+                                    { label: t('options.notReady'), value: "notReady" }
                                 ]}
                             />
                         </div>
                     </div>
                 </FormSection>
 
-                <FormSection title="التاريخ الصحي للاسرة">
+                <FormSection title={t('sections.familyHealthHistory')}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                         <RadioGroup
-                            label="هل توجد امراض وراثية في الاسرة"
+                            label={t('fields.geneticDiseases')}
                             name="geneticDiseases"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
                     </div>
                 </FormSection>
 
-               
-                <FormSection title="التاريخ الوراثي والمرضي للعائلة">
+                <FormSection title={t('sections.familyGeneticHistory')}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                         <RadioGroup
-                            label="هل هناك صلة قرابة بين الام والاب"
+                            label={t('fields.parentsConsanguinity')}
                             name="parentsConsanguinity"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل يوجد اي حالة اشتباة او اعاقات اخرى"
+                            label={t('fields.otherDisabilities')}
                             name="otherDisabilities"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل اجرى الاب و الام الفحوصات الجينية"
+                            label={t('fields.geneticTests')}
                             name="geneticTests"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل يعتقد الاطباء الاضطراب ناتج عن عوامل وراثية"
+                            label={t('fields.geneticCause')}
                             name="geneticCause"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
                     </div>
                 </FormSection>
 
-                <FormSection title="تاريخ الحمل والولادة">
+                <FormSection title={t('sections.pregnancyBirthHistory')}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                         <RadioGroup
-                            label="عمر الام عند الولادة"
+                            label={t('fields.motherAgeAtBirth')}
                             name="motherAgeAtBirth"
                             options={[
-                                { label: "دون سن 20", value: "under20" },
-                                { label: "30-20", value: "20to30" },
-                                { label: "فوق 30", value: "over30" }
+                                { label: t('options.under20'), value: "under20" },
+                                { label: t('options.20to30'), value: "20to30" },
+                                { label: t('options.over30'), value: "over30" }
                             ]}
                         />
 
                         <RadioGroup
-                            label="طول فترة الحمل"
+                            label={t('fields.pregnancyDuration')}
                             name="pregnancyDuration"
                             options={[
-                                { label: "9 شهور", value: "9months" },
-                                { label: "من 9 شهور", value: "lessThan9" },
-                                { label: "اكثر من 9 شهور", value: "moreThan9" }
+                                { label: t('options.9months'), value: "9months" },
+                                { label: t('options.lessThan9'), value: "lessThan9" },
+                                { label: t('options.moreThan9'), value: "moreThan9" }
                             ]}
                         />
 
                         <RadioGroup
-                            label="هل عانت الام من اي امراض قبل الحمل"
+                            label={t('fields.diseasesBeforePregnancy')}
                             name="diseasesBeforePregnancy"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل اصيبت الام من اي امراض اثناء الحمل"
+                            label={t('fields.diseasesDuringPregnancy')}
                             name="diseasesDuringPregnancy"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل عانت الام من التعب والارهاق الحاد اثناء فترة الحمل"
+                            label={t('fields.fatigueDuringPregnancy')}
                             name="fatigueDuringPregnancy"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="السبب"
+                            additionalFieldLabel={t('fields.reason')}
                         />
 
                         <RadioGroup
-                            label="هل تعرضت الام لحوادث تسمم اثناء فترة الحمل"
+                            label={t('fields.poisoningDuringPregnancy')}
                             name="poisoningDuringPregnancy"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل تعرضت الام لحوادث او اشعة اثناء فترة الحمل"
+                            label={t('fields.accidentsDuringPregnancy')}
                             name="accidentsDuringPregnancy"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل تعرضت الام للانفعالات اثناء فترة الحمل"
+                            label={t('fields.stressDuringPregnancy')}
                             name="stressDuringPregnancy"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل تناولت الام الفيتامينات اللازمة (الحديد / الفوليك اسيد) اثناء فترة الحمل"
+                            label={t('fields.vitaminsDuringPregnancy')}
                             name="vitaminsDuringPregnancy"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                         />
                     </div>
                 </FormSection>
-                <FormSection title="التاريخ المرضي والصحي للطفل">
+                <FormSection title={t('sections.childMedicalHistory')}>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                        <TextInput label="متى اكتشفت الاسرة الاضطراب" name="discoveryTime" />
+                        <TextInput label={t('fields.discoveryTime')} name="discoveryTime" />
 
                         <RadioGroup
-                            label="هل اصيب الطفل باي امراض حادة أو حوادث اثرت على تطوره ونموه"
+                            label={t('fields.seriousIllness')}
                             name="seriousIllness"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل يعاني الطفل من مشكلات سمعية"
+                            label={t('fields.hearingProblems')}
                             name="hearingProblems"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل يعاني الطفل من مشكلات بصرية"
+                            label={t('fields.visionProblems')}
                             name="visionProblems"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل يعاني الطفل من مشكلات خلقية"
+                            label={t('fields.congenitalProblems')}
                             name="congenitalProblems"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل يعاني الطفل من مشكلات في تناول الطعام والشراب"
+                            label={t('fields.eatingProblems')}
                             name="eatingProblems"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل يعاني الطفل من الحساسية لادوية او اطعمة معينة"
+                            label={t('fields.allergies')}
                             name="allergies"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل يعاني الطفل من نوبات تشنجات"
+                            label={t('fields.seizures')}
                             name="seizures"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل اجرى الطفل عمليات جراحية"
+                            label={t('fields.surgeries')}
                             name="surgeries"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="هل مازال الطفل يستخدم الحفاظ؟"
+                            label={t('fields.usesDiapers')}
                             name="usesDiapers"
                             options={[
-                                { label: "لا", value: "no" },
-                                { label: "نعم", value: "yes" }
+                                { label: t('options.no'), value: "no" },
+                                { label: t('options.yes'), value: "yes" }
                             ]}
                         />
                     </div>
                 </FormSection>
 
-                <FormSection title="تاريخ النمو التطورى للطفل">
+                <FormSection title={t('sections.childDevelopmentHistory')}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                         <RadioGroup
-                            label="مستوى النمو اللغوي الحالي؟"
+                            label={t('fields.languageDevelopment')}
                             name="languageDevelopment"
                             options={[
-                                { label: "طبيعي", value: "normal" },
-                                { label: "متأخر", value: "delayed" }
+                                { label: t('options.normal'), value: "normal" },
+                                { label: t('options.delayed'), value: "delayed" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="مستوى النمو الحركي الحالي؟"
+                            label={t('fields.motorDevelopment')}
                             name="motorDevelopment"
                             options={[
-                                { label: "طبيعي", value: "normal" },
-                                { label: "متأخر", value: "delayed" }
+                                { label: t('options.normal'), value: "normal" },
+                                { label: t('options.delayed'), value: "delayed" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="مستوى المهارات الوظيفية الاستقرارية الحالية؟"
+                            label={t('fields.functionalSkills')}
                             name="functionalSkills"
                             options={[
-                                { label: "طبيعي", value: "normal" },
-                                { label: "متأخر", value: "delayed" }
+                                { label: t('options.normal'), value: "normal" },
+                                { label: t('options.delayed'), value: "delayed" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
 
                         <RadioGroup
-                            label="مستوى المهارات الإدراكية والمعرفية الحالية؟"
+                            label={t('fields.cognitiveSkills')}
                             name="cognitiveSkills"
                             options={[
-                                { label: "طبيعي", value: "normal" },
-                                { label: "متأخر", value: "delayed" }
+                                { label: t('options.normal'), value: "normal" },
+                                { label: t('options.delayed'), value: "delayed" }
                             ]}
                             withAdditionalField
-                            additionalFieldLabel="تذكر"
+                            additionalFieldLabel={t('fields.mention')}
                         />
                     </div>
                 </FormSection>
 
-                <FormSection title="قائمة المشكلات السلوكية">
-
+                <FormSection title={t('sections.behavioralProblems')}>
                     <div className="flex flex-wrap gap-4 mt-5 mb-6">
-                    <div className="w-full md:w-1/4 ">
-                        <label className="text-sm font-bold mb-1 block text-black">أسم الطفل</label>
-                        <input
-                            type="text"
-                            disabled
-                            value="محمد لاشين"
-                            className="form-input w-full border rounded px-3 py-2 bg-gray-200 text-black"
-                        />
-                    </div>
+                        <div className="w-full md:w-1/4 ">
+                            <label className="text-sm font-bold mb-1 block text-black">{t('fields.childName')}</label>
+                            <input
+                                type="text"
+                                disabled
+                                value="محمد لاشين"
+                                className="form-input w-full border rounded px-3 py-2 bg-gray-200 text-black"
+                            />
+                        </div>
 
-                    <div className="w-full md:w-1/2 text-black">
-                        <label className="text-sm font-bold block mb-2">السن</label>
-                        <div className="flex items-center gap-4">
-                            <div className="flex items-center gap-1">
-                                <input
-                                    type="number"
-                                    className="w-14 h-8 border text-center rounded outline-none"
-                                />
-                                <label className="text-sm mx-2">سنه</label>
-                            </div>
-                            <div className="flex items-center gap-1">
-                                <input
-                                    type="number"
-                                    className="w-14 h-8 border text-center rounded"
-                                />
-                                <label className="text-sm mx-2">شهر</label>
+                        <div className="w-full md:w-1/2 text-black">
+                            <label className="text-sm font-bold block mb-2">{t('fields.age')}</label>
+                            <div className="flex items-center gap-4">
+                                <div className="flex items-center gap-1">
+                                    <input
+                                        type="number"
+                                        className="w-14 h-8 border text-center rounded outline-none"
+                                    />
+                                    <label className="text-sm mx-2">{t('fields.years')}</label>
+                                </div>
+                                <div className="flex items-center gap-1">
+                                    <input
+                                        type="number"
+                                        className="w-14 h-8 border text-center rounded"
+                                    />
+                                    <label className="text-sm mx-2">{t('fields.months')}</label>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="w-full md:w-1/4">
-                        <label className="text-sm font-bold mb-1 block text-black">المستوى العقلي</label>
-                        <input
-                            type="text"
-                            disabled
-                            className="form-input w-full border rounded px-3 py-2 bg-gray-200\ text-black"
-                        />
+                        <div className="w-full md:w-1/4">
+                            <label className="text-sm font-bold mb-1 block text-black">{t('fields.mentalLevel')}</label>
+                            <input
+                                type="text"
+                                disabled
+                                className="form-input w-full border rounded px-3 py-2 bg-gray-200\ text-black"
+                            />
+                        </div>
                     </div>
-                </div>
                 </FormSection>
 
                 <div className="overflow-x-auto ">
                     <table className="table-auto text-black w-full border border-collapse text-center">
                         <thead>
                             <tr className="bg-green-600 text-white">
-                                <th className="border p-2">م</th>
-                                <th className="border p-2">السلوك</th>
-                                <th className="border p-2">م</th>
-                                <th className="border p-2">السلوك</th>
-                                <th className="border p-2">م</th>
-                                <th className="border p-2">السلوك</th>
+                                <th className="border p-2">{t('table.no')}</th>
+                                <th className="border p-2">{t('table.behavior')}</th>
+                                <th className="border p-2">{t('table.no')}</th>
+                                <th className="border p-2">{t('table.behavior')}</th>
+                                <th className="border p-2">{t('table.no')}</th>
+                                <th className="border p-2">{t('table.behavior')}</th>
                             </tr>
                         </thead>
                         <tbody>
                             {[
-                                ['1', 'حزين وغير سعيد', '21', 'يصيح ويصرخ', '41', 'يمص أصابعه'],
-                                ['2', 'يخجل', '22', 'يرتمي على الأرض', '42', 'يأكل اظافره'],
-                                ['3', 'ينقلب بسهولة', '23', 'يعدد ويهذي', '43', 'يأكل القاذورات'],
-                                ['4', 'ينعزل عن الآخرين', '24', 'يضرب ويعتدي', '44', 'ينتف شعره'],
-                                ['5', 'يبكي', '25', 'يشتم بالألفاظ القبيحة', '45', 'يلعب بأعضائه التناسلية'],
-                                ['6', 'يخاف من الناس', '26', 'يحطم الأثاث', '46', 'يكشف عن عورته'],
-                                ['7', 'يخاف من الحيوانات', '27', 'يضرب ويتوقف', '47', 'يهمل واجبه المدرسي'],
-                                ['8', 'يخاف من أشياء أخرى', '28', 'يعض', '48', 'يهرب من المدرسة'],
-                                ['9', 'يؤذي نفسه باللطم', '29', 'يسرق', '49', 'يتعلق بأبيه'],
-                                ['10', 'يستيقظ مفزوعًا', '30', 'يجادل', '50', 'يتعلق بأمه'],
-                                ['11', 'يسمع كوابيس ليلاً', '31', 'يصرخ عند الاستيقاظ', '51', 'لا يرتدي ملابسه علناً'],
-                                ['12', 'يكثر من النوم', '32', 'يكثر من النوم', '52', 'لا يأكل جيداً'],
-                                ['13', 'يستيقظ مبكرًا وينام', '33', 'يستيقظ مبكرًا وينام', '53', 'يأكل بشره'],
-                                ['14', 'لا يظهر غضبه', '34', 'يبدي الغضب', '54', 'يبكي بسهولة'],
-                                ['15', 'يدافع عن نفسه', '35', 'يدافع عن نفسه', '55', 'يرفض الانصياع للأوامر'],
-                                ['16', 'يتحدث مع نفسه', '36', 'يتحدث مع نفسه'],
-                                ['17', 'لا يستجيب للطفل', '37', 'يضحك على نفسه'],
-                                ['18', 'لا يتوقف عن نشاطه', '38', 'لا يستجيب للطفل'],
-                                ['19', 'يستمر في نشاطه', '39', 'يستمر في نشاطه'],
-                                ['20', 'يكثر من الحركة', '40', 'يكثر من الحركة'],
+                                ['1', t('behaviors.sad'), '21', t('behaviors.screams'), '41', t('behaviors.fingerSucking')],
+                                ['2', t('behaviors.shy'), '22', t('behaviors.throwsSelf'), '42', t('behaviors.nailBiting')],
+                                ['3', t('behaviors.easilyUpset'), '23', t('behaviors.rambles'), '43', t('behaviors.eatsDirt')],
+                                ['4', t('behaviors.isolates'), '24', t('behaviors.hits'), '44', t('behaviors.hairPulling')],
+                                ['5', t('behaviors.cries'), '25', t('behaviors.swears'), '45', t('behaviors.genitalPlay')],
+                                ['6', t('behaviors.fearPeople'), '26', t('behaviors.destroysFurniture'), '46', t('behaviors.exposes')],
+                                ['7', t('behaviors.fearAnimals'), '27', t('behaviors.hitsAndStops'), '47', t('behaviors.neglectsHomework')],
+                                ['8', t('behaviors.fearOther'), '28', t('behaviors.bites'), '48', t('behaviors.schoolAvoidance')],
+                                ['9', t('behaviors.selfHarm'), '29', t('behaviors.steals'), '49', t('behaviors.attachedToFather')],
+                                ['10', t('behaviors.wakesFrightened'), '30', t('behaviors.argues'), '50', t('behaviors.attachedToMother')],
+                                ['11', t('behaviors.nightmares'), '31', t('behaviors.screamsOnWake'), '51', t('behaviors.notDressPublic')],
+                                ['12', t('behaviors.oversleeps'), '32', t('behaviors.oversleeps'), '52', t('behaviors.poorEating')],
+                                ['13', t('behaviors.wakesEarly'), '33', t('behaviors.wakesEarly'), '53', t('behaviors.eatsBites')],
+                                ['14', t('behaviors.noAnger'), '34', t('behaviors.showsAnger'), '54', t('behaviors.criesEasily')],
+                                ['15', t('behaviors.defendsSelf'), '35', t('behaviors.defendsSelf'), '55', t('behaviors.disobeys')],
+                                ['16', t('behaviors.selfTalk'), '36', t('behaviors.selfTalk')],
+                                ['17', t('behaviors.noResponse'), '37', t('behaviors.laughsAlone')],
+                                ['18', t('behaviors.hyperactive'), '38', t('behaviors.noResponse')],
+                                ['19', t('behaviors.persistentActivity'), '39', t('behaviors.persistentActivity')],
+                                ['20', t('behaviors.excessiveMovement'), '40', t('behaviors.excessiveMovement')],
                             ].map((row, index) => (
                                 <tr key={index}>
                                     {row.map((cell, i) => (
@@ -498,17 +495,16 @@ const StudyCaseForm = () => {
 
                 <div className="mt-6">
                     <label className="text-sm font-bold block mb-2 text-black">
-                        أي ملاحظات أو مشكلات أخرى أضفها هنا:
+                        {t('fields.otherNotes')}
                     </label>
                     <textarea
                         className="form-textarea w-full h-24 border rounded p-2 text-black"
-                        placeholder="اكتب هنا..."
+                        placeholder={t('fields.writeHere')}
                     ></textarea>
-                    <button className = 'bg-blue-500 text-white lg:w-[200px] rounded-[19px] cursor-pointer mt-5 h-[49px] px-10'>
-                        حفظ التقرير
+                    <button className='bg-blue-500 text-white lg:w-[200px] rounded-[19px] cursor-pointer mt-5 h-[49px] px-10'>
+                        {t('saveReport')}
                     </button>
                 </div>
-
             </div>
         </div>
     );

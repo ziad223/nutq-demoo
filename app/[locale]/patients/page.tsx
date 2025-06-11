@@ -5,46 +5,29 @@ import { FaFileInvoiceDollar, FaWhatsapp } from 'react-icons/fa';
 import { FaClipboardUser, FaMessage } from 'react-icons/fa6';
 import { IoEye } from 'react-icons/io5';
 import { GoClockFill } from "react-icons/go";
-import { BsThreeDotsVertical } from "react-icons/bs";
 import SearchPatients from './SearchPatients';
 import TransferBtn from './TransferBtn';
 import OptionsMenu from './OptionsMenu';
+import { getTranslations } from 'next-intl/server';
+
 interface LayoutProps {
-    params: { locale: string };
+  params: { locale: string };
 }
 
 interface PatientData {
-    number: number;
-    name: string;
-    phone: string;
-    nationality: string;
-    gender: string;
-    age: number;
-    civilNumber: string;
-    paidBills: string;
-    unpaidBills: string;
-    lastVisit: string;
-    medicalNumber?: string;
-    actions: React.ReactNode;
+  number: number;
+  name: string;
+  phone: string;
+  nationality: string;
+  gender: string;
+  age: number;
+  civilNumber: string;
+  paidBills: string;
+  unpaidBills: string;
+  lastVisit: string;
+  medicalNumber?: string;
+  actions: React.ReactNode;
 }
-
-const columns: Column[] = [
-    { label: 'Number', key: 'number' },
-    { label: 'Name', key: 'name' },
-    { label: 'Phone', key: 'phone' },
-    { label: 'Nationality', key: 'nationality' },
-    { label: 'Gender', key: 'gender' },
-    { label: 'Age', key: 'age' },
-    { label: 'Civil No.', key: 'civilNumber' },
-    { label: 'Medical No.', key: 'medicalNumber' },
-    { label: 'Paid Bills', key: 'paidBills' },
-    { label: 'Unpaid Bills', key: 'unpaidBills' },
-    { label: 'Last Visit', key: 'lastVisit' },
-    { label: 'Operations', key: 'actions' },
-];
-
-
-
 
 const Page = async ({ params, searchParams }: {
   params: { locale: string },
@@ -55,27 +38,40 @@ const Page = async ({ params, searchParams }: {
   }
 }) => {
   const { locale } = params;
+  const t = await getTranslations('patients');
 
-
+  const columns: Column[] = [
+    { label: t('Number'), key: 'number' },
+    { label: t('Name'), key: 'name' },
+    { label: t('Phone'), key: 'phone' },
+    { label: t('Nationality'), key: 'nationality' },
+    { label: t('Gender'), key: 'gender' },
+    { label: t('Age'), key: 'age' },
+    { label: t('CivilNo'), key: 'civilNumber' },
+    { label: t('MedicalNo'), key: 'medicalNumber' },
+    { label: t('PaidBills'), key: 'paidBills' },
+    { label: t('UnpaidBills'), key: 'unpaidBills' },
+    { label: t('LastVisit'), key: 'lastVisit' },
+    { label: t('Operations'), key: 'actions' },
+  ];
   const generateActions = (patientId: number) => (
     <div className="flex gap-1 items-center">
       <Link href={`/${locale}/patient-report`} className="bg-blue-500 text-white p-2 rounded-lg">
-        Patient <span className='lg:block'>Report</span>
+        {t('Patient_Report')}
       </Link>
       <a
         href="https://wa.me/96612312220239"
         target="_blank"
         rel="noopener noreferrer"
-        title="send family login information"
+        title={t('sendfamilylogininformation')}
       >
         <button className="bg-green-500 hover:bg-green-600 w-8 h-8 flex items-center justify-center text-white p-2 rounded-full shadow-md">
-          <FaWhatsapp className = 'text-xl' />
+          <FaWhatsapp className='text-xl' />
         </button>
-        
       </a>
       <Link
         href={`/${locale}/attendance-report?patient_id=${patientId}`}
-        title="Attendance and absence record" 
+        title={t('Attendanceandabsencerecord')}
         className="bg-[#222] hover:bg-[#000] w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
       >
         <FaClipboardUser size={16} />
@@ -83,23 +79,22 @@ const Page = async ({ params, searchParams }: {
       <Link
         href={`/${locale}/chat/$4?patientName=${encodeURIComponent('ziad')}`}
         className="bg-[#0d6efd] hover:bg-blue-700 w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
-        title={`Chat with the patient`}
+        title={t('Chatwiththepatient')}
       >
         <FaMessage size={16} />
       </Link>
       <Link
-       href={`/${locale}/invoices/create?patient_id=6`}
-       className="bg-green-400 hover:bg-green-600 w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
-        title='Add Invoice'
-
-       >
+        href={`/${locale}/invoices/create?patient_id=6`}
+        className="bg-green-400 hover:bg-green-600 w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
+        title={t('AddInvoice')}
+      >
         <FaFileInvoiceDollar size={16} />
-        
       </Link>
       <Link
-       href={`/${locale}/patients/6`}
-       title='patient file'
-        className="bg-[#8e44ad] w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md">
+        href={`/${locale}/patients/6`}
+        title={t('patientfile')}
+        className="bg-[#8e44ad] w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
+      >
         <IoEye size={20} className='text-xl' />
       </Link>
       <Link
@@ -110,12 +105,12 @@ const Page = async ({ params, searchParams }: {
       </Link>
       <Link
         href={`/${locale}/appointments/create`}
-       className="bg-[#ffc107] w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md">
+        className="bg-[#ffc107] w-8 h-8 flex items-center justify-center text-white p-2 rounded-[5px] shadow-md"
+      >
         <GoClockFill size={16} />
       </Link>
-      <TransferBtn/>
+      <TransferBtn />
       <OptionsMenu />
-
     </div>
   );
 
@@ -304,7 +299,7 @@ const Page = async ({ params, searchParams }: {
           href={`/${locale}/patients/add`}
           className="bg-[#09adce] text-white px-6 py-2 rounded-md hover:bg-blue-400 whitespace-nowrap"
         >
-          + Add Patient
+          + {t('AddPatient')}
         </Link>
       </div>
 
