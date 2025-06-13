@@ -506,6 +506,50 @@
     "common": {
       "egp": "EGP"
     }
+  },
+  "home" : {
+    "clinicStats": "Clinic Statistics",
+    "addPatient": "Add Patient",
+    "addInvoice": "Add Invoice",
+    "addAppointment": "Add Appointment",
+    "todayAppointments": "Today's Appointments",
+    "allPatients": "All Patients",
+    "todayRegistered": "Registered Today",
+    "saudiPatients": "Saudi Patients",
+    "nonSaudiPatients": "Non-Saudi Patients",
+    "paidVisits": "Paid Visits",
+    "unpaidInvoices": "Unpaid Invoices",
+    "doctorStats": "Specialists Statistics",
+    "section": "Section",
+    "waitingRoom": "Waiting Room",
+    "followUpAppointments": "Follow-up Appointments",
+    "consulted": "Consulted",
+      "latestStatsTab": "Latest Statistics",
+      "doctorStatsTab": "Doctors Statistics",
+      "addPatient": "Add patient",
+      "personalInfo": "Personal information about the patient",
+      "name": "Name",
+      "civilNumber": "Civil number (10 digits)",
+      "otherPhone": "Other phone",
+      "gender": "Gender",
+      "age": "Age",
+      "enterCity": "Enter city name",
+      "managementPreset": "You can add a preset of management",
+      "managementPresetDesc": "It is especially for patients who have symptoms, for example, school/university students, employees",
+      "selectGroup": "Select group",
+      "allergiesQuestion": "Do you suffer from allergies or not?",
+      "bloodPressureQuestion": "High or low blood pressure?",
+      "country": "Country",
+      "phone": "Phone",
+      "birthdateAD": "Date of birth AD",
+      "birthdateHijri": "Hijri date of birth",
+      "uploadImage": "Upload image",
+      "insuranceQuestion": "Is the patient insured?",
+      "insurance": "Insurance",
+      "otherDiseases": "Other diseases",
+      "saveData": "Save the data",
+      "nationality" : "Nationality"
+
   }
  
 }

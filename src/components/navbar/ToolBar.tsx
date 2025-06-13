@@ -44,7 +44,7 @@ const ToolBar = () => {
                         )}
                     </li>
                     <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('accountingReporting')}</a></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('transferredPatients')}</a></li>
+                    <li><Link href={`/${locale}/appointments-transferred`} className='text-sm whitespace-nowrap text-white'>{t('transferredPatients')}</Link></li>
                     <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('diagnoses')}</a></li>
                     <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('userManual')}</a></li>
                     <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('programAdditions')}</a></li>
@@ -87,7 +87,7 @@ const ToolBar = () => {
                         )}
                     </li>
                     <li><a href="#">{t('accountingReporting')}</a></li>
-                    <li><a href="#">{t('transferredPatients')}</a></li>
+                    <li><Link href={`/${locale}/appointments-transferred`}>{t('transferredPatients')}</Link></li>
                     <li><a href="#">{t('diagnoses')}</a></li>
                     <li><a href="#">{t('userManual')}</a></li>
                     <li><a href="#">{t('programAdditions')}</a></li>

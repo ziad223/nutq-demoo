@@ -5,19 +5,21 @@ interface TextInputProps {
     label?: string;
     name: string;
     defaultValue?: string;
+    value?: string; // ← Added optional value prop
     disabled?: boolean;
     placeholder?: string;
-    type?: string; // ← اختياري لتحديد نوع الإدخال (مثل "email" أو "password")
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void; // ← دالة تغيير اختيارية
+    type?: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const TextInput: React.FC<TextInputProps> = ({
     label,
     name,
     defaultValue = '',
+    value, // ← Added value prop
     disabled = false,
     placeholder = '',
-    type = 'text', // ← النوع الافتراضي هو text
+    type = 'text',
     onChange,
 }) => {
     return (
@@ -29,6 +31,7 @@ const TextInput: React.FC<TextInputProps> = ({
                 type={type}
                 name={name}
                 defaultValue={defaultValue}
+                value={value} // ← Added value attribute
                 disabled={disabled}
                 placeholder={placeholder}
                 onChange={onChange}
