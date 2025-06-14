@@ -37,7 +37,7 @@ const Navbar = () => {
                         className={`flex flex-col lg:flex-row gap-5 mt-4 lg:mt-0 
   ${menuOpen ? 'block' : 'hidden'} lg:flex justify-center items-center`}
                     >                        <li>
-                            <Link href={`/${locale}/home`} className='text-black flex items-center gap-1 text-sm'>
+                            <Link href={`/${locale}`} className='text-black flex items-center gap-1 text-sm'>
                                 {t('home')} <IoMdHome className='text-gray-500' />
                             </Link>
                         </li>

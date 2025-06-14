@@ -24,25 +24,36 @@ const LatestStats = () => {
           <h2 className="font-bold text-md mb-2 sm:mb-0">{t('addPatient')}</h2>
           <Image src={users} alt="users" />
         </Link>
-        <div className="border border-[#09adce] transition duration-300 bg-white flex flex-col sm:flex-row items-center justify-between w-full p-5 cursor-pointer hover:bg-[#09adce] hover:text-white">
+        <Link href={`/${locale}/invoices/create`}  className="border border-[#09adce] transition duration-300 bg-white flex flex-col sm:flex-row items-center justify-between w-full p-5 cursor-pointer hover:bg-[#09adce] hover:text-white">
           <h2 className="font-bold text-md mb-2 sm:mb-0">{t('addInvoice')}</h2>
           <Image src={casher} alt="casher" />
-        </div>
-        <div className="border border-[#198754] transition duration-300 bg-white flex flex-col sm:flex-row items-center justify-between w-full p-5 cursor-pointer hover:bg-[#198754] hover:text-white">
+        </Link>
+        <Link href={`/${locale}/appointments/create`} className="border border-[#198754] transition duration-300 bg-white flex flex-col sm:flex-row items-center justify-between w-full p-5 cursor-pointer hover:bg-[#198754] hover:text-white">
           <h2 className="font-bold text-md mb-2 sm:mb-0">{t('addAppointment')}</h2>
           <Image src={invoice} alt="invoice" />
-        </div>
-        <div className="border border-[#686bdf] transition duration-300 bg-white flex flex-col sm:flex-row items-center justify-between w-full p-5 cursor-pointer hover:bg-[#686bdf] hover:text-white">
+        </Link>
+        <Link href={`/${locale}/patients`} className="border border-[#686bdf] transition duration-300 bg-white flex flex-col sm:flex-row items-center justify-between w-full p-5 cursor-pointer hover:bg-[#686bdf] hover:text-white">
           <h2 className="font-bold text-md mb-2 sm:mb-0">{t('todayAppointments')}</h2>
           <Image src={calendar} alt="calendar" />
-        </div>
+        </Link>
 
-        {/* Static data boxes */}
+        <Link href={`/${locale}/patients`} >
         <StatBox icon={allPatients} number="5" label={t('allPatients')} />
+        </Link>
+        <Link href={`/${locale}/patients`} >
         <StatBox icon={todayUsers} number="0" label={t('todayRegistered')} />
+        </Link>
+
+        <Link href={`/${locale}/patients`} >
         <StatBox icon={todayUsers} number="0" label={t('saudiPatients')} />
+        </Link>
+
+        <Link href={`/${locale}/patients`} >
         <StatBox icon={todayUsers} number="0" label={t('nonSaudiPatients')} small />
+        </Link>
+        <Link href={`/${locale}/appointments`} >
         <StatBox icon={todayAppointment} number="4" label={t('todayAppointments')} small />
+        </Link>
         <StatBox icon={todayAppointment} number="4" label={t('todayAppointments')} small />
         <StatBox icon={visitors} number="4" label={t('paidVisits')} small />
         <StatBox icon={dd} number="4" label={t('unpaidInvoices')} small />

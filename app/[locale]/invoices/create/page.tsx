@@ -22,8 +22,8 @@ export default function CreateInvoice() {
                     <FaInfoCircle className="text-blue-500 mt-1 mr-2 flex-shrink-0" />
                     <div>
                         {locale === 'ar'
-                            ? 'هذه الفاتورة خاصة بدراسة حالة، يرجى التأكد من صحة البيانات'
-                            : 'This invoice is for a case study, please verify the data'}
+                            ? 'في حال اصدار فاتورة دراسة الحالة سيظهر الطلب للمشرف التعليمي في طلبات دراسة الحالة'
+                            : 'If a case study invoice is issued, the request will appear to the educational supervisor in the case study requests.'}
                     </div>
                 </div>
 
@@ -132,19 +132,11 @@ export default function CreateInvoice() {
                                 <div>
                                     <p className="font-medium">
                                         {locale === 'ar'
-                                            ? 'هذا المريض ينتمي إلى المجموعة (VIP)'
-                                            : 'This patient belongs to group (VIP)'}
+                                            ? 'في حال كانت الفاتورة دراسة للحالة يجب تحديد الخيار هنا'
+                                            : 'If the invoice is a case study, the option must be selected here.'}
                                     </p>
-                                    <p>
-                                        {locale === 'ar'
-                                            ? 'المجموعة لها نسبة خصم على الخدمات (10%)'
-                                            : 'Group has a discount on services (10%)'}
-                                    </p>
-                                    <p>
-                                        {locale === 'ar'
-                                            ? 'ونسبة خصم على الاشتراكات (15%)'
-                                            : 'And discount on subscriptions (15%)'}
-                                    </p>
+                                 
+                               
                                 </div>
                             </div>
                         </div>
@@ -201,64 +193,10 @@ export default function CreateInvoice() {
                                 </label>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div>
-                                    <label className="block text-sm font-medium mb-1">
-                                        {locale === 'ar' ? 'الباقة' : 'Package'}
-                                    </label>
-                                    <select className="w-full p-2 border rounded">
-                                        <option value="">{locale === 'ar' ? 'اختر باقة' : 'Select package'}</option>
-                                        <option value="1">{locale === 'ar' ? 'باقة شهرية' : 'Monthly Package'} - 500 SAR</option>
-                                        <option value="2">{locale === 'ar' ? 'باقة سنوية' : 'Yearly Package'} - 5000 SAR</option>
-                                    </select>
-                                </div>
-
-                                <div>
-                                    <label className="block text-sm font-medium mb-1">
-                                        {locale === 'ar' ? 'تاريخ البدء' : 'Start Date'}
-                                    </label>
-                                    <input
-                                        type="date"
-                                        className="w-full p-2 border rounded"
-                                    />
-                                </div>
-
-                                <div>
-                                    <label className="block text-sm font-medium mb-1">
-                                        {locale === 'ar' ? 'تاريخ الانتهاء' : 'End Date'}
-                                    </label>
-                                    <input
-                                        type="date"
-                                        readOnly
-                                        className="w-full p-2 border rounded bg-gray-50"
-                                    />
-                                </div>
-                            </div>
+                           
                         </div>
 
-                        {/* Split payment section */}
-                        <div className="flex items-center mb-6">
-                            <input
-                                type="checkbox"
-                                className="mr-2 h-4 w-4"
-                            />
-                            <label className="font-medium mr-2">
-                                {locale === 'ar' ? 'تقسيم الدفع' : 'Split Payment'}
-                            </label>
-
-                            <div className="flex items-center ml-4">
-                                <label className="mr-2">
-                                    {locale === 'ar' ? 'عدد الأقساط:' : 'Installments:'}
-                                </label>
-                                <input
-                                    type="number"
-                                    min="1"
-                                    value={installments}
-                                    onChange={(e) => setInstallments(Number(e.target.value))}
-                                    className="w-16 p-1 border rounded text-center"
-                                />
-                            </div>
-                        </div>
+                      
 
                         {/* Items table */}
                         <div className="overflow-x-auto mb-6 border rounded-lg">
