@@ -62,7 +62,10 @@ const LatestStats = () => {
         <StatBox icon={visitors} number="4" label={t('paidVisits')} small />
         </Link>
 
+        <Link href={`/${locale}/invoices`} >
         <StatBox icon={dd} number="4" label={t('unpaidInvoices')} small />
+        </Link>
+
       </div>
     </div>
   );
@@ -80,7 +83,7 @@ const StatBox = ({
   small?: boolean;
 }) => {
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-between w-full -h-[150px] shadow-lg px-3 py-7 bg-white">
+    <div className="flex flex-col sm:flex-row items-center justify-between w-full h-[150px] shadow-lg px-3 py-7 bg-white">
       <Image src={icon} alt={label} width={60} />
       <div className="flex flex-col gap-1 items-center sm:items-end mt-2 sm:mt-0">
         <h2 className="font-bold text-lg">{number}</h2>
