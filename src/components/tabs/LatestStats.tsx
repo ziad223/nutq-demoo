@@ -54,8 +54,14 @@ const LatestStats = () => {
         <Link href={`/${locale}/appointments`} >
         <StatBox icon={todayAppointment} number="4" label={t('todayAppointments')} small />
         </Link>
-        <StatBox icon={todayAppointment} number="4" label={t('todayAppointments')} small />
+        <Link href={`/${locale}/appointments-transferred`} >
+        <StatBox icon={todayAppointment} number="4" label={t('referredPatients')} small />
+        </Link>
+
+        <Link href={`/${locale}/pay-visit`} >
         <StatBox icon={visitors} number="4" label={t('paidVisits')} small />
+        </Link>
+
         <StatBox icon={dd} number="4" label={t('unpaidInvoices')} small />
       </div>
     </div>
@@ -74,8 +80,8 @@ const StatBox = ({
   small?: boolean;
 }) => {
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-between w-full shadow-lg px-3 py-7 bg-white">
-      <Image src={icon} alt={label} width={80} />
+    <div className="flex flex-col sm:flex-row items-center justify-between w-full -h-[150px] shadow-lg px-3 py-7 bg-white">
+      <Image src={icon} alt={label} width={60} />
       <div className="flex flex-col gap-1 items-center sm:items-end mt-2 sm:mt-0">
         <h2 className="font-bold text-lg">{number}</h2>
         <h3 className={`text-gray-500 ${small ? 'text-sm' : ''}`}>{label}</h3>

@@ -218,30 +218,29 @@ const AppointmentsPage = () => {
     return (
         <div className="container mx-auto px-4 py-8">
             <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-                <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-                    <div></div>
-                    <div className="flex flex-wrap items-center gap-2 justify-end">
-                        <button
-                            onClick={resetAll}
-                            className="border border-gray-300 hover:bg-gray-100 px-4 py-2 rounded text-sm"
-                        >
-                            {t('all_appointments')}
-                        </button>
-                        <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm">
-                            {t('new_appointment')}
-                        </button>
-                        <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm">
-                            {t('new_visitor')}
-                        </button>
-                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm flex items-center gap-1">
-                            {t('schedule')}
-                            <FiCalendar className="text-sm" />
-                        </button>
-                        <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded text-sm flex items-center gap-1">
-                            <FiPrinter className="text-sm" />
-                        </button>
-                    </div>
-                </div>
+                <div className="flex flex-wrap items-center gap-2 justify-end">
+                                       <button className="bg-[#09adce] hover:[#2cafc9] text-white px-4 py-2 rounded text-sm">
+                                           {t('new_visitor')}
+                                       </button>
+                                       <button className="bg-[#09adce] hover:[#2cafc9] text-white px-4 py-2 rounded text-sm">
+                                           {t('new_appointment')}
+                                       </button>
+                                       <button
+                                           onClick={resetAll}
+                                           className="border bg-[#198754] text-white hover:bg-green-600 px-4 py-2 rounded text-sm"
+                                       >
+                                           {t('all_appointments')}
+                                       </button>
+                                      
+                                      
+                                       <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm flex items-center gap-1">
+                                           {t('schedule')}
+                                           <FiCalendar className="text-sm" />
+                                       </button>
+                                       <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded text-sm flex items-center gap-1">
+                                           <FiPrinter className="text-sm" />
+                                       </button>
+                                   </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 items-center md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 mb-4">
                     <div className="col-span-1">
