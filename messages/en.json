@@ -673,6 +673,38 @@
     "employeeName2": "Receptionist 2",
     "mainClinic": "Main Clinic",
     "branchClinic": "Branch Clinic"
+  },
+  "accounting" : {
+    "Accounting": "Accounting",
+    "Reports": "Reports",
+    "adminPurchases": "Payment Voucher",
+    "accoutSettings": "Account Settings",
+    "AccountingTree": "Accounting Tree",
+    "AccountStatement": "Account Statement",
+    "Entries": "Entries",
+    "CostCenter": "Cost Center",
+    "IncomeStatement": "Income Statement",
+    "PaymentVoucher": "Payment Voucher",
+    "Takaful": "Takaful",
+    "Expenses": "Expenses",
+    "TaxDeclaration": "Tax Declaration"
+  },
+  "consultations": {
+    "title": "Consultations",
+    "add": "Add",
+    "back": "Back",
+    "infoText": "You can view all consultations submitted by visitors, contact them, and save their data.",
+    "searchPlaceholder": "Search by name, city, or address...",
+    "allStatus": "All Statuses",
+    "pending": "Pending",
+    "contacted": "Contacted",
+    "name": "Name",
+    "phone": "Phone",
+    "city": "City",
+    "address": "Address",
+    "message": "Consultation Message",
+    "status": "Status",
+    "actions": "Actions"
   }
  
 }

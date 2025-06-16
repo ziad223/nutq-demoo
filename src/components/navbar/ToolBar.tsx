@@ -43,13 +43,13 @@ const ToolBar = () => {
                             </ul>
                         )}
                     </li>
-                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('accountingReporting')}</a></li>
+                    <li><Link href={`/${locale}/accounting`} className='text-sm whitespace-nowrap text-white'>{t('accountingReporting')}</Link></li>
                     <li><Link href={`/${locale}/appointments-transferred`} className='text-sm whitespace-nowrap text-white'>{t('transferredPatients')}</Link></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('diagnoses')}</a></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('userManual')}</a></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('programAdditions')}</a></li>
+                    <li><Link href={`/${locale}/consultations`} className='text-sm whitespace-nowrap text-white'>{t('consultations')}</Link></li>
+                    {/* <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('diagnoses')}</a></li> */}
+                    <li><Link href={`/${locale}/guides`} className='text-sm whitespace-nowrap text-white'>{t('userManual')}</Link></li>
+                    <li><Link href={`/${locale}/program-additions`} className='text-sm whitespace-nowrap text-white'>{t('programAdditions')}</Link></li>
                     <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('services')}</a></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('consultations')}</a></li>
                 </ul>
 
                 <ul className="flex items-center gap-3">
@@ -60,7 +60,7 @@ const ToolBar = () => {
                         <span className='text-white'>{t('admin')}</span>
                         <FaChevronDown className='text-white' />
                     </li>
-                    <li className='hidden lg:block'><LanguageSelector /></li>
+                    <li className='hidden lg:block '><LanguageSelector /></li>
 
                 </ul>
             </div>
@@ -86,13 +86,12 @@ const ToolBar = () => {
                             </ul>
                         )}
                     </li>
-                    <li><a href="#">{t('accountingReporting')}</a></li>
+                    <li><Link href={`/${locale}/accounting`} >{t('accountingReporting')}</Link></li>
                     <li><Link href={`/${locale}/appointments-transferred`}>{t('transferredPatients')}</Link></li>
-                    <li><a href="#">{t('diagnoses')}</a></li>
-                    <li><a href="#">{t('userManual')}</a></li>
-                    <li><a href="#">{t('programAdditions')}</a></li>
+                    <li><Link href={`/${locale}/consultations`}>{t('consultations')}</Link></li>
+                    <li><Link href={`/${locale}/guides`} >{t('userManual')}</Link></li>
+                    <li><Link href={`/${locale}/program-additions`}>{t('programAdditions')}</Link></li>
                     <li><a href="#">{t('services')}</a></li>
-                    <li><a href="#">{t('consultations')}</a></li>
                     <li className='text-black'><LanguageSelector/></li>
                 </ul>
             )}

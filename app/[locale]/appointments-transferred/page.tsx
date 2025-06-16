@@ -251,7 +251,7 @@ const AppointmentsPage = () => {
                             type="text"
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
-                            className="w-full border border-gray-300 rounded px-3 py-2 text-sm"
+                            className="w-full border border-gray-300 rounded px-3 py-3 text-sm"
                             placeholder={t('search_placeholder')}
                         />
                     </div>

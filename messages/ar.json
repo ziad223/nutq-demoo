@@ -635,5 +635,37 @@
     "employeeName2": "موظف الاستقبال 2",
     "mainClinic": "العيادة الرئيسية",
     "branchClinic": "فرع العيادة"
+  },
+  "accounting" : {
+    "Accounting": "المحاسبة",
+    "Reports": "التقارير",
+    "adminPurchases": "المشتريات",
+    "accoutSettings": "إعدادات الحساب",
+    "AccountingTree": "الشجرة المحاسبية",
+    "AccountStatement": "كشف حساب",
+    "Entries": "القيود",
+    "CostCenter": "مركز التكلفة",
+    "IncomeStatement": "قائمة الدخل",
+    "PaymentVoucher": "سند صرف",
+    "Takaful": "تكافل",
+    "Expenses": "المصاريف",
+    "TaxDeclaration": "الإقرار الضريبي"
+  },
+  "consultations": {
+    "title": "الاستشارات",
+    "add": "إضافة",
+    "back": "رجوع",
+    "infoText": "يمكنك استعراض كل الاستشارات المقدمة من قبل الزوار والتواصل معهم وحفظ البيانات الخاصه بهم",
+    "searchPlaceholder": "البحث بالأسم , المدينة , أو العنوان ...",
+    "allStatus": "جميع الحالات",
+    "pending": "قيد الانتظار",
+    "contacted": "تم التواصل",
+    "name": "الاسم",
+    "phone": "الجوال",
+    "city": "المدينة",
+    "address": "العنوان",
+    "message": "محتوى الاستشارة",
+    "status": "الحالة",
+    "actions": "التحكم"
   }
 }
