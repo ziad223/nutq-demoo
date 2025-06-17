@@ -705,6 +705,17 @@
     "message": "Consultation Message",
     "status": "Status",
     "actions": "Actions"
+  },
+  "services" : {
+    "services": "Services",
+  "service": "Service",
+  "service_description": "Service Description",
+  "request_service": "Request Service",
+  "back": "Back",
+  "add_service_message": "If you would like to add a service, you can contact us via mail or phone:",
+  "know_all_programs": "Know all the programs we offer to all clients",
+  "right_this_way": "Right this way",
+  "close": "Close"
   }
  
 }

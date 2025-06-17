@@ -667,5 +667,16 @@
     "message": "محتوى الاستشارة",
     "status": "الحالة",
     "actions": "التحكم"
+  },
+  "services" : {
+    "services": "الخدمات",
+    "service": "الخدمة",
+    "service_description": "وصف الخدمة",
+    "request_service": "طلب الخدمة",
+    "back": "رجوع",
+    "add_service_message": "إذا كنت ترغب في إضافة خدمة، يمكنك التواصل معنا عبر البريد أو الهاتف:",
+    "know_all_programs": "تعرف على جميع البرامج التي نقدمها لجميع العملاء",
+    "right_this_way": "من هنا",
+    "close": "إغلاق"
   }
 }

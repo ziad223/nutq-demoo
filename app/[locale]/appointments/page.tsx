@@ -242,7 +242,7 @@ const AppointmentsPage = () => {
                                        </button>
                                    </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 items-center md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 mb-4">
+                <div className="grid grid-cols-1 mt-10 sm:grid-cols-2 items-center md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 mb-4">
                     <div className="col-span-1">
                         <input
                             type="text"

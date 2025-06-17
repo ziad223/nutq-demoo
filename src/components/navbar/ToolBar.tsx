@@ -49,7 +49,7 @@ const ToolBar = () => {
                     {/* <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('diagnoses')}</a></li> */}
                     <li><Link href={`/${locale}/guides`} className='text-sm whitespace-nowrap text-white'>{t('userManual')}</Link></li>
                     <li><Link href={`/${locale}/program-additions`} className='text-sm whitespace-nowrap text-white'>{t('programAdditions')}</Link></li>
-                    <li><a href="#" className='text-sm whitespace-nowrap text-white'>{t('services')}</a></li>
+                    <li><Link href={`/${locale}/services`}  className='text-sm whitespace-nowrap text-white'>{t('services')}</Link></li>
                 </ul>
 
                 <ul className="flex items-center gap-3">
@@ -91,7 +91,7 @@ const ToolBar = () => {
                     <li><Link href={`/${locale}/consultations`}>{t('consultations')}</Link></li>
                     <li><Link href={`/${locale}/guides`} >{t('userManual')}</Link></li>
                     <li><Link href={`/${locale}/program-additions`}>{t('programAdditions')}</Link></li>
-                    <li><a href="#">{t('services')}</a></li>
+                    <li><Link href={`/${locale}/services`}>{t('services')}</Link></li>
                     <li className='text-black'><LanguageSelector/></li>
                 </ul>
             )}

@@ -47,7 +47,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <a href="#" className='text-black flex items-center gap-1 text-sm'>{t('appointments')} <FaCalendarAlt className='text-gray-500' /></a>
+                            <Link href={`/${locale}/appointments`} className='text-black flex items-center gap-1 text-sm'>{t('appointments')} <FaCalendarAlt className='text-gray-500' /></Link>
                         </li>
                         <li>
                             <a href="#" className='text-black flex items-center gap-1 text-sm'>{t('todayAppointments')} <FaCalendarAlt className='text-gray-500' /></a>
