@@ -50,22 +50,20 @@ const Navbar = () => {
                             <Link href={`/${locale}/appointments`} className='text-black flex items-center gap-1 text-sm'>{t('appointments')} <FaCalendarAlt className='text-gray-500' /></Link>
                         </li>
                         <li>
-                            <a href="#" className='text-black flex items-center gap-1 text-sm'>{t('todayAppointments')} <FaCalendarAlt className='text-gray-500' /></a>
+                            <Link href={`/${locale}/appointments`}className='text-black flex items-center gap-1 text-sm'>{t('todayAppointments')} <FaCalendarAlt className='text-gray-500' /></Link>
+                        </li>
+                        
+                        <li>
+                            <Link href={`/${locale}/invoices`} className='text-black flex items-center gap-1 text-sm'>{t('invoices')} <LiaFileInvoiceSolid className='text-gray-500' /></Link>
                         </li>
                         <li>
-                            <a href="#" className='text-black flex items-center gap-1 text-sm'>{t('pendingAppointments')} <FaCalendarAlt className='text-gray-500' /></a>
+                            <Link href={`/${locale}/pay-visit`} className='text-black flex items-center gap-1 text-sm'>{t('payVisit')} <FaAlipay className='text-gray-500' /></Link>
                         </li>
                         <li>
-                            <a href="#" className='text-black flex items-center gap-1 text-sm'>{t('invoices')} <LiaFileInvoiceSolid className='text-gray-500' /></a>
+                            <Link href={`/${locale}/treatment-plans`} className='text-black flex items-center gap-1 text-sm'>{t('subscriptions')} <PiTextSubscriptFill className='text-gray-500' /></Link>
                         </li>
                         <li>
-                            <a href="#" className='text-black flex items-center gap-1 text-sm'>{t('payVisit')} <FaAlipay className='text-gray-500' /></a>
-                        </li>
-                        <li>
-                            <a href="#" className='text-black flex items-center gap-1 text-sm'>{t('subscriptions')} <PiTextSubscriptFill className='text-gray-500' /></a>
-                        </li>
-                        <li>
-                            <a href="#" className='text-black flex items-center gap-1 text-sm'>{t('payPackage')} <FaCcAmazonPay className='text-gray-500' /></a>
+                            <Link href={`/${locale}/pay_package`} className='text-black flex items-center gap-1 text-sm'>{t('payPackage')} <FaCcAmazonPay className='text-gray-500' /></Link>
                         </li>
                         <li>
                             <a href="#" className='text-black flex items-center gap-1 text-sm'>{t('caseStudy')} <FaCcAmazonPay className='text-gray-500' /></a>

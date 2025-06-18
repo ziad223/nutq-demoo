@@ -716,6 +716,53 @@
   "know_all_programs": "Know all the programs we offer to all clients",
   "right_this_way": "Right this way",
   "close": "Close"
+  },
+  "subscription": {
+    "title": "Subscriptions",
+    "all": "All",
+    "active": "Active Subscriptions",
+    "expired": "Expired Subscriptions",
+    "stopped": "Stopped Subscriptions",
+    "retreat": "Retreat Subscriptions",
+    "cancelled": "Cancelled Subscriptions",
+    "search": "Search by patient name",
+    "from": "From",
+    "to": "To",
+    "number": "Subscription Number",
+    "patient": "Patient",
+    "package": "Package",
+    "start": "Start Date",
+    "end": "End Date",
+    "status": "Status",
+    "remaining": "Remaining Sessions",
+    "actions": "Actions",
+    "details": "View Details",
+    "in_progress": "In Progress"
+
+  },
+  "bills": {
+    "title": "Pay a Package",
+    "tooltip": "All packages appear here after the case study is completed and the invoice must be paid",
+    "all": "All",
+    "paid": "Paid",
+    "not_paid": "Unpaid",
+    "pay": "Pay",
+    "month": "Month",
+    "week": "Week",
+    "select": "Select",
+    "may": "May",
+    "june": "June",
+    "week_1": "Week 1",
+    "week_2": "Week 2",
+    "patient": "Patient",
+    "supervisor": "Educational Supervisor",
+    "start": "Start Date",
+    "end": "End Date",
+    "amount": "Amount",
+    "tax": "Tax",
+    "total": "Total with Tax",
+    "status": "Status",
+    "actions": "Actions"
   }
  
 }

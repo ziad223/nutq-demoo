@@ -29,9 +29,9 @@
   "todayAppointments": "مواعيد اليوم",
   "pendingAppointments": "المواعيد المعلقة",
   "invoices": "الفواتير",
-  "payVisit": "زيارة مدفوعة",
+  "payVisit": "تسديد زيارة",
   "subscriptions": "الاشتراكات",
-  "payPackage": "الدفع على باقة",
+  "payPackage": " تسديد الأشتراكات",
   "caseStudy": "دراسة حالة"
 },
 "patients": {
@@ -126,9 +126,9 @@
   "pendingAppointments": "المواعيد المعلقة",
   "rate" : "التقييم",
   "invoices": "الفواتير",
-  "payVisit": "زيارة مدفوعة",
+  "payVisit": "تسديد زيارة",
   "subscriptions": "الاشتراكات",
-  "payPackage": "الدفع على باقة",
+  "payPackage": "تسديد الأشتراكات",
   "caseStudy": "دراسة حالة",
   "Number": "الرقم",
   "Name": "الاسم",
@@ -579,11 +579,11 @@
     "Total with tax": "الإجمالي مع الضريبة",
     "Status": "الحالة",
     "actions": "الإجراءات",
-    "payment": "دفع"
+    "payment": "تسديد"
   },
   "status": {
-    "Paid": "مدفوع",
-    "Unpaid": "غير مدفوع"
+    "Paid": "مسددة",
+    "Unpaid": "غير مسددة"
   },
   
   "invoices": {
@@ -611,7 +611,7 @@
     "tax": "الضريبة",
     "discount": "الخصم",
     "totalWithTax": "الإجمالي مع الضريبة",
-    "paid": "المدفوع",
+    "paid": "المسدد",
     "remaining": "المتبقي",
     "actions": "الإجراءات",
     "view": "عرض",
@@ -619,8 +619,8 @@
     "bonds": "سندات",
     "editInvoice": "تعديل الفاتورة",
     "deleteInvoice": "حذف الفاتورة",
-    "paidStatus": "مدفوعة",
-    "unpaidStatus": "غير مدفوعة",
+    "paidStatus": "مسددة",
+    "unpaidStatus": "غير مسددة",
     "returnedStatus": "مرتجعة",
     "partiallyPaidStatus": "مدفوعة جزئياً",
     "notAvailable": "غير متاح",
@@ -678,5 +678,51 @@
     "know_all_programs": "تعرف على جميع البرامج التي نقدمها لجميع العملاء",
     "right_this_way": "من هنا",
     "close": "إغلاق"
+  },
+  "subscription": {
+    "title": "الاشتراكات",
+    "all": "الكل",
+    "active": "اشتراكات فعالة",
+    "expired": "اشتراكات منتهية",
+    "stopped": "اشتراكات متوقفة",
+    "retreat": "اشتراكات منسحبة",
+    "cancelled": "اشتراكات ملغية",
+    "search": "بحث بأسم المريض",
+    "from": "من",
+    "to": "إلى",
+    "number": "رقم الاشتراك",
+    "patient": "المريض",
+    "package": "الاشتراك",
+    "start": "تاريخ البداية",
+    "end": "نهاية الاشتراك",
+    "status": "حالة الاشتراك",
+    "remaining": "الجلسات المتبقية",
+    "actions": "العمليات",
+    "details": "تفاصيل الأشتراك",
+    "in_progress": "قيد المتابعة"
+  },
+  "bills": {
+    "title": "تسديد باقة",
+    "tooltip": "هنا تظهر جميع الباكجات بعد الانتهاء من دراسة الحالة ويجب تسديد الفاتورة",
+    "all": "الكل",
+    "paid": "مدفوع",
+    "not_paid": "غير مدفوع",
+    "pay": "تسديد",
+    "month": "الشهر",
+    "week": "الأسبوع",
+    "select": "اختر",
+    "may": "مايو",
+    "june": "يونيو",
+    "week_1": "الأسبوع الأول",
+    "week_2": "الأسبوع الثاني",
+    "patient": "المريض",
+    "supervisor": "المشرف التربوي",
+    "start": "تاريخ البداية",
+    "end": "تاريخ النهاية",
+    "amount": "المبلغ",
+    "tax": "الضريبة",
+    "total": "الإجمالي مع الضريبة",
+    "status": "الحالة",
+    "actions": "العمليات"
   }
 }
