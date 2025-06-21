@@ -66,7 +66,7 @@ const Navbar = () => {
                             <Link href={`/${locale}/pay_package`} className='text-black flex items-center gap-1 text-sm'>{t('payPackage')} <FaCcAmazonPay className='text-gray-500' /></Link>
                         </li>
                         <li>
-                            <a href="#" className='text-black flex items-center gap-1 text-sm'>{t('caseStudy')} <FaCcAmazonPay className='text-gray-500' /></a>
+                            <Link href={`/${locale}/pay_package`} className='text-black flex items-center gap-1 text-sm'>{t('caseStudy')} <FaCcAmazonPay className='text-gray-500' /></Link>
                         </li>
                     </ul>
                 </div>

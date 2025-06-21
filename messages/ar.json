@@ -36,6 +36,17 @@
 },
 "patients": {
   "title": "المرضى",
+  "formTitle": "نموذج المريض",
+  "name": "الاسم",
+  "phone": "رقم الهاتف",
+  "nationality": "الجنسية",
+  "gender": "النوع",
+  "age": "العمر",
+  "civilNumber": "الرقم المدني",
+  "paidBills": "الفواتير المدفوعة",
+  "unpaidBills": "الفواتير غير المدفوعة",
+  "lastVisit": "آخر زيارة",
+  "addPatient": "إضافة مريض",
   "columns": {
     "id": "ID",
     "name": "الاسم",
@@ -724,5 +735,73 @@
     "total": "الإجمالي مع الضريبة",
     "status": "الحالة",
     "actions": "العمليات"
+  },
+  "caseStudyPage": {
+    "title": "دراسة الحالة",
+    "messages": {
+      "incompleteStudies": "هناك دراسات حالة لم تكتمل بعد",
+      "deleteConfirm": "هل أنت متأكد أنك تريد حذف دراسة الحالة هذه؟"
+    },
+    "status": {
+      "waiting": "في الانتظار",
+      "done": "مكتمل"
+    },
+    "actions": {
+      "add": "إضافة",
+      "edit": "تعديل",
+      "view": "عرض",
+      "save": "حفظ",
+      "search": "بحث",
+      "viewFile": "عرض الملف",
+      "viewSubscriptions": "عرض جميع الاشتراكات",
+      "allStudies": "جميع الدراسات"
+    },
+    "filters": {
+      "allOrders": "جميع الطلبات",
+      "newOrders": "طلبات جديدة",
+      "previousOrders": "طلبات سابقة",
+      "admin": "المسؤول",
+      "chooseAdmin": "اختر المسؤول",
+      "from": "من",
+      "to": "إلى"
+    },
+    "search": {
+      "idNumber": "البحث عن طريق رقم الهوية",
+      "mobileNumber": "البحث عن طريق رقم الجوال",
+      "medicalNumber": "البحث عن طريق الرقم الطبي",
+      "firstName": "البحث عن طريق الاسم الأول"
+    },
+    "table": {
+      "patient": "المريض",
+      "age": "العمر",
+      "date": "التاريخ",
+      "employee": "الموظف",
+      "studyCase": "حالة الدراسة",
+      "file": "الملف",
+      "actions": "الإجراءات"
+    },
+    "form": {
+      "file": "الملف",
+      "status": "الحالة",
+      "chooseStatus": "اختر الحالة",
+      "patientFileNumber": "رقم ملف المريض",
+      "patientName": "اسم المريض",
+      "civilNumber": "رقم الهوية",
+      "initialEvaluation": "التقييم الأولي",
+      "takesMedication": "هل يتناول الأدوية؟",
+      "problemBehaviors": "ما هي السلوكيات المشكلة؟",
+      "howDealtWith": "كيف يتم التعامل معها"
+    },
+    "faq": {
+      "allergies": "هل يعاني المريض من حساسية؟",
+      "chronicDiseases": "هل يعاني المريض من أمراض مزمنة؟",
+      "patientCondition": "صف حالة المريض"
+    },
+    "general": {
+      "yes": "نعم",
+      "no": "لا",
+      "noFile": "لا يوجد"
+    }
+   
   }
 }

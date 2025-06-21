@@ -37,6 +37,17 @@
   },
   "patients": {
     "title": "Patients",
+    "formTitle": "Patient Form",
+    "name": "Name",
+    "phone": "Phone",
+    "nationality": "Nationality",
+    "gender": "Gender",
+    "age": "Age",
+    "civilNumber": "Civil Number",
+    "paidBills": "Paid Bills",
+    "unpaidBills": "Unpaid Bills",
+    "lastVisit": "Last Visit",
+    "addPatient": "Add Patient",
     "columns": {
       "id": "ID",
       "name": "Name",
@@ -763,6 +774,75 @@
     "total": "Total with Tax",
     "status": "Status",
     "actions": "Actions"
+  },
+  "caseStudyPage": {
+    "title": "Case Study",
+    "messages": {
+      "incompleteStudies": "There are case studies that have not been completed yet",
+      "deleteConfirm": "Are you sure you want to delete this case study?"
+    },
+    "status": {
+      "waiting": "Waiting",
+      "done": "Done"
+    },
+    "actions": {
+      "add": "Add",
+      "edit": "Edit",
+      "view": "View",
+      "save": "Save",
+      "search": "Search",
+      "viewFile": "View file",
+      "viewSubscriptions": "View all subscriptions",
+      "allStudies": "All studies"
+    },
+    "filters": {
+      "allOrders": "All orders",
+      "newOrders": "New Orders",
+      "previousOrders": "Previous Orders",
+      "admin": "Admin",
+      "chooseAdmin": "Choose admin",
+      "from": "From",
+      "to": "To"
+    },
+    "search": {
+      "idNumber": "Search by ID number",
+      "mobileNumber": "Mobile number search",
+      "medicalNumber": "Search by medical number",
+      "firstName": "Search by first name"
+    },
+    "table": {
+      "patient": "Patient",
+      "age": "Age",
+      "date": "Date",
+      "employee": "Employee",
+      "studyCase": "Study case",
+      "file": "File",
+      "actions": "Actions"
+    },
+    "form": {
+      "file": "File",
+      "status": "Status",
+      "chooseStatus": "Choose the status",
+      "patientFileNumber": "Patient file number",
+      "patientName": "Patient name",
+      "civilNumber": "Civil number",
+      "initialEvaluation": "Initial evaluation",
+      "takesMedication": "Does he take medication?",
+      "problemBehaviors": "What are the problem behaviors?",
+      "howDealtWith": "How it is dealt with"
+    },
+    "faq": {
+      "allergies": "Does the patient have allergies?",
+      "chronicDiseases": "Does the patient have chronic diseases?",
+      "patientCondition": "Describe the patient condition"
+    },
+    "general": {
+      "yes": "Yes",
+      "no": "No",
+      "noFile": "There is no"
+    }
+   
+    
   }
  
 }
