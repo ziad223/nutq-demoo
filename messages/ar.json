@@ -10,7 +10,7 @@
   "therapeuticServices": "الخدمات العلاجية",
   "treatmentPlans": "خطط العلاج",
   "offers": "العروض",
-  "financialAndForms": "المالية والنماذج",
+  "financialAndForms": "النماذج الطبية",
   "paymentMethods": "طرق الدفع",
   "accountingReporting": "المحاسبة والتقارير",
   "transferredPatients": "المرضى المحولون",
@@ -35,6 +35,7 @@
   "caseStudy": "دراسة حالة"
 },
 "patients": {
+  "clinics" : "العيادات",
   "title": "المرضى",
   "formTitle": "نموذج المريض",
   "name": "الاسم",
@@ -65,8 +66,11 @@
     "add": "إضافة",
     "edit": "تعديل",
     "delete": "حذف",
-    "viewSessions": "عرض الجلسات"
+    "cancel" : "ألغاء",
+    "save" : "حفظ"
   },
+  "sessionTime" : "مدة الجلسة (دقيقة)",
+  "viewSessions": "جدول جلسات الأخصائيين",
   "edit_patient": "تعديل بيانات المريض",
   "civil_placeholder": "رقم الهوية (10 أرقام)",
   "first_name": "الاسم الأول",
@@ -364,7 +368,7 @@
   "inputPlaceholder": "اكتب رسالتك هنا..."
 },
 "managment": {
-  "title": "الخدمات",
+  "title": "إدارة الخدمات",
   "columns": {
     "serviceNumber": "رقم الخدمة",
     "name": "الاسم",
@@ -373,14 +377,14 @@
     "operations": "العمليات"
   },
   "services": {
-    "speechTherapy": "جلسة تخاطب",
-    "skillsDevelopment": "جلسة تنمية مهارات",
-    "behaviorAnalysis": "جلسة تحليل سلوك"
+    "speechTherapy": "علاج النطق",
+    "skillsDevelopment": "تطوير المهارات",
+    "behaviorAnalysis": "تحليل السلوك"
   },
   "clinics": {
-    "smile": "عيادة سمايل",
-    "care": "عيادة كير",
-    "future": "عيادة فيوتشر"
+    "smile": "عيادة الابتسامة",
+    "care": "عيادة الرعاية",
+    "future": "عيادة المستقبل"
   },
   "prices": {
     "egp200": "200 جنيه",
@@ -392,18 +396,47 @@
     "edit": "تعديل",
     "delete": "حذف",
     "addService": "إضافة خدمة",
+    "cancel": "إلغاء",
+    "save": "حفظ",
     "print": "طباعة"
   },
   "filters": {
     "clinic": "العيادة",
-    "behaviorAnalysis": "تحليل سلوك تطبيقي",
+    "behaviorAnalysis": "تحليل السلوك",
     "caseStudy": "دراسة الحالة",
-    "speechTherapy": "تخاطب",
-    "skillsDevelopment": "تنمية مهارات",
+    "speechTherapy": "علاج النطق",
+    "skillsDevelopment": "تطوير المهارات",
     "evaluationClinics": "عيادات التقييم"
+  },
+  "modal": {
+    "addTitle": "إضافة خدمة جديدة"
+  },
+  "form": {
+    "serviceName": "اسم الخدمة",
+    "price": "السعر",
+    "selectClinic": "اختر العيادة"
   }
 },
 "treatmentPlans": {
+ 
+  "modal": {
+    "addTitle": "إضافة خطة علاجية جديدة"
+  },
+  "form": {
+    "planName": "اسم الخطة",
+    "duration": "المدة (بالأيام)",
+    "sessionsPerDay": "الجلسات يومياً",
+    "totalSessions": "إجمالي الجلسات",
+    "price": "السعر",
+    "selectClinic": "اختر العيادة"
+  },
+  "clinics": {
+    "hope": "عيادة الأمل",
+    "joy": "عيادة البهجة",
+    "happiness": "عيادة السعادة",
+    "future": "عيادة المستقبل",
+    "prefix" : "بادئة"
+  },
   "title": "خطط العلاج",
   "columns": {
     "planName": "اسم الخطة",
@@ -418,20 +451,8 @@
   "data": {
     "plan": "خطة"
   },
-  "clinics": {
-    "prefix": "عيادة",
-    "hope": "الأمل",
-    "joy": "الفرحة",
-    "happiness": "السعادة",
-    "future": "المستقبل"
-  },
-  "actions": {
-    "financialReport": "تقرير مالي",
-    "edit": "تعديل",
-    "delete": "حذف",
-    "addPlan": "إضافة خطة",
-    "print": "طباعة"
-  },
+
+
   "filters": {
     "clinic": "العيادة",
     "behaviorAnalysis": "تحليل سلوك تطبيقي",
@@ -474,10 +495,26 @@
       "edit": "تعديل",
       "delete": "حذف",
       "addOffer": "إضافة عرض",
-      "print": "طباعة"
+      "print": "طباعة",
+      "view" :"عرض",
+      "save" : "حفظ"
     },
     "common": {
       "egp": "جنيه"
+    },
+    "form": {
+      "startDate": "تاريخ البداية",
+      "endDate": "تاريخ النهاية",
+      "service": "الخدمة",
+      "selectService": "اختر خدمة",
+      "service1": "خدمة 1",
+      "service2": "خدمة 2",
+      "service3": "خدمة 3",
+      "hasDiscount": "هل يوجد نسبة خصم؟",
+      "yes": "نعم",
+      "no": "لا",
+      "discountValue": "نسبة الخصم (%)",
+      "discountExample": "مثال: 10"
     }
   },
   "home" : {
@@ -791,6 +828,7 @@
       "takesMedication": "هل يتناول الأدوية؟",
       "problemBehaviors": "ما هي السلوكيات المشكلة؟",
       "howDealtWith": "كيف يتم التعامل معها"
+      
     },
     "faq": {
       "allergies": "هل يعاني المريض من حساسية؟",
@@ -803,5 +841,33 @@
       "noFile": "لا يوجد"
     }
    
+  },
+  "forms" : {
+    "title": "النماذج الطبية",
+    "description": "يمكنك رفع نموذج من لوحة لتحكم ومشاهدته من قبل الموظفين وطباعته مثال ( الموافقه على اجراء طبي وتوقيع المريض ، نموذج اجازة ..الخ )",
+    "name": "الاسم",
+    "operations": "العمليات",
+    "editDelete": "تعديل | حذف",
+    "behaviorAnalysis": "تحليل سلوك",
+    "skillDevelopment": "تنمية مهارات",
+    "speechTherapy": "تخاطب"
+  },
+  "payment_methods" : {
+    "title": "طرق الدفع",
+    "add": "إضافة",
+    "addTitle": "إضافة طريقة دفع",
+    "name": "الاسم",
+    "account": "الحساب",
+    "cash": "نقدي",
+    "active": "فعال",
+    "method": "طريقة",
+    "bank": "الحساب البنكي",
+    "cashbox": "نقدية بالصندوق",
+    "yes": "نعم",
+    "no": "لا",
+    "options": "الخيارات",
+    "selectAccount": "اختر الحساب",
+    "cancel": "إلغاء",
+    "save": "حفظ"
   }
 }

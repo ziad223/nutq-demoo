@@ -1,11 +1,14 @@
-'use client'
-import React, { useState } from 'react';
+import React from 'react';
 import Table, { Column } from '@/components/shared/reusableComponents/Table';
-import { FaPlus, FaEdit, FaTrash, FaPrint } from 'react-icons/fa';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import AddPlanModal from './AddPlanModal';
+import PaginationControls from './PaginationControls';
 
-const Page = () => {
-    const t = useTranslations('treatmentPlans');
+const Page = async ({ searchParams }: { searchParams?: { page?: string } }) => {
+    const t = await getTranslations('treatmentPlans');
+    const currentPage = Number(searchParams?.page || 1);
+    const itemsPerPage = 10;
+
     const columns: Column[] = [
         { label: '#', key: 'service_number' },
         { label: t('columns.planName'), key: 'name' },
@@ -18,41 +21,19 @@ const Page = () => {
         { label: t('columns.actions'), key: 'actions' },
     ];
 
-    const generateData = () => {
-        return Array.from({ length: 50 }, (_, i) => ({
-            service_number: i + 1,
-            name: `${t('data.plan')} ${i + 1}`,
-            duration: 30 + (i % 5) * 10,
-            sessions_per_day: 1 + (i % 3),
-            total_sessions: 10 + i,
-            price: `${100 + i * 5} ${t('common.egp')}`,
-            clinic: `${t('clinics.prefix')} ${i % 4 === 0 ? t('clinics.hope') : i % 4 === 1 ? t('clinics.joy') : i % 4 === 2 ? t('clinics.happiness') : t('clinics.future')}`,
-            subscribers: Math.floor(Math.random() * 100),
-            actions: (
-                <div className="flex items-center justify-center gap-3">
-                    <button className="text-white bg-[#0d6efd] h-[30px] text-sm px-3 py-1 rounded hover:bg-blue-700">
-                        {t('actions.financialReport')}
-                    </button>
-                    <div className="w-[30px] h-[30px] flex items-center justify-center rounded bg-[#09adce] cursor-pointer">
-                        <FaEdit className="text-white text-lg" title={t('actions.edit')} />
-                    </div>
-                    <div className="w-[30px] h-[30px] flex items-center justify-center rounded bg-red-600 cursor-pointer">
-                        <FaTrash className="text-white text-sm" title={t('actions.delete')} />
-                    </div>
-                </div>
-            ),
-        }));
-    };
+    const allData = Array.from({ length: 50 }, (_, i) => ({
+        service_number: i + 1,
+        name: `${t('data.plan')} ${i + 1}`,
+        duration: 30 + (i % 5) * 10,
+        sessions_per_day: 1 + (i % 3),
+        total_sessions: 10 + i,
+        price: `${100 + i * 5} ${t('common.egp')}`,
+        clinic: `${t('clinics.prefix')} ${i % 4 === 0 ? t('clinics.hope') : i % 4 === 1 ? t('clinics.joy') : i % 4 === 2 ? t('clinics.happiness') : t('clinics.future')}`,
+        subscribers: Math.floor(Math.random() * 100),
+        actions: <span>{t('actions.view')}</span>
+    }));
 
-    const allData = generateData();
-    const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 10;
     const totalPages = Math.ceil(allData.length / itemsPerPage);
-
-    const handleChangePage = (page: number) => {
-        setCurrentPage(page);
-    };
-
     const paginatedData = allData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
     return (
@@ -70,13 +51,7 @@ const Page = () => {
                         <option>{t('filters.evaluationClinics')}</option>
                     </select>
                     <div className="flex items-center gap-2">
-                        <button className="flex items-center gap-2 bg-[#09adce] text-white py-2 px-5 h-[40px] rounded-[10px]">
-                            <span>{t('actions.addPlan')}</span>
-                            <FaPlus />
-                        </button>
-                        <button className="flex items-center gap-2 bg-[#ffc107] text-white py-2 px-2 h-[40px] rounded-[10px]">
-                            <FaPrint title={t('actions.print')} />
-                        </button>
+                        <AddPlanModal />
                     </div>
                 </div>
 
@@ -84,17 +59,8 @@ const Page = () => {
                     <Table columns={columns} data={paginatedData} />
                 </div>
 
-                <div className="mt-6 flex justify-center gap-2">
-                    {Array.from({ length: totalPages }, (_, i) => (
-                        <button
-                            key={i}
-                            onClick={() => handleChangePage(i + 1)}
-                            className={`px-3 py-1 rounded border ${currentPage === i + 1 ? 'bg-[#09adce] text-white' : 'bg-white text-black'
-                                }`}
-                        >
-                            {i + 1}
-                        </button>
-                    ))}
+                <div className="mt-6">
+                    <PaginationControls totalPages={totalPages} currentPage={currentPage} basePath="/treatment-plans" />
                 </div>
             </div>
         </div>

@@ -1,10 +1,13 @@
 import React from 'react';
 import Table, { Column } from '@/components/shared/reusableComponents/Table';
-import { FaPlus, FaEdit, FaTrash, FaPrint } from 'react-icons/fa';
 import { getTranslations } from 'next-intl/server';
+import AddServiceModal from './AddServiceModal';
+import PrintButton from './PrintButton';
+import { FaEdit, FaTrash } from 'react-icons/fa';
 
 const Page = async () => {
     const t = await getTranslations('managment');
+
     const columns: Column[] = [
         { label: t('columns.serviceNumber'), key: 'service_number' },
         { label: t('columns.name'), key: 'name' },
@@ -87,17 +90,12 @@ const Page = async () => {
                         <option>{t('filters.evaluationClinics')}</option>
                     </select>
                     <div className="flex items-center gap-2">
-                        <button className="flex items-center gap-2 bg-[#09adce] text-white py-2 px-5 h-[40px] rounded-[10px]">
-                            <span>{t('actions.addService')}</span>
-                            <FaPlus />
-                        </button>
-                        <button className="flex items-center gap-2 bg-[#ffc107] text-white py-2 px-2 h-[40px] rounded-[10px]">
-                            <FaPrint title={t('actions.print')} />
-                        </button>
+                        <AddServiceModal />
+                        <PrintButton />
                     </div>
                 </div>
 
-                <div className="mt-5">
+                <div className="mt-5 print:p-0">
                     <Table columns={columns} data={data} />
                 </div>
             </div>

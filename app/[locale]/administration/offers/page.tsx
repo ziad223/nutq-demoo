@@ -1,7 +1,8 @@
 import React from 'react';
 import Table, { Column } from '@/components/shared/reusableComponents/Table';
-import { FaPlus, FaEdit, FaTrash, FaPrint } from 'react-icons/fa';
 import { getTranslations } from 'next-intl/server';
+import OffersActions from './OffersActions';
+import { FaEdit, FaTrash } from 'react-icons/fa';
 
 const Page = async () => {
     const t = await getTranslations('offers');
@@ -91,15 +92,7 @@ const Page = async () => {
             <h2 className="font-bold text-xl">{t('title')}</h2>
             <div className="bg-white rounded-[10px] mt-5 p-10 shadow">
                 <div className="flex flex-col md:flex-row w-full justify-between items-center gap-4">
-                    <div className="flex items-center justify-between w-full gap-2">
-                        <button className="flex items-center gap-2 bg-[#198754] text-white py-2 px-5 h-[40px] rounded-[10px]">
-                            <span>{t('actions.addOffer')}</span>
-                            <FaPlus />
-                        </button>
-                        <button className="flex items-center gap-2 bg-[#ffc107] text-white py-2 px-2 h-[40px] rounded-[10px]">
-                            <FaPrint title={t('actions.print')} />
-                        </button>
-                    </div>
+                    <OffersActions />
                 </div>
 
                 <div className="mt-5">

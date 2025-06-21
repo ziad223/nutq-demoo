@@ -35,7 +35,59 @@
     "payPackage": "Pay a package",
     "caseStudy": "Case Study"
   },
+    "managment": {
+      "title": "إدارة الخدمات",
+      "columns": {
+        "serviceNumber": "رقم الخدمة",
+        "name": "الاسم",
+        "clinic": "العيادة",
+        "price": "السعر",
+        "operations": "العمليات"
+      },
+      "services": {
+        "speechTherapy": "علاج النطق",
+        "skillsDevelopment": "تطوير المهارات",
+        "behaviorAnalysis": "تحليل السلوك"
+      },
+      "clinics": {
+        "smile": "عيادة الابتسامة",
+        "care": "عيادة الرعاية",
+        "future": "عيادة المستقبل"
+      },
+      "prices": {
+        "egp200": "200 جنيه",
+        "egp180": "180 جنيه",
+        "egp250": "250 جنيه"
+      },
+      "actions": {
+        "financialReport": "تقرير مالي",
+        "edit": "تعديل",
+        "delete": "حذف",
+        "addService": "إضافة خدمة",
+        "cancel": "إلغاء",
+        "save": "حفظ",
+        "print": "طباعة"
+      },
+      "filters": {
+        "clinic": "العيادة",
+        "behaviorAnalysis": "تحليل السلوك",
+        "caseStudy": "دراسة الحالة",
+        "speechTherapy": "علاج النطق",
+        "skillsDevelopment": "تطوير المهارات",
+        "evaluationClinics": "عيادات التقييم"
+      },
+      "modal": {
+        "addTitle": "إضافة خدمة جديدة"
+      },
+      "form": {
+        "serviceName": "اسم الخدمة",
+        "price": "السعر",
+        "selectClinic": "اختر العيادة"
+      }
+    },
   "patients": {
+    
+    "clinics" : "Clinics",
     "title": "Patients",
     "formTitle": "Patient Form",
     "name": "Name",
@@ -48,6 +100,19 @@
     "unpaidBills": "Unpaid Bills",
     "lastVisit": "Last Visit",
     "addPatient": "Add Patient",
+    "viewSessions": "View Sessions",
+    "actions": {
+      "add": "Add",
+      "cancel": "Cancel",
+      "save": "Save"
+    },
+    "modal": {
+      "title": "Add Patient"
+    },
+    "form": {
+      "name": "Name",
+      "phone": "Phone"
+    },
     "columns": {
       "id": "ID",
       "name": "Name",
@@ -68,6 +133,7 @@
       "delete": "Delete",
       "viewSessions": "View Sessions"
     },
+    "sessionTime" :"Session duration (minutes)",
     "edit_patient": "Edit Patient",
     "civil_placeholder": "Civil number (10 digits)",
     "first_name": "First Name",
@@ -366,7 +432,7 @@
     "received": "Your message has been received",
     "inputPlaceholder": "Type your message here..."
   },
-"managment": {
+
   "title": "Services",
   "columns": {
     "serviceNumber": "Service Number",
@@ -404,9 +470,20 @@
     "speechTherapy": "Speech Therapy",
     "skillsDevelopment": "Skills Development",
     "evaluationClinics": "Evaluation Clinics"
-  }
 },
 "treatmentPlans" : {
+  "modal": {
+    "addTitle": "Add New Service"
+  },
+  "form": {
+    "serviceName": "Service Name",
+    "price": "Price",
+    "selectClinic": "Select Clinic",
+    "planName": "Plan Name",
+    "duration": "Duration (in days)",
+    "sessionsPerDay": "Sessions per Day",
+    "totalSessions": "Total Sessions"
+  },
   "title": "Treatment Plans",
   "columns": {
     "planName": "Plan Name",
@@ -422,6 +499,8 @@
     "plan": "Plan"
   },
   "clinics": {
+    "smile": "Smile Clinic",
+    "care": "Care Center",
     "prefix": "Clinic",
     "hope": "Hope",
     "joy": "Joy",
@@ -433,7 +512,12 @@
     "edit": "Edit",
     "delete": "Delete",
     "addPlan": "Add Plan",
-    "print": "Print"
+    "print": "Print",
+    "addService": "Add Service",
+    "cancel": "Cancel",
+    "save": "Save",
+    "print": "Print",
+    "view": "View"
   },
   "filters": {
     "clinic": "Clinic",
@@ -446,7 +530,8 @@
   "common": {
     "egp": "EGP"
   }
-},  "offers": {
+},
+ "offers": {
     "title": "Offers",
     "columns": {
       "productName": "Product name",
@@ -472,52 +557,34 @@
       "inactive": "Inactive"
     },
     "actions": {
+      "view" : "View",
+      "save" : "Save",
       "financialReport": "Financial report",
       "edit": "Edit",
       "delete": "Delete",
       "addOffer": "Add Offer",
       "print": "Print"
     },
-    "common": {
-      "egp": "EGP"
-    }
-  },
-  "offers": {
-    "title": "Offers",
-    "columns": {
-      "productName": "Product name",
-      "start": "Start",
-      "end": "End",
-      "status": "Status",
-      "rate": "Rate",
-      "discountRatio": "Discount ratio",
-      "actions": "Actions"
-    },
-    "services": {
-      "speechTherapy": "Speech therapy session",
-      "skillsDevelopment": "Skills development session",
-      "behaviorAnalysis": "Behavior analysis session"
-    },
-    "clinics": {
-      "smile": "Smile Clinic",
-      "care": "Care Clinic",
-      "future": "Future Clinic"
-    },
-    "status": {
-      "active": "Active",
-      "inactive": "Inactive"
-    },
-    "actions": {
-      "financialReport": "Financial report",
-      "edit": "Edit",
-      "delete": "Delete",
-      "addOffer": "Add Offer",
-      "print": "Print"
+    "form": {
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "service": "Service",
+      "selectService": "Select a service",
+      "service1": "Service 1",
+      "service2": "Service 2",
+      "service3": "Service 3",
+      "hasDiscount": "Has Discount?",
+      "yes": "Yes",
+      "no": "No",
+      "discountValue": "Discount (%)",
+      "discountExample": "e.g. 10"
+      
     },
     "common": {
       "egp": "EGP"
     }
   },
+
   "home" : {
     "clinicStats": "Clinic Statistics",
     "addPatient": "Add Patient",
@@ -843,6 +910,35 @@
     }
    
     
+  },
+  "forms" : {
+    "title": "Medical Forms",
+    "description": "You can upload a form from the dashboard to be viewed and printed by staff (e.g., consent for a medical procedure, leave form, etc.)",
+    "name": "Name",
+    "operations": "Operations",
+    "editDelete": "Edit | Delete",
+    "behaviorAnalysis": "Behavior Analysis",
+    "skillDevelopment": "Skill Development",
+    "speechTherapy": "Speech Therapy"
+  },
+  "payment_methods" : {
+    "title": "Payment Methods",
+    "add": "Add",
+    "addTitle": "Add Payment Method",
+    "name": "Name",
+    "account": "Account",
+    "cash": "Cash",
+    "active": "Active",
+    "method": "Method",
+    "bank": "Bank Account",
+    "cashbox": "Cashbox",
+    "yes": "Yes",
+    "no": "No",
+    "options": "Options",
+    "selectAccount": "Select Account",
+    "cancel": "Cancel",
+    "save": "Save"
   }
- 
 }
+ 
+
