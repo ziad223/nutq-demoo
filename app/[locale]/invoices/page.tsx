@@ -1,6 +1,6 @@
 'use client'
 import Table from '@/components/shared/reusableComponents/Table';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
 interface Invoice {
@@ -43,7 +43,8 @@ interface Clinic {
 }
 
 const InvoicesPage: React.FC = () => {
-    const t = useTranslations('invoices')
+    const t = useTranslations('invoices');
+    const locale = useLocale()
 
     // بيانات الفواتير
     const [invoices, setInvoices] = useState<Invoice[]>([
@@ -228,9 +229,9 @@ const InvoicesPage: React.FC = () => {
                             <div className="print-btn btn btn-sm bg-yellow-500 text-white px-3 py-1 rounded">
                                 <i className="fa-solid fa-print"></i>
                             </div>
-                            <a href="/invoices/create" className="btn bg-blue-500 text-white px-3 py-1 rounded text-sm">
-                                {t('addInvoice')}
-                                <i className="fa-solid fa-plus ml-1"></i>
+                            <a href={`/${locale}/invoices/create`} className="btn flex items-center gap-2 bg-blue-500 text-white px-3 py-1 rounded text-sm">
+                                <span>{t('addInvoice')}</span>
+                                <i className="fa-solid fa-plus"></i>
                             </a>
                         </div>
                     </div>
