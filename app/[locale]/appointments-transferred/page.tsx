@@ -1,16 +1,17 @@
 'use client'
 import React, { useState } from 'react';
-import { FiCalendar, FiPrinter, FiPlus, FiCheck, FiX, FiEye, FiMoreVertical } from 'react-icons/fi';
+import { FiCalendar, FiPrinter, FiCheck, FiX, FiEye, FiMoreVertical } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import Table from '@/components/shared/reusableComponents/Table';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import PresenceModal from './PresenceModal';
 import AbsenceModal from './AbsenceModal';
 import DetailsModal from './DetailsModal';
+import Link from 'next/link';
 
 const AppointmentsPage = () => {
     const t = useTranslations('appointments');
-
+    const locale = useLocale();
     const [search, setSearch] = useState('');
     const [department, setDepartment] = useState('');
     const [doctor, setDoctor] = useState('');
@@ -221,12 +222,12 @@ const AppointmentsPage = () => {
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                     <div></div>
                     <div className="flex flex-wrap items-center gap-2 justify-end">
-                        <button className="bg-[#09adce] hover:[#2cafc9] text-white px-4 py-2 rounded text-sm">
+                        <Link href={`/${locale}/patients/add`} className="bg-[#09adce] hover:[#2cafc9] text-white px-4 py-2 rounded text-sm">
                             {t('new_visitor')}
-                        </button>
-                        <button className="bg-[#09adce] hover:[#2cafc9] text-white px-4 py-2 rounded text-sm">
+                        </Link>
+                        <Link href = {`/${locale}/appointments/create`} className="bg-[#09adce] hover:[#2cafc9] text-white px-4 py-2 rounded text-sm">
                             {t('new_appointment')}
-                        </button>
+                        </Link>
                         <button
                             onClick={resetAll}
                             className="border bg-[#198754] text-white hover:bg-green-600 px-4 py-2 rounded text-sm"
@@ -235,11 +236,11 @@ const AppointmentsPage = () => {
                         </button>
                        
                        
-                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm flex items-center gap-1">
+                        <Link href={`/${locale}/doctor-appointments-table`} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm flex items-center gap-1">
                             {t('schedule')}
                             <FiCalendar className="text-sm" />
-                        </button>
-                        <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded text-sm flex items-center gap-1">
+                        </Link>
+                        <button onClick={() => window.print()} className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded text-sm flex items-center gap-1">
                             <FiPrinter className="text-sm" />
                         </button>
                     </div>

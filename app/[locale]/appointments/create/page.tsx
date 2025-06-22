@@ -16,13 +16,13 @@ export default function AppointmentPage() {
 
     return (
         <div className="container mx-auto px-4 py-6">
-            <h2 className="mb-5 text-xl text-center lg:text-left">{t('addAppointment')}</h2>
+            <h2 className="mb-5 text-xl  ">{t('addAppointment')}</h2>
 
             <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
                 {/* Left Form */}
                 <div className="lg:col-span-2 bg-white p-4 sm:p-6 rounded-md shadow">
                     <div className="flex justify-center lg:justify-end mb-3">
-                        <Link href="/appointments" className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm text-center">
+                        <Link href="/appointments" className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm ">
                             {t('appointments')}
                         </Link>
                     </div>
@@ -140,7 +140,7 @@ export default function AppointmentPage() {
 
                 {/* Appointment Time */}
                 <div className="bg-white p-4 sm:p-6 rounded-md shadow">
-                    <h3 className="text-lg font-semibold mb-4 text-center lg:text-left">
+                    <h3 className="text-lg font-semibold mb-4  ">
                         {t('appointmentTime')}
                     </h3>
                     <div className="flex flex-wrap justify-center lg:justify-start gap-2">

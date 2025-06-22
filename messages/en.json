@@ -630,6 +630,21 @@
       "referredPatients": "Referred patients"
   },
   "appointments" : {
+    "specialistSchedule": "Specialist Schedule",
+    "dateRangeNote": "Appointments are displayed for one month from the start date. Please select the start date and the end date will be set automatically.",
+    "specialistNote": "Appointments are displayed based on the available times for the specialist. You can review the specialist's sessions in the clinics section.",
+    "fromDate": "From Date",
+    "toDate": "To Date",
+    "clinic": "Clinic",
+    "selectClinic": "Select Clinic",
+    "clinic1": "Clinic 1",
+    "clinic2": "Clinic 2",
+    "specialist": "Specialist",
+    "selectSpecialist": "Select Specialist",
+    "specialist1": "Specialist 1",
+    "specialist2": "Specialist 2",
+    "warning": "Warning",
+    "fillAllFields": "Please fill in all required fields to display the schedule.",
     "title": "Appointments List",
     "all_appointments": "All Appointments",
     "new_appointment": "New Appointment",
@@ -768,6 +783,17 @@
     "TaxDeclaration": "Tax Declaration"
   },
   "consultations": {
+    "add": "Add",
+    "addTitle": "Add New Consultation",
+    "editTitle": "Edit Consultation",
+    "form": {
+      "name": "Name",
+      "phone": "Phone Number",
+      "city": "City",
+      "address": "Address",
+      "message": "Message",
+      "save": "Save"
+    },
     "title": "Consultations",
     "add": "Add",
     "back": "Back",
