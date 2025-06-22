@@ -89,7 +89,7 @@
     
     "clinics" : "Clinics",
     "title": "Patients",
-    "formTitle": "Patient Form",
+    "formTitle": "Add Patient",
     "name": "Name",
     "phone": "Phone",
     "nationality": "Nationality",

@@ -37,7 +37,7 @@
 "patients": {
   "clinics" : "العيادات",
   "title": "المرضى",
-  "formTitle": "نموذج المريض",
+  "formTitle": "أضافة مريض",
   "name": "الاسم",
   "phone": "رقم الهاتف",
   "nationality": "الجنسية",
