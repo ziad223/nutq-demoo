@@ -42,7 +42,7 @@ const FinancialReport = async ({ params }: LayoutProps) => {
      <section className="pt-5 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
         <div className="flex mb-3">
-          <Link href={`/${locale}/treatment-plans`} className="btn bg-[#09adce] text-white px-4 py-2 rounded flex items-center gap-1">
+            <Link href={`/${locale}/administration/treatment-plans`} className="btn bg-[#09adce] text-white px-4 py-2 rounded flex items-center gap-1">
             <FaAngleRight />
           </Link>
         </div>

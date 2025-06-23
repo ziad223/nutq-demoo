@@ -1,11 +1,20 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Table, { Column } from '@/components/shared/reusableComponents/Table';
-import { getTranslations } from 'next-intl/server';
 import OffersActions from './OffersActions';
+import AddOfferModal from './AddOfferModal';
 import { FaEdit, FaTrash } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
 
-const Page = async () => {
-    const t = await getTranslations('offers');
+const Page = () => {
+    const t = useTranslations('offers');
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedOffer, setSelectedOffer] = useState<any>(null);
+
+    const handleEdit = (offer: any) => {
+        setSelectedOffer(offer);
+        setIsModalOpen(true);
+    };
 
     const columns: Column[] = [
         { label: '#', key: 'service_number' },
@@ -18,7 +27,7 @@ const Page = async () => {
         { label: t('columns.actions'), key: 'actions' },
     ];
 
-    const data = [
+    const offers = [
         {
             service_number: 1,
             name: t('services.speechTherapy'),
@@ -27,19 +36,6 @@ const Page = async () => {
             status: t('status.active'),
             rate: '4.5',
             discount_ratio: '10%',
-            actions: (
-                <div className="flex items-center justify-center gap-3">
-                    <button className="text-white bg-[#0d6efd] h-[30px] text-sm px-3 py-1 rounded hover:bg-blue-700">
-                        {t('actions.financialReport')}
-                    </button>
-                    <div className="w-[30px] h-[30px] flex items-center justify-center rounded bg-[#09adce] cursor-pointer">
-                        <FaEdit className="text-white text-lg" title={t('actions.edit')} />
-                    </div>
-                    <div className="w-[30px] h-[30px] flex items-center justify-center rounded bg-red-600 cursor-pointer">
-                        <FaTrash className="text-white text-sm" title={t('actions.delete')} />
-                    </div>
-                </div>
-            ),
         },
         {
             service_number: 2,
@@ -49,19 +45,6 @@ const Page = async () => {
             status: t('status.inactive'),
             rate: '4.2',
             discount_ratio: '5%',
-            actions: (
-                <div className="flex items-center justify-center gap-3">
-                    <button className="text-white bg-[#0d6efd] h-[30px] text-sm px-3 py-1 rounded hover:bg-blue-700">
-                        {t('actions.financialReport')}
-                    </button>
-                    <div className="w-[30px] h-[30px] flex items-center justify-center rounded bg-[#09adce] cursor-pointer">
-                        <FaEdit className="text-white text-lg" title={t('actions.edit')} />
-                    </div>
-                    <div className="w-[30px] h-[30px] flex items-center justify-center rounded bg-red-600 cursor-pointer">
-                        <FaTrash className="text-white text-sm" title={t('actions.delete')} />
-                    </div>
-                </div>
-            ),
         },
         {
             service_number: 3,
@@ -71,34 +54,45 @@ const Page = async () => {
             status: t('status.active'),
             rate: '4.8',
             discount_ratio: '15%',
-            actions: (
-                <div className="flex items-center justify-center gap-3">
-                    <button className="text-white bg-[#0d6efd] h-[30px] text-sm px-3 py-1 rounded hover:bg-blue-700">
-                        {t('actions.financialReport')}
-                    </button>
-                    <div className="w-[30px] h-[30px] flex items-center justify-center rounded bg-[#09adce] cursor-pointer">
-                        <FaEdit className="text-white text-lg" title={t('actions.edit')} />
-                    </div>
-                    <div className="w-[30px] h-[30px] flex items-center justify-center rounded bg-red-600 cursor-pointer">
-                        <FaTrash className="text-white text-sm" title={t('actions.delete')} />
-                    </div>
-                </div>
-            ),
         },
     ];
+    
+    const data = offers.map((offer) => ({
+        ...offer,
+        actions: (
+            <div className="flex items-center justify-center gap-3">
+                <button className="text-white bg-[#0d6efd] h-[30px] text-sm px-3 py-1 rounded hover:bg-blue-700">
+                    {t('actions.financialReport')}
+                </button>
+                <div
+                    onClick={() => handleEdit(offer)}
+                    className="w-[30px] h-[30px] flex items-center justify-center rounded bg-[#09adce] cursor-pointer"
+                >
+                    <FaEdit className="text-white text-lg" title={t('actions.edit')} />
+                </div>
+                <div className="w-[30px] h-[30px] flex items-center justify-center rounded bg-red-600 cursor-pointer">
+                    <FaTrash className="text-white text-sm" title={t('actions.delete')} />
+                </div>
+            </div>
+        ),
+    }));
 
     return (
         <div className="w-[90%] lg:w-[75%] mx-auto mt-10">
             <h2 className="font-bold text-xl">{t('title')}</h2>
             <div className="bg-white rounded-[10px] mt-5 p-10 shadow">
-                <div className="flex flex-col md:flex-row w-full justify-between items-center gap-4">
-                    <OffersActions />
-                </div>
-
+                <OffersActions onAdd={() => {
+                    setSelectedOffer(null);
+                    setIsModalOpen(true);
+                }} />
                 <div className="mt-5">
                     <Table columns={columns} data={data} />
                 </div>
             </div>
+            <AddOfferModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
         </div>
     );
 };
