@@ -35,56 +35,73 @@
     "payPackage": "Pay a package",
     "caseStudy": "Case Study"
   },
-    "managment": {
-      "title": "إدارة الخدمات",
-      "columns": {
-        "serviceNumber": "رقم الخدمة",
-        "name": "الاسم",
-        "clinic": "العيادة",
-        "price": "السعر",
-        "operations": "العمليات"
-      },
-      "services": {
-        "speechTherapy": "علاج النطق",
-        "skillsDevelopment": "تطوير المهارات",
-        "behaviorAnalysis": "تحليل السلوك"
-      },
-      "clinics": {
-        "smile": "عيادة الابتسامة",
-        "care": "عيادة الرعاية",
-        "future": "عيادة المستقبل"
-      },
-      "prices": {
-        "egp200": "200 جنيه",
-        "egp180": "180 جنيه",
-        "egp250": "250 جنيه"
-      },
-      "actions": {
-        "financialReport": "تقرير مالي",
-        "edit": "تعديل",
-        "delete": "حذف",
-        "addService": "إضافة خدمة",
-        "cancel": "إلغاء",
-        "save": "حفظ",
-        "print": "طباعة"
-      },
-      "filters": {
-        "clinic": "العيادة",
-        "behaviorAnalysis": "تحليل السلوك",
-        "caseStudy": "دراسة الحالة",
-        "speechTherapy": "علاج النطق",
-        "skillsDevelopment": "تطوير المهارات",
-        "evaluationClinics": "عيادات التقييم"
-      },
-      "modal": {
-        "addTitle": "إضافة خدمة جديدة"
-      },
-      "form": {
-        "serviceName": "اسم الخدمة",
-        "price": "السعر",
-        "selectClinic": "اختر العيادة"
-      }
+  "managment": {
+    "title": "Service Management",
+  "products_sub" : "Patient Subscription Report",
+      "cash": "Cash",
+  "card": "Card",
+  "paid": "Paid",
+  "unpaid": "Unpaid",
+  "without_tax": "Without tax",
+  "total_with_tax": "Total with tax",
+  "tax": "Tax",
+  "products_financial_report": "Products Financial Report",
+  "product": "Product",
+  "number_of_invoices": "Number of invoices",
+  "from": "From",
+  "to": "To",
+  "print": "Print",
+  "export_excel": "Export Excel",
+    "columns": {
+      "serviceNumber": "Service Number",
+      "name": "Name",
+      "clinic": "Clinic",
+      "price": "Price",
+      "operations": "Actions"
     },
+    "services": {
+      "speechTherapy": "Speech Therapy",
+      "skillsDevelopment": "Skills Development",
+      "behaviorAnalysis": "Behavior Analysis"
+    },
+    "clinics": {
+      "smile": "Smile Clinic",
+      "care": "Care Clinic",
+      "future": "Future Clinic"
+    },
+    "prices": {
+      "egp200": "200 EGP",
+      "egp180": "180 EGP",
+      "egp250": "250 EGP"
+    },
+    "actions": {
+      "financialReport": "Financial Report",
+      "edit": "Edit",
+      "delete": "Delete",
+      "addService": "Add Service",
+      "cancel": "Cancel",
+      "save": "Save",
+      "print": "Print"
+    },
+    "filters": {
+      "clinic": "Clinic",
+      "behaviorAnalysis": "Behavior Analysis",
+      "caseStudy": "Case Study",
+      "speechTherapy": "Speech Therapy",
+      "skillsDevelopment": "Skills Development",
+      "evaluationClinics": "Evaluation Clinics"
+    },
+    "modal": {
+      "addTitle": "Add New Service",
+          "editTitle": "Edit Service"
+    },
+    "form": {
+      "serviceName": "Service Name",
+      "price": "Price",
+      "selectClinic": "Select Clinic"
+    }
+  },
+
   "patients": {
     
     "clinics" : "Clinics",
@@ -471,26 +488,14 @@
     "skillsDevelopment": "Skills Development",
     "evaluationClinics": "Evaluation Clinics"
 },
-"treatmentPlans" : {
-  "modal": {
-    "addTitle": "Add New Service"
-  },
-  "form": {
-    "serviceName": "Service Name",
-    "price": "Price",
-    "selectClinic": "Select Clinic",
-    "planName": "Plan Name",
-    "duration": "Duration (in days)",
-    "sessionsPerDay": "Sessions per Day",
-    "totalSessions": "Total Sessions"
-  },
+"treatmentPlans": {
   "title": "Treatment Plans",
   "columns": {
     "planName": "Plan Name",
-    "duration": "Duration in Days",
-    "sessionsPerDay": "Sessions Per Day",
+    "duration": "Duration (days)",
+    "sessionsPerDay": "Sessions per Day",
     "totalSessions": "Total Sessions",
-    "price": "Plan Price",
+    "price": "Price",
     "clinic": "Clinic",
     "subscribers": "Subscribers",
     "actions": "Actions"
@@ -498,39 +503,48 @@
   "data": {
     "plan": "Plan"
   },
+  "common": {
+    "egp": "EGP"
+  },
   "clinics": {
-    "smile": "Smile Clinic",
-    "care": "Care Center",
     "prefix": "Clinic",
     "hope": "Hope",
     "joy": "Joy",
     "happiness": "Happiness",
     "future": "Future"
   },
+   "modal": {
+    "editTitle": "Edit Plan",
+    "addTitle": "Add Plan"
+
+  },
+  "form": {
+    "planName": "Plan Name",
+    "duration": "Duration (days)",
+    "sessionsPerDay": "Sessions Per Day",
+    "totalSessions": "Total Sessions",
+    "price": "Price",
+    "selectClinic": "Clinic Name"
+  },
   "actions": {
-    "financialReport": "Financial Report",
-    "edit": "Edit",
-    "delete": "Delete",
-    "addPlan": "Add Plan",
-    "print": "Print",
-    "addService": "Add Service",
-    "cancel": "Cancel",
-    "save": "Save",
-    "print": "Print",
-    "view": "View"
+    "view": "View",
+    "addPlan" : "Add Plan",
+    "financialReport" :"Financial Report",
+    "edit" : "Edit",
+    "delete" : "Delete",
+     "cancel": "Cancel",
+    "save": "Save"
   },
   "filters": {
     "clinic": "Clinic",
-    "behaviorAnalysis": "Applied Behavior Analysis",
+    "behaviorAnalysis": "Behavior Analysis",
     "caseStudy": "Case Study",
     "speechTherapy": "Speech Therapy",
     "skillsDevelopment": "Skills Development",
     "evaluationClinics": "Evaluation Clinics"
-  },
-  "common": {
-    "egp": "EGP"
   }
-},
+}
+,
  "offers": {
     "title": "Offers",
     "columns": {

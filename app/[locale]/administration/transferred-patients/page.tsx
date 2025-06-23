@@ -4,9 +4,17 @@ import { getTranslations } from 'next-intl/server';
 import AddServiceModal from './AddServiceModal';
 import PrintButton from './PrintButton';
 import { FaEdit, FaTrash } from 'react-icons/fa';
+import Link from 'next/link';
+import EditServiceModal from './EditServiceModal';
 
-const Page = async () => {
+interface LayoutProps {
+  params: Promise<{ locale: string | any }>; 
+}
+
+
+const Page = async ({ params }: LayoutProps) => {
     const t = await getTranslations('managment');
+  const { locale } = await params;
 
     const columns: Column[] = [
         { label: t('columns.serviceNumber'), key: 'service_number' },
@@ -24,12 +32,17 @@ const Page = async () => {
             price: t('prices.egp200'),
             actions: (
                 <div className="flex items-center justify-center gap-3">
-                    <button className="text-white bg-[#0d6efd] h-[30px] text-sm px-3 py-1 rounded hover:bg-blue-700">
+                    <Link href={`/${locale}/products-report`} className="text-white bg-[#0d6efd] h-[30px] text-sm px-3 py-1 rounded hover:bg-blue-700">
                         {t('actions.financialReport')}
-                    </button>
-                    <div className="w-[30px] h-[30px] flex items-center justify-center rounded bg-[#09adce] cursor-pointer">
-                        <FaEdit className="text-white text-lg" title={t('actions.edit')} />
-                    </div>
+                    </Link>
+                    <EditServiceModal
+                      service={{
+                        service_number: 1,
+                        name: t('services.speechTherapy'),
+                        clinic: t('clinics.smile'),
+                        price: t('prices.egp200'),
+                      }}
+                    />
                     <div className="w-[30px] h-[30px] flex items-center justify-center rounded bg-red-600 cursor-pointer">
                         <FaTrash className="text-white text-sm" title={t('actions.delete')} />
                     </div>

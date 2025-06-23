@@ -3,11 +3,25 @@ import Table, { Column } from '@/components/shared/reusableComponents/Table';
 import { getTranslations } from 'next-intl/server';
 import AddPlanModal from './AddPlanModal';
 import PaginationControls from './PaginationControls';
+import PlanActions from './PlanActions';
 
-const Page = async ({ searchParams }: { searchParams?: { page?: string } }) => {
+interface LayoutProps {
+  params: Promise<{ locale: string | any }>; 
+}
+
+
+const Page = async ({
+  searchParams,
+  params,
+}: {
+  searchParams?: { page?: string };
+  params: { locale: string };
+}) =>{
     const t = await getTranslations('treatmentPlans');
     const currentPage = Number(searchParams?.page || 1);
     const itemsPerPage = 10;
+      const { locale } = await params;
+
 
     const columns: Column[] = [
         { label: '#', key: 'service_number' },
@@ -30,7 +44,16 @@ const Page = async ({ searchParams }: { searchParams?: { page?: string } }) => {
         price: `${100 + i * 5} ${t('common.egp')}`,
         clinic: `${t('clinics.prefix')} ${i % 4 === 0 ? t('clinics.hope') : i % 4 === 1 ? t('clinics.joy') : i % 4 === 2 ? t('clinics.happiness') : t('clinics.future')}`,
         subscribers: Math.floor(Math.random() * 100),
-        actions: <span>{t('actions.view')}</span>
+        actions: <PlanActions row={{
+  service_number: i + 1,
+  name: `${t('data.plan')} ${i + 1}`,
+  duration: 30 + (i % 5) * 10,
+  sessions_per_day: 1 + (i % 3),
+  total_sessions: 10 + i,
+  price: `${100 + i * 5} ${t('common.egp')}`,
+  clinic: `${t('clinics.prefix')} ي`,
+  subscribers: Math.floor(Math.random() * 100),
+}} locale={locale} />
     }));
 
     const totalPages = Math.ceil(allData.length / itemsPerPage);

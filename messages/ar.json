@@ -369,12 +369,28 @@
 },
 "managment": {
   "title": "إدارة الخدمات",
+  "products_sub" : "تقرير اشتراكات المريض",
+    "cash": "نقدي",
+  "card": "بطاقة",
+  "paid": "المدفوع",
+  "unpaid": "غير مدفوع",
+  "without_tax": "بدون ضريبة",
+  "total_with_tax": "الإجمالي مع الضريبة",
+  "tax": "الضريبة",
+  "products_financial_report": "تقرير المنتجات المالي",
+  "product": "المنتج",
+  "number_of_invoices": "عدد الفواتير",
+  "from": "من",
+  "to": "إلى",
+  "print": "طباعة",
+  "export_excel": "تصدير Excel",
   "columns": {
     "serviceNumber": "رقم الخدمة",
     "name": "الاسم",
     "clinic": "العيادة",
     "price": "السعر",
     "operations": "العمليات"
+   
   },
   "services": {
     "speechTherapy": "علاج النطق",
@@ -409,7 +425,9 @@
     "evaluationClinics": "عيادات التقييم"
   },
   "modal": {
-    "addTitle": "إضافة خدمة جديدة"
+    "addTitle": "إضافة خدمة جديدة",
+     "editTitle": "تعديل الخدمة"
+
   },
   "form": {
     "serviceName": "اسم الخدمة",
@@ -418,53 +436,64 @@
   }
 },
 "treatmentPlans": {
- 
-  "modal": {
-    "addTitle": "إضافة خطة علاجية جديدة"
-  },
-  "form": {
+  "title": "خطط العلاج",
+  "columns": {
     "planName": "اسم الخطة",
     "duration": "المدة (بالأيام)",
     "sessionsPerDay": "الجلسات يومياً",
     "totalSessions": "إجمالي الجلسات",
     "price": "السعر",
-    "selectClinic": "اختر العيادة"
-  },
-  "clinics": {
-    "hope": "عيادة الأمل",
-    "joy": "عيادة البهجة",
-    "happiness": "عيادة السعادة",
-    "future": "عيادة المستقبل",
-    "prefix" : "بادئة"
-  },
-  "title": "خطط العلاج",
-  "columns": {
-    "planName": "اسم الخطة",
-    "duration": "مدة الخطة بالأيام",
-    "sessionsPerDay": "الجلسات لليوم الواحد",
-    "totalSessions": "عدد الجلسات",
-    "price": "سعر الخطة",
     "clinic": "العيادة",
     "subscribers": "المشتركين",
-    "actions": "الإجراءات"
+    "actions": "العمليات"
   },
   "data": {
     "plan": "خطة"
   },
-
-
-  "filters": {
-    "clinic": "العيادة",
-    "behaviorAnalysis": "تحليل سلوك تطبيقي",
-    "caseStudy": "دراسة الحالة",
-    "speechTherapy": "تخاطب",
-    "skillsDevelopment": "تنمية مهارات",
-    "evaluationClinics": "عيادات التقييم"
-  },
   "common": {
     "egp": "جنيه"
+  },
+  "clinics": {
+    "prefix": "عيادة",
+    "hope": "الأمل",
+    "joy": "الفرح",
+    "happiness": "السعادة",
+    "future": "المستقبل"
+  },
+  "actions": {
+    "view": "عرض",
+    "addPlan" : "أضافة خطة",
+    "financialReport" : "تقرير مالي",
+    "edit" :"تعديل ",
+    "delete" :"حذف",
+        "cancel": "إلغاء",
+    "save": "حفظ"
+
+
+  },
+  "filters": {
+    "clinic": "العيادة",
+    "behaviorAnalysis": "تحليل السلوك",
+    "caseStudy": "دراسة الحالة",
+    "speechTherapy": "علاج النطق",
+    "skillsDevelopment": "تطوير المهارات",
+    "evaluationClinics": "عيادات التقييم"
+  },
+   "modal": {
+    "editTitle": "تعديل الخطة",
+    "addTitle": "أضافة خطة"
+  },
+   "form": {
+    "planName": "اسم الخطة",
+    "duration": "المدة (بالأيام)",
+    "sessionsPerDay": "الجلسات يومياً",
+    "totalSessions": "إجمالي الجلسات",
+    "price": "السعر",
+    "selectClinic": "اسم العيادة"
   }
-},
+
+}
+,
 "offers": {
     "title": "العروض",
     "columns": {
