@@ -729,6 +729,94 @@
     "branchClinic": "فرع العيادة"
   },
   "accounting" : {
+    "account_statement": "كشف حساب",
+    "filters": {
+      "account_type": "نوع الحساب",
+      "select_account_type": "اختر نوع الحساب",
+      "from_date": "من تاريخ",
+      "to_date": "إلى تاريخ"
+    },
+    "account_types": {
+      "assets": "الأصول",
+      "liabilities": "الخصوم",
+      "capital": "رأس المال",
+      "expenses": "المصروفات",
+      "revenues": "الإيرادات",
+      "purchases": "المشتريات"
+    },
+    "table": {
+      "columns": {
+        "date": "التاريخ",
+        "account": "الحساب",
+        "cost_center": "مركز التكلفة",
+        "description": "البيان",
+        "debit": "مدين",
+        "credit": "دائن"
+      }
+    },
+  "registration_bonds" : "سندات القيد",
+   "search_by_bond_name" : " بحث باسم السند",
+"account_tree": "شجرة الحسابات",
+"sidebar": {
+  "title": "شجرة الحسابات",
+  "add_section": "إضافة قسم",
+  "items": {
+    "assets": "الأصول",
+    "liabilities": "الخصوم",
+    "capital": "رأس المال",
+    "expenses": "المصروفات",
+    "revenues": "الإيرادات",
+    "purchases": "المشتريات"
+  },
+  "sub_items": {
+    "asset1": "أصل 1",
+    "asset2": "أصل 2",
+    "liability1": "خصم 1",
+    "capital1": "رأس مال 1",
+    "expense1": "مصروف 1",
+    "expense2": "مصروف 2",
+    "revenue1": "إيراد 1",
+    "purchase1": "شراء 1"
+  }
+},
+"columns": {
+  "id": "#",
+  "name": "الاسم",
+  "created_at": "تاريخ الإنشاء",
+  "sub_sections": "الأقسام الفرعية",
+  "specialist": "الاختصاصي",
+  "actions": "الإجراءات"
+},
+"buttons": {
+  "close": "إغلاق",
+  "add": "إضافة",
+  "add_new_section": "إضافة قسم جديد",
+  "cancel": "إلغاء",
+  "save": "حفظ",
+  "edit": "تعديل",
+  "delete": "حذف"
+},
+"modal": {
+  "add_new_section": "إضافة قسم جديد",
+  "employee_section_note": "إذا كان القسم خاص بإيرادات الموظفين، يجب اختيار موظف."
+},
+"placeholders": {
+  "name": "الاسم",
+  "select_main_source": "اختر أصل رئيسي",
+  "select_doctor": "اختر طبيب",
+  "section_cost": "تكلفة القسم"
+},
+"labels": {
+  "depreciable": "قابل للاستهلاك"
+},
+"doctors": {
+  "fatima": "د. فاطمة",
+  "mohamed": "د. محمد",
+  "sara": "د. سارة",
+  "ali": "د. علي",
+  "nada": "د. ندى",
+  "kareem": "د. كريم"
+},
     "Accounting": "المحاسبة",
     "Reports": "التقارير",
     "adminPurchases": "المشتريات",

@@ -12,30 +12,36 @@ import accounting7 from '@/public/images/accountig-7.png'
 import accounting8 from '@/public/images/accountig-8.png'
 import accounting9 from '@/public/images/accountig-9.png'
 
-const AccountingPage = async () => {
-    const t = await getTranslations('accounting')
+
+interface LayoutProps {
+    params: Promise<{ locale: string | any }>; 
+  }
+const AccountingPage = async ({ params }: LayoutProps) => {
+    const t = await getTranslations('accounting');
+      const { locale } = await params;
+    
 
     const isAccountTreeActive = true
 
     const accountingLinks = [
         isAccountTreeActive && {
             title: t('AccountingTree'),
-            href: '/accounts-tree',
+            href: `/${locale}/accounts-tree`,
             image: accounting1,
         },
         {
             title: t('AccountStatement'),
-            href: '/takaful',
+            href: `/${locale}/account-statement`,
             image: accounting2,
         },
         {
             title: t('Entries'),
-            href: '/expenses',
+            href: `/${locale}/vouchers`,
             image: accounting3,
         },
         {
             title: t('CostCenter'),
-            href: '/tax',
+            href: `/${locale}/cost_centers`,
             image: accounting4,
         },
         {

@@ -782,6 +782,94 @@
     "branchClinic": "Branch Clinic"
   },
   "accounting" : {
+    "account_statement": "Account Statement",
+    "filters": {
+      "account_type": "Account Type",
+      "select_account_type": "Select Account Type",
+      "from_date": "From Date",
+      "to_date": "To Date"
+    },
+    "account_types": {
+      "assets": "Assets",
+      "liabilities": "Liabilities",
+      "capital": "Capital",
+      "expenses": "Expenses",
+      "revenues": "Revenues",
+      "purchases": "Purchases"
+    },
+    "table": {
+      "columns": {
+        "date": "Date",
+        "account": "Account",
+        "cost_center": "Cost Center",
+        "description": "Description",
+        "debit": "Debit",
+        "credit": "Credit"
+      }
+    },
+    "registration_bonds" : "Registration Bonds",
+    "search_by_bond_name" : "Search by Bond Name",
+ "account_tree": "Accounts Tree",
+"sidebar": {
+  "title": "Accounts Tree",
+  "add_section": "Add Section",
+  "items": {
+    "assets": "Assets",
+    "liabilities": "Liabilities",
+    "capital": "Capital",
+    "expenses": "Expenses",
+    "revenues": "Revenues",
+    "purchases": "Purchases"
+  },
+  "sub_items": {
+    "asset1": "Asset 1",
+    "asset2": "Asset 2",
+    "liability1": "Liability 1",
+    "capital1": "Capital 1",
+    "expense1": "Expense 1",
+    "expense2": "Expense 2",
+    "revenue1": "Revenue 1",
+    "purchase1": "Purchase 1"
+  }
+},
+"columns": {
+  "id": "#",
+  "name": "Name",
+  "created_at": "Creation Date",
+  "sub_sections": "Sub Sections",
+  "specialist": "Specialist",
+  "actions": "Actions"
+},
+"buttons": {
+  "close": "Close",
+  "add": "Add",
+  "add_new_section": "Add New Section",
+  "cancel": "Cancel",
+  "save": "Save",
+  "edit": "Edit",
+  "delete": "Delete"
+},
+"modal": {
+  "add_new_section": "Add New Section",
+  "employee_section_note": "If the section is for employee revenues, an employee must be selected."
+},
+"placeholders": {
+  "name": "Name",
+  "select_main_source": "Select main source",
+  "select_doctor": "Select doctor",
+  "section_cost": "Section cost"
+},
+"labels": {
+  "depreciable": "Depreciable"
+},
+"doctors": {
+  "fatima": "Dr. Fatima",
+  "mohamed": "Dr. Mohamed",
+  "sara": "Dr. Sara",
+  "ali": "Dr. Ali",
+  "nada": "Dr. Nada",
+  "kareem": "Dr. Kareem"
+},
     "Accounting": "Accounting",
     "Reports": "Reports",
     "adminPurchases": "Payment Voucher",
