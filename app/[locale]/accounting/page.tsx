@@ -46,17 +46,17 @@ const AccountingPage = async ({ params }: LayoutProps) => {
         },
         {
             title: t('IncomeStatement'),
-            href: '/reports',
+            href: `/${locale}/income-statement`,
             image: accounting5,
         },
         {
             title: t('PaymentVoucher'),
-            href: '/purchases',
+            href: `/${locale}/proof-of-exchange`,
             image: accounting6,
         },
         {
             title: t('Takaful'),
-            href: '/accounting-summary',
+            href: `/${locale}/takaful-report`,
             image: accounting7,
         },
         {
