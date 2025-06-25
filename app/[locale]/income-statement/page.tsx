@@ -2,7 +2,6 @@ import Container from '@/components/shared/formcomponents/Container';
 import React from 'react';
 import Table, { Column } from '@/components/shared/reusableComponents/Table';
 import { useTranslations } from 'next-intl';
-import { FaAngleRight } from 'react-icons/fa';
 
 const Page = () => {
     const t = useTranslations('accounting');
@@ -36,14 +35,7 @@ const Page = () => {
     return (
         <Container>
             <div>
-            <div className="flex mb-3">
-                    <a
-                        href={`/${locale}/accounting`}
-                        className="btn bg-main-color text-white px-4 py-2 rounded"
-                    >
-                        <FaAngleRight />
-                    </a>
-                </div>
+                
                 <h2 className="text-xl font-bold mb-5">{t('title')}</h2>
                 <div className="bg-white rounded-[10px] p-10 space-y-6">
                     {/* الحقول */}
