@@ -61,7 +61,7 @@ const AccountingPage = async ({ params }: LayoutProps) => {
         },
         {
             title: t('Expenses'),
-            href: '/invoices',
+            href: `/${locale}/expenses`,
             image: accounting8,
         },
         {
