@@ -782,7 +782,85 @@
     "branchClinic": "Branch Clinic"
   },
   "accounting" : {
-    
+    "expenses": {
+      "title": "Expenses",
+      "addExpense": "Add Expense",
+      "editExpense": "Edit Expense",
+      "deleteExpense": "Delete Expense",
+      "deleteConfirm": "Are you sure you want to delete \"{name}\"?",
+      "cancel": "Cancel",
+      "save": "Save",
+      "update": "Update",
+      "categories": "Categories",
+      "name": "Name",
+      "category": "Category",
+      "amount": "Amount",
+      "notes": "Notes",
+      "selectCategory": "Select Category",
+      "columns": {
+        "id": "#",
+        "name": "Description",
+        "date": "Date",
+        "category": "Category",
+        "amount": "Amount",
+        "notes": "Details",
+        "actions": "Actions"
+      },
+      "actions": {
+        "print": "Print",
+        "edit": "Edit",
+        "delete": "Delete"
+      },
+      "placeholders": {
+        "name": "Enter expense name",
+        "amount": "Enter amount",
+        "notes": "Enter notes if any"
+      },
+      "validation": {
+        "required": "This field is required",
+        "invalidAmount": "Amount must be a valid number"
+      }
+    },
+    "categories": {
+      "title": "Expense Categories",
+      "addCategory": "Add New Category",
+      "editCategory": "Edit Category",
+      "deleteCategory": "Delete Category",
+      "deleteConfirm": "Are you sure you want to delete \"{name}\"?",
+      "cancel": "Cancel",
+      "save": "Save",
+      "name": "Category Name",
+      "parent": "Parent Category",
+      "selectParent": "Select Parent Category",
+      "columns": {
+        "id": "#",
+        "name": "Name",
+        "parent": "Subcategory of",
+        "actions": "Operations"
+      }
+    },
+    "taxReport": {
+      "title": "Tax Declaration",
+      "columns": {
+        "id": "#",
+        "statement": "Statement",
+        "months": "Months",
+        "fromDate": "From Date",
+        "toDate": "To Date",
+        "purchases": "Purchases",
+        "sales": "Sales",
+        "totalBeforeTax": "Total Before Tax",
+        "totalAfterTax": "Total After Tax",
+        "taxAmount": "Tax Amount"
+      },
+      "quarters": {
+        "q1": "Q1 2025",
+        "q2": "Q2 2025",
+        "q3": "Q3 2025",
+        "q4": "Q4 2025"
+      },
+      "total": "Total"
+    },
     "takaful" : "Takaful report",
     "header": "Payment Voucher",
   "sectionTitle": "Payment Voucher",

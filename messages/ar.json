@@ -729,7 +729,85 @@
     "branchClinic": "فرع العيادة"
   },
   "accounting" : {
-    
+    "expenses": {
+      "title": "المصروفات",
+      "addExpense": "إضافة مصروف",
+      "editExpense": "تعديل مصروف",
+      "deleteExpense": "حذف مصروف",
+      "deleteConfirm": "هل أنت متأكد من رغبتك في حذف \"{name}\"؟",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "update": "تحديث",
+      "categories": "الفئات",
+      "name": "الاسم",
+      "category": "التصنيف",
+      "amount": "المبلغ",
+      "notes": "ملاحظات",
+      "selectCategory": "اختر تصنيفًا",
+      "columns": {
+        "id": "رقم",
+        "name": "الوصف",
+        "date": "التاريخ",
+        "category": "التصنيف",
+        "amount": "القيمة",
+        "notes": "تفاصيل",
+        "actions": "إجراءات"
+      },
+      "actions": {
+        "print": "طباعة",
+        "edit": "تعديل",
+        "delete": "حذف"
+      },
+      "placeholders": {
+        "name": "أدخل اسم المصروف",
+        "amount": "أدخل المبلغ",
+        "notes": "أدخل ملاحظات (اختياري)"
+      },
+      "validation": {
+        "required": "هذا الحقل مطلوب",
+        "invalidAmount": "يجب أن يكون المبلغ رقمًا صحيحًا"
+      }
+    },
+    "categories": {
+      "title": "فئات المصروفات",
+      "addCategory": "إضافة قسم جديد",
+      "editCategory": "تعديل القسم",
+      "deleteCategory": "حذف القسم",
+      "deleteConfirm": "هل أنت متأكد من حذف \"{name}\"?",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "name": "اسم الفئة",
+      "parent": "الفئة الرئيسية",
+      "selectParent": "اختر الفئة الرئيسية",
+      "columns": {
+        "id": "م",
+        "name": "الاسم",
+        "parent": "فرعي من",
+        "actions": "العمليات"
+      }
+    },
+    "taxReport": {
+      "title": "الإقرار الضريبي",
+      "columns": {
+        "id": "م",
+        "statement": "البيان",
+        "months": "الأشهر",
+        "fromDate": "من تاريخ",
+        "toDate": "إلى تاريخ",
+        "purchases": "المشتريات",
+        "sales": "المبيعات",
+        "totalBeforeTax": "الإجمالي قبل الضريبة",
+        "totalAfterTax": "الإجمالي بعد الضريبة",
+        "taxAmount": "مجموع الضريبة"
+      },
+      "quarters": {
+        "q1": "الربع الأول 2025",
+        "q2": "الربع الثاني 2025",
+        "q3": "الربع الثالث 2025",
+        "q4": "الربع الرابع 2025"
+      },
+      "total": "المجموع الكلي"
+    },
     "takaful" : "تقرير تكافل",
     "header": "سند صرف",
     "sectionTitle": "سند صرف",
@@ -757,7 +835,7 @@
     "assets": "الأصول",
     "liabilities": "الخصوم",
     "capital": "رأس المال",
-    "expenses": "المصروفات",
+    "expensess": "المصروفات",
     "revenues": "الإيرادات",
     "purchases": "المشتريات",
     "item": "البند",
