@@ -495,6 +495,19 @@
 }
 ,
 "offers": {
+  "financialReportTitle": "تقرير العروض المالي",
+  "from": "من",
+  "to": "إلى",
+  "show": "عرض",
+  "print": "طباعة",
+  "exportExcel": "تصدير Excel",
+    "cash": "نقدا",
+    "card": "شبكة",
+    "paid": "المدفوع",
+    "unpaid": "غير مدفوع",
+    "withoutTax": "بدون ضريبة",
+    "totalWithTax": "الإجمالي مع الضريبة",
+    "tax": "الضريبة",
     "title": "العروض",
     "columns": {
       "productName": "اسم المنتج",
@@ -1133,5 +1146,18 @@
     "selectAccount": "اختر الحساب",
     "cancel": "إلغاء",
     "save": "حفظ"
+  },
+  "sessions" : {
+    "sessionsTableTitle": "جدول جلسات الأخصائيين",
+    "backToList": "العودة للقائمة",
+    "chooseDoctorLabel": "اختر الطبيب",
+    "chooseDoctorPlaceholder": "اختر طبيب",
+    "doctor1": "دكتور 1",
+    "doctor2": "دكتور 2",
+    "doctor3": "دكتور 3",
+    "clinic": "العيادة",
+    "clinicName": "تحليل سلوك تطبيقي",
+    "sessionDuration": "مدة الجلسة: 45 دقيقة",
+    "chooseDoctorFirst": "يرجى اختيار الطبيب أولا"
   }
 }

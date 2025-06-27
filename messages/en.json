@@ -546,6 +546,19 @@
 }
 ,
  "offers": {
+  "financialReportTitle": "Offers Financial Report",
+  "from": "From",
+  "to": "To",
+  "show": "Show",
+  "print": "Print",
+  "exportExcel": "Export Excel",
+    "cash": "Cash",
+    "card": "Card",
+    "paid": "Paid",
+    "unpaid": "Unpaid",
+    "withoutTax": "Without Tax",
+    "totalWithTax": "Total with Tax",
+    "tax": "Tax",
     "title": "Offers",
     "columns": {
       "productName": "Product name",
@@ -1187,6 +1200,19 @@
     "selectAccount": "Select Account",
     "cancel": "Cancel",
     "save": "Save"
+  },
+  "sessions" : {
+    "sessionsTableTitle": "Specialists Sessions Table",
+    "backToList": "Back to List",
+    "chooseDoctorLabel": "Choose Doctor",
+    "chooseDoctorPlaceholder": "Select Doctor",
+    "doctor1": "Doctor 1",
+    "doctor2": "Doctor 2",
+    "doctor3": "Doctor 3",
+    "clinic": "Clinic",
+    "clinicName": "Applied Behavior Analysis",
+    "sessionDuration": "Session Duration: 45 minutes",
+    "chooseDoctorFirst": "Please choose a doctor first"
   }
 }
  

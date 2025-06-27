@@ -4,12 +4,14 @@ import Table, { Column } from '@/components/shared/reusableComponents/Table';
 import OffersActions from './OffersActions';
 import AddOfferModal from './AddOfferModal';
 import { FaEdit, FaTrash } from 'react-icons/fa';
-import { useTranslations } from 'next-intl';
+import { useTranslations , useLocale } from 'next-intl';
+import  Link  from 'next/link';
 
 const Page = () => {
     const t = useTranslations('offers');
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedOffer, setSelectedOffer] = useState<any>(null);
+    const locale = useLocale();
 
     const handleEdit = (offer: any) => {
         setSelectedOffer(offer);
@@ -61,9 +63,9 @@ const Page = () => {
         ...offer,
         actions: (
             <div className="flex items-center justify-center gap-3">
-                <button className="text-white bg-[#0d6efd] h-[30px] text-sm px-3 py-1 rounded hover:bg-blue-700">
+                <Link href={`/${locale}/administration/offers/reports`} className="text-white bg-[#0d6efd] h-[30px] text-sm px-3 py-1 rounded hover:bg-blue-700">
                     {t('actions.financialReport')}
-                </button>
+                </Link>
                 <div
                     onClick={() => handleEdit(offer)}
                     className="w-[30px] h-[30px] flex items-center justify-center rounded bg-[#09adce] cursor-pointer"
