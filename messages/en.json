@@ -5,6 +5,8 @@
       "backHome" : "Go To Home"
   },
   "toolbar": {
+"requestLeave": "Request Leave",
+"logout": "Logout",
     "patient_groups" : "Patients groups",
     "administration": "Administration",
     "clinics": "Clinics",
@@ -1250,6 +1252,64 @@
       "add": "Add",
       "save": "Save"
     }
+  },
+  "leaveRequests" : {
+    "leaveRequestsTitle": "Leave Requests",
+    "actions": {
+      "add": "Add Request",
+      "close": "Close",
+      "cancel": "Cancel",
+      "save": "Save"
+    },
+    "modal": {
+      "addRequestTitle": "Add New Request"
+    },
+    "placeholders": {
+      "from": "From",
+      "to": "Requested Shift",
+      "reason": "Reason",
+      "status": "Status",
+      "rejectionReason": "Rejection Reason"
+    },
+    "columns": {
+      "requestNumber": "#",
+      "from": "From",
+      "to": "Requested Shift",
+      "reason": "Reason",
+      "status": "Status",
+      "rejectionReason": "Rejection Reason",
+      "attachment": "Attachment",
+      "createdAt": "Created At"
+    },
+    "statuses": {
+      "pending": "Pending Review",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "sampleData": {
+      "user1": "Mohamed Ahmed",
+      "shift1": "08:00 - 16:00",
+      "reason1": "Emergency Situation",
+      "attachment": "attachment.pdf"
+    }
+  },
+  "login" : {
+    "title": "Login",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Email",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Password",
+    "loginButton": "Login",
+    "familyLoginButton": "Family Login"
+  },
+  "familyLogin" : {
+    "info": "The family can follow the treatment program for the child or patient. Login data can be requested from the administration",
+    "title": "Family Login",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Email",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Password",
+    "loginButton": "Login"
   }
 }
  

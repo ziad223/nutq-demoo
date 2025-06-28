@@ -5,6 +5,8 @@
   "backHome" : "الذهاب الي الصفحة الرئيسية"
 },
 "toolbar": {
+  "requestLeave": "طلب استئذان / إجازة",
+"logout": "تسجيل الخروج",
   "patient_groups" : "مجموعات المرضي",
   "administration": "الإدارة",
   "clinics": "العيادات",
@@ -1199,5 +1201,63 @@
       "add": "إضافة",
       "save": "حفظ"
     }
+  },
+  "leaveRequests" : {
+    "leaveRequestsTitle": "طلبات الاستئذان / الإجازة",
+    "actions": {
+      "add": "إضافة طلب",
+      "close": "إغلاق",
+      "cancel": "إلغاء",
+      "save": "حفظ"
+    },
+    "modal": {
+      "addRequestTitle": "إضافة طلب جديد"
+    },
+    "placeholders": {
+      "from": "من",
+      "to": "إلى الدوام المطلوب",
+      "reason": "السبب",
+      "status": "الحالة",
+      "rejectionReason": "سبب الرفض"
+    },
+    "columns": {
+      "requestNumber": "#",
+      "from": "من",
+      "to": "إلى الدوام المطلوب",
+      "reason": "السبب",
+      "status": "الحالة",
+      "rejectionReason": "سبب الرفض",
+      "attachment": "مرفق",
+      "createdAt": "أنشئت في"
+    },
+    "statuses": {
+      "pending": "قيد المراجعة",
+      "approved": "مقبول",
+      "rejected": "مرفوض"
+    },
+    "sampleData": {
+      "user1": "محمد أحمد",
+      "shift1": "08:00 - 16:00",
+      "reason1": "ظرف طارئ",
+      "attachment": "مرفق.pdf"
+    }
+  },
+  "login" : {
+    "title": "تسجيل الدخول",
+    "emailLabel": "البريد الإلكتروني",
+    "emailPlaceholder": "البريد الإلكتروني",
+    "passwordLabel": "كلمة المرور",
+    "passwordPlaceholder": "كلمة المرور",
+    "loginButton": "تسجيل الدخول",
+    "familyLoginButton": "تسجيل دخول العائلة"
+  },
+  "familyLogin" : {
+    "info": "يمكن للعائلة متابعة البرنامج العلاجي للطفل أو المريض. يمكن طلب بيانات تسجيل الدخول من الإدارة",
+    "title": "تسجيل دخول العائلة",
+    "emailLabel": "البريد الإلكتروني",
+    "emailPlaceholder": "البريد الإلكتروني",
+    "passwordLabel": "كلمة المرور",
+    "passwordPlaceholder": "كلمة المرور",
+    "loginButton": "تسجيل الدخول"
   }
 }
