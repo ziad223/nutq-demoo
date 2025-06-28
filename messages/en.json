@@ -5,6 +5,7 @@
       "backHome" : "Go To Home"
   },
   "toolbar": {
+    "patient_groups" : "Patients groups",
     "administration": "Administration",
     "clinics": "Clinics",
     "therapeuticServices": "Therapeutic services",
@@ -103,7 +104,11 @@
   },
 
   "patients": {
-    
+    "editPatientTitle": "Edit Patient Data",
+    "patientNamePlaceholder": "Patient Name",
+    "locationPlaceholder": "Location",
+    "cancel": "Cancel",
+    "save": "Save",
     "clinics" : "Clinics",
     "title": "Patients",
     "formTitle": "Add Patient",
@@ -121,7 +126,11 @@
     "actions": {
       "add": "Add",
       "cancel": "Cancel",
-      "save": "Save"
+      "save": "Save",
+      "edit": "Edit",
+      "delete": "Delete",
+      "viewSessions": "View Sessions"
+      
     },
     "modal": {
       "title": "Add Patient"
@@ -144,12 +153,7 @@
       "cairo": "Cairo",
       "alexandria": "Alexandria"
     },
-    "actions": {
-      "add": "Add",
-      "edit": "Edit",
-      "delete": "Delete",
-      "viewSessions": "View Sessions"
-    },
+ 
     "sessionTime" :"Session duration (minutes)",
     "edit_patient": "Edit Patient",
     "civil_placeholder": "Civil number (10 digits)",
@@ -1213,6 +1217,37 @@
     "clinicName": "Applied Behavior Analysis",
     "sessionDuration": "Session Duration: 45 minutes",
     "chooseDoctorFirst": "Please choose a doctor first"
+  },
+  "patientsGroups": {
+    "title": "Patient Groups",
+    "add": "Add",
+    "table": {
+      "name": "Name",
+      "subscriptionDiscount": "Subscription Discount",
+      "examinationDiscount": "Examination Discount",
+      "count": "Count",
+      "actions": "Actions"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "addModal": {
+      "title": "Add Patient Group"
+    },
+    "editModal": {
+      "title": "Edit Patient Group"
+    },
+    "form": {
+      "groupName": "Group Name",
+      "subscriptionDiscount": "Subscription Discount",
+      "examinationDiscount": "Examination Discount"
+    },
+    "common": {
+      "cancel": "Cancel",
+      "add": "Add",
+      "save": "Save"
+    }
   }
 }
  

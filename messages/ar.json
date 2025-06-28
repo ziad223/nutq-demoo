@@ -5,6 +5,7 @@
   "backHome" : "الذهاب الي الصفحة الرئيسية"
 },
 "toolbar": {
+  "patient_groups" : "مجموعات المرضي",
   "administration": "الإدارة",
   "clinics": "العيادات",
   "therapeuticServices": "الخدمات العلاجية",
@@ -35,6 +36,11 @@
   "caseStudy": "دراسة حالة"
 },
 "patients": {
+  "editPatientTitle": "تعديل بيانات المريض",
+  "patientNamePlaceholder": "اسم المريض",
+  "locationPlaceholder": "الموقع",
+  "cancel": "إلغاء",
+  "save": "حفظ",
   "clinics" : "العيادات",
   "title": "المرضى",
   "formTitle": "أضافة مريض",
@@ -1159,5 +1165,36 @@
     "clinicName": "تحليل سلوك تطبيقي",
     "sessionDuration": "مدة الجلسة: 45 دقيقة",
     "chooseDoctorFirst": "يرجى اختيار الطبيب أولا"
+  },
+  "patientsGroups": {
+    "title": "مجموعات المرضى",
+    "add": "إضافة",
+    "table": {
+      "name": "الاسم",
+      "subscriptionDiscount": "نسبة الخصم علي الاشتراكات",
+      "examinationDiscount": "نسبة الخصم علي الكشف",
+      "count": "العدد",
+      "actions": "العمليات"
+    },
+    "actions": {
+      "edit": "تعديل",
+      "delete": "حذف"
+    },
+    "addModal": {
+      "title": "إضافة مجموعة مرضى"
+    },
+    "editModal": {
+      "title": "تعديل مجموعة مرضى"
+    },
+    "form": {
+      "groupName": "اسم المجموعة",
+      "subscriptionDiscount": "نسبة الخصم علي الاشتراكات",
+      "examinationDiscount": "نسبة الخصم علي الكشف"
+    },
+    "common": {
+      "cancel": "إلغاء",
+      "add": "إضافة",
+      "save": "حفظ"
+    }
   }
 }

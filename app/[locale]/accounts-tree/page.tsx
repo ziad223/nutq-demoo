@@ -35,10 +35,10 @@ const AccountsTree = () => {
             doctor: t('doctors.fatima'),
             actions: (
                 <div className="flex justify-center items-center gap-1">
-                    <button className="bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                    <button className="bg-blue-500 text-white text-md px-2 py-1 rounded">
                         <FaPenToSquare title={t('buttons.edit')} />
                     </button>
-                    <button className="bg-red-500 text-white text-xs px-2 py-1 rounded">
+                    <button className="bg-red-500 text-white text-md px-2 py-1 rounded">
                         <FaTrashCan title={t('buttons.delete')} />
                     </button>
                 </div>

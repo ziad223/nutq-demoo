@@ -37,6 +37,7 @@ const ToolBar = () => {
                                 <li><Link href={`/${locale}/administration/clinics`} className="block px-4 py-2 text-sm text-black hover:bg-gray-100">{t('clinics')}</Link></li>
                                 <li><Link href={`/${locale}/administration/transferred-patients`} className="block px-4 py-2 text-sm text-black hover:bg-gray-100">{t('therapeuticServices')}</Link></li>
                                 <li><Link href={`/${locale}/administration/treatment-plans`} className="block px-4 py-2 text-sm text-black hover:bg-gray-100">{t('treatmentPlans')}</Link></li>
+                                <li><Link href={`/${locale}/administration/patient_groups`} className="block px-4 py-2 text-sm text-black hover:bg-gray-100">{t('patient_groups')}</Link></li>
                                 <li><Link href={`/${locale}/administration/offers`} className="block px-4 py-2 text-sm text-black hover:bg-gray-100">{t('offers')}</Link></li>
                                 <li><Link href={`/${locale}/administration/forms`} className="block px-4 py-2 text-sm text-black hover:bg-gray-100">{t('financialAndForms')}</Link></li>
                                 <li><Link href={`/${locale}/administration/payment-methods`} className="block px-4 py-2 text-sm text-black hover:bg-gray-100">{t('paymentMethods')}</Link></li>

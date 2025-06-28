@@ -3,8 +3,13 @@ import Table, { Column } from '@/components/shared/reusableComponents/Table';
 import { FaAngleRight, FaEye, FaPrint, FaFileExcel } from 'react-icons/fa';
 import { getTranslations } from 'next-intl/server';
 
-const Page = async () => {
+interface LayoutProps {
+  params: Promise<{ locale: string | any }>;
+}
+
+const Page = async ({ params }: LayoutProps) => {
   const t = await getTranslations('offers');
+  const { locale } = await params;
 
   const columns: Column[] = [
     { label: t('cash'), key: 'cash' },
@@ -34,7 +39,7 @@ const Page = async () => {
         {/* العودة للقائمة */}
         <div className="flex mb-3">
           <a
-            href="/reports"
+            href={`/${locale}/administration/offers`}
             className="bg-[#007bff] text-white flex items-center justify-center w-[40px] h-[40px] rounded"
           >
             <FaAngleRight />
