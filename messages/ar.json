@@ -920,7 +920,7 @@
   }
 },
 "columns": {
-  "id": "#",
+  "id": "المعرف",
   "name": "الاسم",
   "created_at": "تاريخ الإنشاء",
   "sub_sections": "الأقسام الفرعية",
@@ -934,11 +934,14 @@
   "cancel": "إلغاء",
   "save": "حفظ",
   "edit": "تعديل",
-  "delete": "حذف"
+  "delete": "حذف",
+  "save_changes": "حفظ التغييرات"
 },
 "modal": {
   "add_new_section": "إضافة قسم جديد",
-  "employee_section_note": "إذا كان القسم خاص بإيرادات الموظفين، يجب اختيار موظف."
+  "edit_section": "تعديل القسم",
+  "employee_section_note": "ملاحظة: سيتم تعيين هذا القسم للموظفين المعنيين",
+  "editing_section": "جارٍ تعديل القسم"
 },
 "placeholders": {
   "name": "الاسم",

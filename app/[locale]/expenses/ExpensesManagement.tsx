@@ -1,10 +1,11 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useTranslations , useLocale} from 'next-intl'
 import { FaPenToSquare, FaPlus, FaPrint, FaTrashCan } from 'react-icons/fa6'
 import { ExpenseModal } from './ExpenseModal'
 import Table from '@/components/shared/reusableComponents/Table'
 import { useState } from 'react'
+import Link from 'next/link'
 
 interface Expense {
     id: number
@@ -29,7 +30,8 @@ interface ExpensesManagementProps {
 }
 
 const ExpensesManagement = ({ initialExpenses, initialCategories }: ExpensesManagementProps) => {
-    const t = useTranslations('accounting.expenses')
+    const t = useTranslations('accounting.expenses');
+    const locale = useLocale();
     const [expenses, setExpenses] = useState<Expense[]>(initialExpenses)
     const [categories, setCategories] = useState<Category[]>(initialCategories)
     const [modalMode, setModalMode] = useState<'add' | 'edit' | 'delete' | null>(null)
@@ -145,7 +147,7 @@ const ExpensesManagement = ({ initialExpenses, initialCategories }: ExpensesMana
         notes: expense.notes,
         actions: (
             <div className="flex items-center justify-center gap-1">
-                <div className="inline-flex items-center gap-2 p-2 rounded-lg shadow">
+                <div className="inline-flex items-center gap-2 p-2 rounded-lg ">
                     <button
                         onClick={() => handleEdit(expense)}
                         className="bg-blue-500 hover:bg-blue-600 rounded-sm text-white p-2 transition"
@@ -182,14 +184,14 @@ const ExpensesManagement = ({ initialExpenses, initialCategories }: ExpensesMana
                 />
             )}
 
-            <div className="section-content bg-white rounded-lg shadow p-6">
+            <div className="section-content bg-white rounded-lg  p-6">
                 <div className="flex flex-wrap items-center gap-2 mt-3 justify-between mb-4">
-                    <a
-                        href="/categories"
+                    <Link
+                        href={`/${locale}/expenses  /categories`}
                         className="btn btn-sm btn-primary px-4 py-2 bg-blue-600 text-white rounded text-sm"
                     >
                         {t('categories')}
-                    </a>
+                    </Link>
 
                     <div className="flex flex-wrap items-center gap-2 justify-end">
                         <button

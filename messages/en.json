@@ -905,7 +905,6 @@
   "assets": "Assets",
   "liabilities": "Liabilities",
   "capital": "Capital",
-  "expenses": "Expenses",
   "revenues": "Revenues",
   "purchases": "Purchases",
   "item": "Item",
@@ -985,11 +984,14 @@
   "cancel": "Cancel",
   "save": "Save",
   "edit": "Edit",
-  "delete": "Delete"
+  "delete": "Delete",
+  "save_changes": "Save Changes"
 },
 "modal": {
   "add_new_section": "Add New Section",
-  "employee_section_note": "If the section is for employee revenues, an employee must be selected."
+  "edit_section": "Edit Section",
+  "employee_section_note": "Note: This section will be assigned to relevant employees",
+  "editing_section": "Editing Section"
 },
 "placeholders": {
   "name": "Name",

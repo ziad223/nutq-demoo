@@ -66,7 +66,7 @@ const AccountingPage = async ({ params }: LayoutProps) => {
         },
         {
             title: t('TaxDeclaration'),
-            href: '/balance-sheet',
+            href: `/${locale}/tax`,
             image: accounting9,
         },
     ].filter(Boolean)

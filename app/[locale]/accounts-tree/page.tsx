@@ -5,14 +5,60 @@ import Table, { Column } from '@/components/shared/reusableComponents/Table';
 import { FaBars, FaAngleRight, FaPenToSquare, FaTrashCan, FaPlus, FaList } from 'react-icons/fa6';
 import { useTranslations } from 'next-intl';
 
+interface TableRow {
+    id: string;
+    name: string;
+    created_at: string;
+    kids_count: React.ReactNode;
+    doctor: string;
+    actions: React.ReactNode;
+}
+
 const AccountsTree = () => {
     const t = useTranslations('accounting');
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const [modalOpen, setModalOpen] = useState(false);
+    const [addModalOpen, setAddModalOpen] = useState(false);
+    const [editModalOpen, setEditModalOpen] = useState(false);
     const [expanded, setExpanded] = useState<string | null>(null);
+    const [currentRow, setCurrentRow] = useState<TableRow | null>(null);
+    const [formData, setFormData] = useState({
+        name: '',
+        doctor: '',
+        cost: '',
+        depreciable: false,
+        mainSource: ''
+    });
 
     const toggleExpand = (id: string) => {
         setExpanded(prev => (prev === id ? null : id));
+    };
+
+    const handleEditClick = (row: TableRow) => {
+        setCurrentRow(row);
+        setFormData({
+            name: row.name,
+            doctor: row.doctor,
+            cost: '',
+            depreciable: false,
+            mainSource: ''
+        });
+        setEditModalOpen(true);
+    };
+
+    const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        const { name, value, type } = e.target;
+        const checked = (e.target as HTMLInputElement).checked;
+
+        setFormData(prev => ({
+            ...prev,
+            [name]: type === 'checkbox' ? checked : value
+        }));
+    };
+
+    const handleSaveEdit = () => {
+        // هنا يمكنك إضافة منطق حفظ التعديلات
+        console.log('Saving changes:', formData);
+        setEditModalOpen(false);
     };
 
     // Columns
@@ -26,7 +72,7 @@ const AccountsTree = () => {
     ];
 
     // Table Data
-    const data = [
+    const data: TableRow[] = [
         {
             id: '1',
             name: t('sidebar.items.assets'),
@@ -35,10 +81,20 @@ const AccountsTree = () => {
             doctor: t('doctors.fatima'),
             actions: (
                 <div className="flex justify-center items-center gap-1">
-                    <button className="bg-blue-500 text-white text-md px-2 py-1 rounded">
+                    <button
+                        className="bg-blue-500 text-white text-sm px-2 py-1 rounded"
+                        onClick={() => handleEditClick({
+                            id: '1',
+                            name: t('sidebar.items.assets'),
+                            created_at: '2024-06-01',
+                            kids_count: <button className="btn btn-sm bg-blue-600 text-white px-2 py-1 rounded">2</button>,
+                            doctor: t('doctors.fatima'),
+                            actions: <></>
+                        })}
+                    >
                         <FaPenToSquare title={t('buttons.edit')} />
                     </button>
-                    <button className="bg-red-500 text-white text-md px-2 py-1 rounded">
+                    <button className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                         <FaTrashCan title={t('buttons.delete')} />
                     </button>
                 </div>
@@ -52,10 +108,20 @@ const AccountsTree = () => {
             doctor: t('doctors.mohamed'),
             actions: (
                 <div className="flex justify-center items-center gap-1">
-                    <button className="bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                    <button
+                        className="bg-blue-500 text-white text-sm px-2 py-1 rounded"
+                        onClick={() => handleEditClick({
+                            id: '2',
+                            name: t('sidebar.items.liabilities'),
+                            created_at: '2024-06-02',
+                            kids_count: <button className="btn btn-sm bg-blue-600 text-white px-2 py-1 rounded">1</button>,
+                            doctor: t('doctors.mohamed'),
+                            actions: <></>
+                        })}
+                    >
                         <FaPenToSquare title={t('buttons.edit')} />
                     </button>
-                    <button className="bg-red-500 text-white text-xs px-2 py-1 rounded">
+                    <button className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                         <FaTrashCan title={t('buttons.delete')} />
                     </button>
                 </div>
@@ -69,10 +135,20 @@ const AccountsTree = () => {
             doctor: t('doctors.sara'),
             actions: (
                 <div className="flex justify-center items-center gap-1">
-                    <button className="bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                    <button
+                        className="bg-blue-500 text-white text-sm px-2 py-1 rounded"
+                        onClick={() => handleEditClick({
+                            id: '3',
+                            name: t('sidebar.items.capital'),
+                            created_at: '2024-06-03',
+                            kids_count: <button className="btn btn-sm bg-blue-600 text-white px-2 py-1 rounded">1</button>,
+                            doctor: t('doctors.sara'),
+                            actions: <></>
+                        })}
+                    >
                         <FaPenToSquare title={t('buttons.edit')} />
                     </button>
-                    <button className="bg-red-500 text-white text-xs px-2 py-1 rounded">
+                    <button className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                         <FaTrashCan title={t('buttons.delete')} />
                     </button>
                 </div>
@@ -86,10 +162,20 @@ const AccountsTree = () => {
             doctor: t('doctors.ali'),
             actions: (
                 <div className="flex justify-center items-center gap-1">
-                    <button className="bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                    <button
+                        className="bg-blue-500 text-white text-sm px-2 py-1 rounded"
+                        onClick={() => handleEditClick({
+                            id: '4',
+                            name: t('sidebar.items.expenses'),
+                            created_at: '2024-06-04',
+                            kids_count: <button className="btn btn-sm bg-blue-600 text-white px-2 py-1 rounded">2</button>,
+                            doctor: t('doctors.ali'),
+                            actions: <></>
+                        })}
+                    >
                         <FaPenToSquare title={t('buttons.edit')} />
                     </button>
-                    <button className="bg-red-500 text-white text-xs px-2 py-1 rounded">
+                    <button className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                         <FaTrashCan title={t('buttons.delete')} />
                     </button>
                 </div>
@@ -103,10 +189,20 @@ const AccountsTree = () => {
             doctor: t('doctors.nada'),
             actions: (
                 <div className="flex justify-center items-center gap-1">
-                    <button className="bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                    <button
+                        className="bg-blue-500 text-white text-sm px-2 py-1 rounded"
+                        onClick={() => handleEditClick({
+                            id: '5',
+                            name: t('sidebar.items.revenues'),
+                            created_at: '2024-06-05',
+                            kids_count: <button className="btn btn-sm bg-blue-600 text-white px-2 py-1 rounded">1</button>,
+                            doctor: t('doctors.nada'),
+                            actions: <></>
+                        })}
+                    >
                         <FaPenToSquare title={t('buttons.edit')} />
                     </button>
-                    <button className="bg-red-500 text-white text-xs px-2 py-1 rounded">
+                    <button className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                         <FaTrashCan title={t('buttons.delete')} />
                     </button>
                 </div>
@@ -120,10 +216,20 @@ const AccountsTree = () => {
             doctor: t('doctors.kareem'),
             actions: (
                 <div className="flex justify-center items-center gap-1">
-                    <button className="bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                    <button
+                        className="bg-blue-500 text-white text-sm px-2 py-1 rounded"
+                        onClick={() => handleEditClick({
+                            id: '6',
+                            name: t('sidebar.items.purchases'),
+                            created_at: '2024-06-06',
+                            kids_count: <button className="btn btn-sm bg-blue-600 text-white px-2 py-1 rounded">1</button>,
+                            doctor: t('doctors.kareem'),
+                            actions: <></>
+                        })}
+                    >
                         <FaPenToSquare title={t('buttons.edit')} />
                     </button>
-                    <button className="bg-red-500 text-white text-xs px-2 py-1 rounded">
+                    <button className="bg-red-500 text-white text-sm px-2 py-1 rounded">
                         <FaTrashCan title={t('buttons.delete')} />
                     </button>
                 </div>
@@ -179,7 +285,7 @@ const AccountsTree = () => {
                                 <FaList />
                                 <span className="text-sm font-medium">{t('sidebar.title')}</span>
                             </div>
-                            <button onClick={() => setModalOpen(true)} className="w-full text-white bg-green-600 px-3 py-2 text-sm rounded">
+                            <button onClick={() => setAddModalOpen(true)} className="w-full text-white bg-green-600 px-3 py-2 text-sm rounded">
                                 {t('sidebar.add_section')}
                             </button>
                         </div>
@@ -225,7 +331,7 @@ const AccountsTree = () => {
                         <div className="bg-white p-4 rounded shadow">
                             <div className="flex justify-between items-center mb-3">
                                 <button
-                                    onClick={() => setModalOpen(true)}
+                                    onClick={() => setAddModalOpen(true)}
                                     className="bg-[#09adce] text-white px-4 py-2 text-sm rounded"
                                 >
                                     {t('buttons.add_new_section')} <FaPlus className="inline ml-1" />
@@ -237,13 +343,13 @@ const AccountsTree = () => {
                     </div>
                 </div>
 
-                {/* Modal */}
-                {modalOpen && (
+                {/* Add New Section Modal */}
+                {addModalOpen && (
                     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                         <div className="bg-white rounded-lg shadow-lg w-full max-w-lg p-4">
                             <div className="flex justify-between items-center border-b pb-2 mb-4">
                                 <h4 className="text-lg font-semibold">{t('modal.add_new_section')}</h4>
-                                <button onClick={() => setModalOpen(false)} className="text-red-500">
+                                <button onClick={() => setAddModalOpen(false)} className="text-red-500">
                                     {t('buttons.close')}
                                 </button>
                             </div>
@@ -264,11 +370,84 @@ const AccountsTree = () => {
                                 </label>
                             </div>
                             <div className="mt-4 flex justify-end gap-2">
-                                <button onClick={() => setModalOpen(false)} className="px-4 py-2 bg-gray-200 rounded">
+                                <button onClick={() => setAddModalOpen(false)} className="px-4 py-2 bg-gray-200 rounded">
                                     {t('buttons.cancel')}
                                 </button>
                                 <button className="px-4 py-2 bg-green-600 text-white rounded">
                                     {t('buttons.save')}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Edit Section Modal */}
+                {editModalOpen && currentRow && (
+                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div className="bg-white rounded-lg shadow-lg w-full max-w-lg p-4">
+                            <div className="flex justify-between items-center border-b pb-2 mb-4">
+                                <h4 className="text-lg font-semibold">{t('modal.edit_section')}</h4>
+                                <button onClick={() => setEditModalOpen(false)} className="text-red-500">
+                                    {t('buttons.close')}
+                                </button>
+                            </div>
+                            <div className="text-sm text-gray-600 mb-4">
+                                {t('modal.editing_section')}: <strong>{currentRow.name}</strong> (ID: {currentRow.id})
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleFormChange}
+                                    placeholder={t('placeholders.name')}
+                                    className="border p-2 rounded w-full"
+                                />
+                                <select
+                                    name="mainSource"
+                                    value={formData.mainSource}
+                                    onChange={handleFormChange}
+                                    className="border p-2 rounded w-full"
+                                >
+                                    <option value="">{t('placeholders.select_main_source')}</option>
+                                    <option value="source1">Source 1</option>
+                                    <option value="source2">Source 2</option>
+                                </select>
+                                <select
+                                    name="doctor"
+                                    value={formData.doctor}
+                                    onChange={handleFormChange}
+                                    className="border p-2 rounded w-full"
+                                >
+                                    <option value="">{t('placeholders.select_doctor')}</option>
+                                    <option value={t('doctors.fatima')}>{t('doctors.fatima')}</option>
+                                    <option value={t('doctors.mohamed')}>{t('doctors.mohamed')}</option>
+                                    <option value={t('doctors.sara')}>{t('doctors.sara')}</option>
+                                </select>
+                                <input
+                                    type="number"
+                                    name="cost"
+                                    value={formData.cost}
+                                    onChange={handleFormChange}
+                                    placeholder={t('placeholders.section_cost')}
+                                    className="border p-2 rounded w-full"
+                                />
+                                <label className="flex items-center gap-2">
+                                    <input
+                                        type="checkbox"
+                                        name="depreciable"
+                                        checked={formData.depreciable}
+                                        onChange={handleFormChange}
+                                    />
+                                    {t('labels.depreciable')}
+                                </label>
+                            </div>
+                            <div className="mt-4 flex justify-end gap-2">
+                                <button onClick={() => setEditModalOpen(false)} className="px-4 py-2 bg-gray-200 rounded">
+                                    {t('buttons.cancel')}
+                                </button>
+                                <button onClick={handleSaveEdit} className="px-4 py-2 bg-blue-600 text-white rounded">
+                                    {t('buttons.save_changes')}
                                 </button>
                             </div>
                         </div>
