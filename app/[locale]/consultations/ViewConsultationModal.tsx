@@ -29,7 +29,7 @@ const ViewConsultationModal: React.FC<Props> = ({ consultation }) => {
 
             {isOpen && (
                 <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-                    <div className="bg-white p-6 rounded-md w-[90%] max-w-md relative">
+                    <div className="bg-white p-6 rounded-md w-[90%] max-w-[600PX] relative">
                         <button
                             onClick={() => setIsOpen(false)}
                             className="absolute top-3 left-3 text-gray-600 hover:text-black"
@@ -37,7 +37,7 @@ const ViewConsultationModal: React.FC<Props> = ({ consultation }) => {
                             <FaTimes />
                         </button>
                         <h2 className="text-xl font-bold mb-4 text-center">عرض بيانات الاستشارة</h2>
-                        <div className="space-y-2 text-sm">
+                        <div className="space-y-2 text-sm grid grid-cols-1 md:grid-cols-2 ">
                             <p><strong>الاسم:</strong> {consultation.name}</p>
                             <p><strong>رقم الهاتف:</strong> {consultation.phone}</p>
                             <p><strong>المدينة:</strong> {consultation.city}</p>

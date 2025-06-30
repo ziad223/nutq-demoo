@@ -3,13 +3,17 @@
 import React, { useState } from 'react';
 import Table, { Column } from '@/components/shared/reusableComponents/Table';
 import { FaPrint, FaQuestionCircle, FaEye } from 'react-icons/fa';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 
 const BillsPage = () => {
     const [statusFilter, setStatusFilter] = useState<string | null>(null);
     const [month, setMonth] = useState('');
     const [week, setWeek] = useState('');
+    const [selectedRow, setSelectedRow] = useState<any | null>(null);
+
     const t = useTranslations('bills');
+    const locale = useLocale();
 
     const columns: Column[] = [
         { label: t('patient'), key: 'patient' },
@@ -23,7 +27,7 @@ const BillsPage = () => {
         { label: t('actions'), key: 'actions' },
     ];
 
-    const data = [
+    const baseData = [
         {
             patient: 'أحمد علي',
             supervisor: 'أ. فاطمة',
@@ -33,11 +37,6 @@ const BillsPage = () => {
             tax: '50',
             total: '550',
             status: <span className="badge bg-success px-2 py-1 text-white text-xs rounded">{t('paid')}</span>,
-            actions: (
-                <a href="#" className="btn btn-sm bg-gray-600 text-white px-3 py-1 rounded text-xs inline-flex items-center">
-                    <FaEye className="mr-1" />
-                </a>
-            )
         },
         {
             patient: 'سارة محمود',
@@ -48,13 +47,26 @@ const BillsPage = () => {
             tax: '40',
             total: '440',
             status: <span className="badge bg-danger px-2 py-1 text-white text-xs rounded">{t('not_paid')}</span>,
-            actions: (
-                <a href="#" className="btn btn-sm bg-blue-600 text-white px-3 py-1 rounded text-xs">
-                    {t('pay')}
-                </a>
-            )
         },
     ];
+
+    const data = baseData.map((row) => ({
+        ...row,
+        actions: (
+            <div className="flex items-center gap-2">
+                <button
+                    onClick={() => setSelectedRow(row)}
+                    className="btn btn-sm bg-gray-600 text-white px-3 py-1 rounded text-lg inline-flex items-center"
+                >
+                    <FaEye className="mr-1" />
+                </button>
+                <Link href={`/${locale}/treatment-plans`} className="btn btn-sm bg-blue-600 text-white px-3 py-1 rounded text-xs">
+                    {t('pay')}
+                </Link>
+            </div>
+        )
+    }));
+    
 
     return (
         <section className="py-10 bg-gray-100 min-h-[calc(100vh-100px)]">
@@ -125,6 +137,30 @@ const BillsPage = () => {
                     <Table columns={columns} data={data} />
                 </div>
             </div>
+
+            {/* Modal */}
+            {selectedRow && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+                    <div className="bg-white rounded-lg shadow-lg w-[90%] max-w-md p-6 relative animate-fade-in">
+                        <button
+                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+                            onClick={() => setSelectedRow(null)}
+                        >
+                            &times;
+                        </button>
+                        <h2 className="text-lg font-bold mb-4">تفاصيل الأشتراك</h2>
+                        <div className="space-y-2 text-sm">
+                            <p><strong>{t('patient')}:</strong> {selectedRow.patient}</p>
+                            <p><strong>{t('supervisor')}:</strong> {selectedRow.supervisor}</p>
+                            <p><strong>{t('start')}:</strong> {selectedRow.start}</p>
+                            <p><strong>{t('end')}:</strong> {selectedRow.end}</p>
+                            <p><strong>{t('amount')}:</strong> {selectedRow.amount}</p>
+                            <p><strong>{t('tax')}:</strong> {selectedRow.tax}</p>
+                            <p><strong>{t('total')}:</strong> {selectedRow.total}</p>
+                        </div>
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

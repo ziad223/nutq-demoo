@@ -24,7 +24,7 @@ const ViewBondModal: React.FC<ViewBondModalProps> = ({ isOpen, onClose, bondData
                     <h3 className="text-xl font-bold">تفاصيل السند</h3>
                     <button
                         onClick={onClose}
-                        className="text-gray-500 hover:text-gray-700"
+                        className="text-black font-bold text-xl hover:text-gray-700"
                     >
                         &times;
                     </button>
@@ -33,27 +33,27 @@ const ViewBondModal: React.FC<ViewBondModalProps> = ({ isOpen, onClose, bondData
                 <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                         <div>
-                            <p className="text-sm text-gray-500">#</p>
+                            <p className="text-sm text-black font-bold ">#</p>
                             <p className="font-medium">{bondData.id}</p>
                         </div>
                         <div>
-                            <p className="text-sm text-gray-500">التاريخ</p>
+                            <p className="text-sm text-black font-bold ">التاريخ</p>
                             <p className="font-medium">{bondData.date}</p>
                         </div>
                     </div>
 
                     <div>
-                        <p className="text-sm text-gray-500">البيان</p>
+                        <p className="text-sm text-black font-bold ">البيان</p>
                         <p className="font-medium">{bondData.description}</p>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
                         <div>
-                            <p className="text-sm text-gray-500">مدين</p>
+                            <p className="text-sm text-black font-bold ">مدين</p>
                             <p className="font-medium">{bondData.debit}</p>
                         </div>
                         <div>
-                            <p className="text-sm text-gray-500">دائن</p>
+                            <p className="text-sm text-black font-bold">دائن</p>
                             <p className="font-medium">{bondData.credit}</p>
                         </div>
                     </div>

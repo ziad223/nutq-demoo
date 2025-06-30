@@ -663,6 +663,9 @@
       "referredPatients": "Referred patients"
   },
   "appointments" : {
+    "edit_appointment" : "Edit Appointment",
+    "save_changes" : "Save Changes",
+    "confirm_delete" : "Confirm Delete",
     "specialistSchedule": "Specialist Schedule",
     "dateRangeNote": "Appointments are displayed for one month from the start date. Please select the start date and the end date will be set automatically.",
     "specialistNote": "Appointments are displayed based on the available times for the specialist. You can review the specialist's sessions in the clinics section.",
@@ -1035,7 +1038,7 @@
       "phone": "Phone Number",
       "city": "City",
       "address": "Address",
-      "message": "Message",
+      "message": "consultations",
       "save": "Save"
     },
     "title": "Consultations",
